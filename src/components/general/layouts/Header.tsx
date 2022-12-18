@@ -31,7 +31,7 @@ const Header: FC = () => {
   const [open, setOpen] = useState<boolean>(false);
   return (
     <div className="w-full fixed top-0 left-0 bg-secondary-700 sm:px-10 z-40 bg-opacity-100 lg:bg-opacity-[0.93]">
-      <div className="md:flex items-center justify-between container py-7 mx-auto sm:py-4 px-7 sm:px-0 2xl:px-0">
+      <div className="md:flex items-center justify-between container mx-auto py-7 lg:py-1 px-7 sm:px-0 2xl:px-0">
         <Link href="/" className="cursor-pointer">
           <figure>
             <Image

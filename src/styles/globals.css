@@ -18,6 +18,13 @@ body {
   background-clip: text;
 }
 
+.text-transparent-active {
+  background: linear-gradient(97.43deg, #4485fd -3.02%, #1a4187 108.35%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 a {
   color: inherit;
   text-decoration: none;

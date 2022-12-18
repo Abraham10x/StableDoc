@@ -17,6 +17,7 @@ module.exports = {
       "text-600": "#5A6FA0",
       "text-500": "#7889B2",
       "text-400": "#373F41",
+      "text-300": "#465371",
       "gradient-500": "linear-gradient(96.45deg, #4485FD 0%, #1A4187 99%)",
       "stroke-500": "#A9C5DE",
       "gray-500": "#F8FBFF",
@@ -30,7 +31,8 @@ module.exports = {
       backgroundImage: {
         "gradient-600":
           "linear-gradient(97.43deg, #4485FD -3.02%, #1A4187 108.35%)",
-        "footer-texture": "url('/img/footer-texture.png')",
+        "gradient-700":
+          "linear-gradient(174.31deg, rgba(60, 64, 66, 0.2) 57.42%, rgba(133, 137, 138, 0) 95.47%)",
       },
     },
   },

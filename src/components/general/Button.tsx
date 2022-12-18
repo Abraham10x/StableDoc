@@ -16,11 +16,7 @@ export const Button: FC<AppProps> = ({
   onClick,
 }: AppProps) => {
   return (
-    <button
-      type="button"
-      className={`px-5 py-3 rounded-full text-sm ${className}`}
-      onClick={onClick}
-    >
+    <button type="button" className={` mt-0 ${className}`} onClick={onClick}>
       {children}
     </button>
   );

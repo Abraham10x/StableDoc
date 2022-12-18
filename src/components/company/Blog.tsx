@@ -24,7 +24,7 @@ const Blog: FC = () => {
                 Dr Anita tells us about her journey combining medecine and
                 motherhood in a third class country
               </p>
-              <Button className="bg-primary text-white text-base font-bold rounded-none px-11 mb-10">
+              <Button className="bg-primary text-white text-base font-bold rounded-none px-10 py-4 mb-10">
                 Read her story
                 <BsFillArrowRightCircleFill className="inline ml-4" />
               </Button>
@@ -36,7 +36,7 @@ const Blog: FC = () => {
                 StableDoc Plans Launch Of Blockchain-Based Telehealth And Health
                 Data NFTs
               </h3>
-              <Button className="border-2 border-gray-500 text-white text-base font-bold rounded-none mb-5">
+              <Button className="border-2 border-gray-500 text-white text-base font-bold rounded-none mb-5 px-5 py-2">
                 Read
                 <BsFillArrowRightCircleFill className="inline ml-4" />
               </Button>
@@ -47,7 +47,7 @@ const Blog: FC = () => {
               <h3 className="text-gray-500 font-bold text-xl mb-5 mt-3">
                 StableDoc Announces Platform Partnership With PayTalk
               </h3>
-              <Button className="border-2 border-gray-500 text-white text-base font-bold rounded-none mb-5">
+              <Button className="border-2 border-gray-500 text-white text-base font-bold rounded-none mb-5 px-5 py-2">
                 Read
                 <BsFillArrowRightCircleFill className="inline ml-4" />
               </Button>
@@ -58,7 +58,7 @@ const Blog: FC = () => {
               <h3 className="text-gray-500 font-bold text-xl mb-5 mt-3">
                 StableDoc Announces Platform Partnership With PayTalk
               </h3>
-              <Button className="border-2 border-gray-500 text-white text-base font-bold rounded-none mb-5">
+              <Button className="border-2 border-gray-500 text-white text-base font-bold rounded-none mb-5 px-5 py-2">
                 Read
                 <BsFillArrowRightCircleFill className="inline ml-4" />
               </Button>

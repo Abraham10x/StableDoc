@@ -12,6 +12,7 @@ module.exports = {
       "secondary-700": "#EBF3FE",
       "secondary-600": "#9ED1FE",
       "secondary-500": "#F4FDFF",
+      "secondary-400": "#E3E3E3",
       "text-800": "#689CFD",
       "text-700": "#151411",
       "text-600": "#5A6FA0",
@@ -33,6 +34,7 @@ module.exports = {
           "linear-gradient(97.43deg, #4485FD -3.02%, #1A4187 108.35%)",
         "gradient-700":
           "linear-gradient(174.31deg, rgba(60, 64, 66, 0.2) 57.42%, rgba(133, 137, 138, 0) 95.47%)",
+        "hero-bg": "url('/img/general/hero-circle.svg')",
       },
     },
   },

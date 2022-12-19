@@ -10,7 +10,7 @@ const Contact: FC = () => {
       </h3>
       <div className="bg-gradient-600 flex flex-row justify-between pb-14 pt-20 px-14 gap-10 rounded-3xl">
         <Image
-          src="/img/partners/contact.svg"
+          src="/img/partners/contact.png"
           alt="contact"
           width={600}
           height={600}

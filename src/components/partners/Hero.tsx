@@ -30,7 +30,7 @@ const Hero: FC = () => {
         <div className="absolute bottom-0 right-0">
           <Image
             className="basis-full lg:basis-[20%]"
-            src="/img/partners/partners-hero.svg"
+            src="/img/partners/partners-hero.png"
             alt="doctors-3d"
             width={560}
             height={560}

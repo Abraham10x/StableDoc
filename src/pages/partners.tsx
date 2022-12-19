@@ -3,7 +3,7 @@ import Seo from "../components/general/Seo";
 import { Layout } from "../layouts/default";
 import Hero from "../components/partners/Hero";
 import Features from "../components/partners/Features";
-import Steps from "../components/partners/Steps";
+import Steps from "../components/general/Steps";
 import Contact from "../components/partners/Contact";
 import CTA from "../components/general/CTA";
 

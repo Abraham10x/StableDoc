@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FC } from "react";
-import { Button } from "../general/Button";
+import { Button } from "./Button";
+import AppStore from "./AppStore";
 
 const Steps: FC = () => {
   const StepsData = [
@@ -25,7 +26,7 @@ const Steps: FC = () => {
   ];
   return (
     <>
-      <div className="container px-10 pb-8 2xl:px-0 mx-auto">
+      <div className="container px-10 pb-8 2xl:px-0 mx-auto mt-32">
         <div className="text-center mx-auto">
           <h3 className="text-4xl lg:text-6xl text-text-700">
             Get Started in Just Three Steps{" "}
@@ -37,7 +38,7 @@ const Steps: FC = () => {
           </p>
         </div>
       </div>
-      <div className="bg-secondary-700 mt-16">
+      <div className="bg-secondary-700 mt-24">
         <div className="container px-10 pb-8 2xl:px-0 mx-auto">
           <div className="flex flex-col sm:flex-row mx-auto gap-10 relative bottom-12">
             {StepsData.map((data) => (
@@ -63,24 +64,7 @@ const Steps: FC = () => {
               </div>
             ))}
           </div>
-          <div className="flex flex-row gap-6 justify-center my-10">
-            <Button className="">
-              <Image
-                src="/img/partners/apple-store.svg"
-                alt="apple-store"
-                width={200}
-                height={200}
-              />
-            </Button>
-            <Button className="">
-              <Image
-                src="/img/partners/play-store.svg"
-                alt="apple-store"
-                width={200}
-                height={200}
-              />
-            </Button>
-          </div>
+          <AppStore />
         </div>
       </div>
     </>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FC } from "react";
 import { Button } from "../general/Button";
+import AppStore from "../general/AppStore";
 
 const Hero: FC = () => {
   return (
@@ -41,24 +42,7 @@ const Hero: FC = () => {
         <h2 className=" bg-gradient-600 bg-clip-text text-transparent-active font-medium text-4xl text-center">
           Why provoiders use stabledoc
         </h2>
-        <div className="flex flex-row gap-6 mx-auto mt-8">
-          <Button className="">
-            <Image
-              src="/img/partners/apple-store.svg"
-              alt="apple-store"
-              width={200}
-              height={200}
-            />
-          </Button>
-          <Button className="">
-            <Image
-              src="/img/partners/play-store.svg"
-              alt="apple-store"
-              width={200}
-              height={200}
-            />
-          </Button>
-        </div>
+        <AppStore />
       </div>
     </div>
   );

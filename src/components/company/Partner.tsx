@@ -14,7 +14,7 @@ const parnters = [
 const Parnter: FC = () => {
   return (
     <div className="bg-secondary-700">
-      <div className="my-24 text-center container pt-12 px-10 pb-8 2xl:px-0 mx-auto py-10">
+      <div className="my-24 text-center container py-14 px-10 2xl:px-0 mx-auto">
         <h3 className="bg-gradient-600 bg-clip-text text-transparent-active text-center font-bold text-4xl">
           We have partnered with over 10 companies
         </h3>

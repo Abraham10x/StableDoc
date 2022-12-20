@@ -3,7 +3,7 @@ import { FC } from "react";
 
 interface AppProps {
   children: React.ReactNode;
-  className: string;
+  className?: string;
   link?: string;
   type?: any;
   onClick?: any;

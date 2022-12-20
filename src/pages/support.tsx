@@ -9,7 +9,7 @@ import Social from "../components/support/Social";
 const Support: NextPage = () => {
   return (
     <Layout>
-      <Seo templateTitle="Parnters" />
+      <Seo templateTitle="Support" />
       <Hero />
       <Guides />
       <Contact />

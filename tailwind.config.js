@@ -35,6 +35,7 @@ module.exports = {
         "gradient-700":
           "linear-gradient(174.31deg, rgba(60, 64, 66, 0.2) 57.42%, rgba(133, 137, 138, 0) 95.47%)",
         "hero-bg": "url('/img/general/hero-circle.svg')",
+        "social-bg": "url('/img/support/social-bg.svg')",
       },
     },
   },

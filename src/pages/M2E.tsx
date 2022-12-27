@@ -4,6 +4,7 @@ import Seo from "../components/general/Seo";
 import SubHeader from "../components/general/SubHeader";
 import Hero from "../components/m2e/Hero";
 import Beneficts from "../components/m2e/Beneficts";
+import Features from "../components/m2e/Feature";
 
 const M2E: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const M2E: NextPage = () => {
       <SubHeader />
       <Hero />
       <Beneficts />
+      <Features />
     </Layout>
   );
 };

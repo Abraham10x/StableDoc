@@ -7,22 +7,22 @@ import { Button } from "../Button";
 const navLinks = [
   {
     id: 1,
-    url: "/",
+    url: "/solution",
     text: "Solution",
   },
   {
     id: 2,
-    url: "/",
+    url: "/telehealth",
     text: "StableDoc Token",
   },
   {
     id: 3,
-    url: "/",
+    url: "/company",
     text: "Company",
   },
   {
     id: 4,
-    url: "/",
+    url: "/support",
     text: "Support",
   },
 ];

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { FC } from "react";
-import { LinkButton } from "../general/Button";
 
 const Hero: FC = () => {
   return (

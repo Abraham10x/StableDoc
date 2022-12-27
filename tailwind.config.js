@@ -36,6 +36,8 @@ module.exports = {
           "linear-gradient(174.31deg, rgba(60, 64, 66, 0.2) 57.42%, rgba(133, 137, 138, 0) 95.47%)",
         "team-gradient":
           "linear-gradient(0deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9))",
+        "step-card":
+          "linear-gradient(152.47deg, #E8F3FE 0%, rgba(227, 241, 255, 0.22) 98.37%);",
         "hero-bg": "url('/img/general/hero-circle.svg')",
         "social-bg": "url('/img/support/social-bg.svg')",
       },

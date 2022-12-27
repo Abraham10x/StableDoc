@@ -5,6 +5,7 @@ import SubHeader from "../components/general/SubHeader";
 import Hero from "../components/m2e/Hero";
 import Beneficts from "../components/m2e/Beneficts";
 import Features from "../components/m2e/Feature";
+import Token from "../components/m2e/Token";
 
 const M2E: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const M2E: NextPage = () => {
       <Hero />
       <Beneficts />
       <Features />
+      <Token />
     </Layout>
   );
 };

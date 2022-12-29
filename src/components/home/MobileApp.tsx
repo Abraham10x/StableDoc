@@ -5,7 +5,7 @@ import Image from "next/image";
 const MobileApp: FC = () => {
   return (
     <div className="bg-secondary-900">
-      <div className="container 2xl:px-0 mx-auto flex flex-col sm:flex-row justify-between gap-8 px-28 py-36">
+      <div className="container 2xl:px-0 mx-auto flex flex-col sm:flex-row justify-between gap-8 px-28 pt-36 pb-64">
         <div className="basis-5/12">
           <Image
             src="/img/home/mobile-app.png"

@@ -40,8 +40,11 @@ module.exports = {
           "linear-gradient(152.47deg, #E8F3FE 0%, rgba(227, 241, 255, 0.22) 98.37%);",
         "hero-bg": "url('/img/general/hero-circle.svg')",
         "social-bg": "url('/img/support/social-bg.svg')",
+        "beneficts-bg": "url('/img/home/beneficts-bg.svg')",
+        "download-bg": "url('/img/home/download-bg.svg')",
+        "client-bg": "url('/img/home/testimonial-bg.svg')",
       },
     },
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/forms"), require("preline/plugin")],
 };

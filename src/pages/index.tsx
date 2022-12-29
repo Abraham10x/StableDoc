@@ -3,11 +3,19 @@ import Image from "next/image";
 import Seo from "../components/general/Seo";
 import { Layout } from "../layouts/default";
 import styles from "../styles/Home.module.css";
+import SubHeader from "../components/general/SubHeader";
+import Hero from "../components/home/Hero";
+import Partners from "../components/home/Partners";
+import MobileApp from "../components/home/MobileApp";
 
 export default function Home() {
   return (
     <Layout>
       <Seo templateTitle="Home" />
+      <SubHeader />
+      <Hero />
+      <Partners />
+      <MobileApp />
       <div className={styles.container}>
         <main className={styles.main}>
           <h1 className={styles.title}>

@@ -70,7 +70,7 @@ const FAQs: FC = () => {
   ];
   return (
     <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-20">
-      <div className="mb-28">
+      <div className="mb-28" id="FAQs">
         <h2 className="font-bold bg-gradient-600 bg-clip-text text-transparent-active text-5xl text-center capitalize text-[#212121]">
           Frequent asked questions
         </h2>

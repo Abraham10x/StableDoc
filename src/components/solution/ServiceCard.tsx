@@ -13,6 +13,7 @@ interface IProps {
 const ServiceCard: FC<IProps> = ({ id, className, header, body, image }) => {
   return (
     <div
+      id={header.replace(/\s/g, "-")}
       key={id}
       className={`flex flex-col sm:flex-row gap-20 ${className} justify-between py-14`}
     >

@@ -4,7 +4,10 @@ import Form from "../general/Form";
 
 const Contact: FC = () => {
   return (
-    <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-10">
+    <div
+      className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-10"
+      id="contact-us"
+    >
       <h3 className="bg-gradient-600 bg-clip-text text-transparent-active font-medium text-5xl text-center mb-10">
         Contact Us
       </h3>

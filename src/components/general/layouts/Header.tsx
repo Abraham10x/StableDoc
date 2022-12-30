@@ -3,27 +3,27 @@ import Link from "next/link";
 import { IoClose, IoMenu, IoChevronDown } from "react-icons/io5";
 import Image from "next/image";
 import { Button } from "../Button";
+import Solutions from "./Solutions";
+import Token from "./Token";
+import Company from "./Company";
+import Support from "./Support";
 
 const navLinks = [
   {
     id: 1,
-    url: "/solution",
-    text: "Solution",
+    url: <Solutions />,
   },
   {
     id: 2,
-    url: "/telehealth",
-    text: "StableDoc Token",
+    url: <Token />,
   },
   {
     id: 3,
-    url: "/company",
-    text: "Company",
+    url: <Company />,
   },
   {
     id: 4,
-    url: "/support",
-    text: "Support",
+    url: <Support />,
   },
 ];
 
@@ -61,14 +61,7 @@ const Header: FC = () => {
                 key={data.id}
                 className="lg:mx-0 xl:mx-4 text-xl md:my-8 sm:my-0 my-7 font-semibold font-sans"
               >
-                <div className="dropdown">
-                  <Link legacyBehavior href={data.url}>
-                    <a className="md:px-6 lg:px-3 hover:bg-gradient-600 hover:bg-clip-text text-transparent text-text-600 text-base">
-                      {data.text}{" "}
-                      <IoChevronDown className="hover:bg-gradient-600 hover:bg-clip-text hover:font-semibold inline mb-1 ml-1" />
-                    </a>
-                  </Link>
-                </div>
+                <div className="dropdown">{data.url}</div>
               </li>
             ))}
           </ul>

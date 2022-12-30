@@ -3,7 +3,10 @@ import { FC } from "react";
 
 const Social: FC = () => {
   return (
-    <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-10">
+    <div
+      className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-10"
+      id="social-media"
+    >
       <div className="bg-secondary-700 py-16">
         <h3 className="bg-gradient-600 bg-clip-text text-transparent-active font-medium text-5xl text-center">
           Connect with us on social media

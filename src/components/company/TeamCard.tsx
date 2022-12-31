@@ -26,15 +26,17 @@ const TeamCard: FC<IProps> = ({
   id,
 }: IProps) => {
   return (
-    <div key={id} className="mt-10 max-w-sm">
+    <div key={id} className="mt-10 sm:mt-3 lg:mt-10 max-w-sm">
       <div
         className="bg-secondary-700 rounded-t-2xl relative"
-        onClick={handleClick}
+        onMouseEnter={handleClick}
       >
         {!state ? (
-          <div className="pt-8 pb-4 px-8 bg-team-gradient bg-opacity-20 absolute top-0 right-0 w-full h-full">
-            <p className="text-base font-medium text-text-600">{description}</p>
-            <div className="flex flex-row gap-9 mt-8 justify-center">
+          <div className="pt-4 sm:pt-8 pb-4 px-8 bg-team-gradient bg-opacity-20 absolute top-0 right-0 w-full h-full sm:max-h-80 xl:max-h-96 sm:overflow-y-scroll 2xl:overflow-hidden">
+            <p className="text-sm sm:text-base font-medium text-text-600">
+              {description}
+            </p>
+            <div className="flex flex-row gap-9 mt-2 sm:mt-8 justify-center">
               {linkedin && (
                 <LinkButton link={linkedin} target="_blank">
                   <Image
@@ -62,10 +64,12 @@ const TeamCard: FC<IProps> = ({
         )}
         <Image src={profile} alt={name} width={380} height={380} />
       </div>
-      <h3 className="text-primary font-medium text-3xl my-4 text-center">
+      <h3 className="text-primary font-medium text-lg sm:text-2xl lg:text-3xl mb-1 mt-4 lg:my-4 text-center">
         {name}
       </h3>
-      <p className="text-text-600 text-2xl text-center">{role}</p>
+      <p className="text-text-600 text-base sm:text-xl lg::text-2xl font-normal sm:font-medium text-center">
+        {role}
+      </p>
     </div>
   );
 };

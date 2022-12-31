@@ -16,14 +16,14 @@ const AdvisvoryTeam: FC = () => {
     });
   }
   return (
-    <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-32">
+    <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-0 sm:mt-10 lg:mt-32">
       <div className="flex flex-col gap-2">
-        <h2 className="bg-gradient-600 bg-clip-text text-transparent-active font-bold text-5xl text-center">
-          Our advsiory Team
+        <h2 className="bg-gradient-600 bg-clip-text text-transparent-active font-bold text-xl sm:text-3xl lg:text-5xl text-center">
+          Our Advsiory Team
         </h2>
       </div>
-      <div className="mt-9">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
+      <div className="mt-2 sm:mt-9">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:gap-12">
           {desc.map((data, index) => (
             <TeamCard
               id={index}

@@ -14,8 +14,8 @@ const parnters = [
 const Parnter: FC = () => {
   return (
     <div className="bg-secondary-700">
-      <div className="my-24 text-center container py-14 px-10 2xl:px-0 mx-auto">
-        <h3 className="bg-gradient-600 bg-clip-text text-transparent-active text-center font-bold text-4xl">
+      <div className="my-16 sm:my-24 text-center container py-14 px-10 2xl:px-0 mx-auto">
+        <h3 className="bg-gradient-600 bg-clip-text text-transparent-active text-center font-bold text-xl sm:text-3xl lg:text-4xl">
           We have partnered with over 10 companies
         </h3>
         <div className="flex flex-wrap gap-8 mt-10 justify-center">
@@ -23,6 +23,7 @@ const Parnter: FC = () => {
             <Image
               data-aos="flip-down"
               src={data}
+              className=""
               alt="parnters lcon"
               width={150}
               height={150}

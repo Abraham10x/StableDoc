@@ -41,17 +41,22 @@ const Features: FC = () => {
     },
   ];
   return (
-    <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-10">
+    <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-0 sm:mt-10">
       {FeatureData.map((data) => (
         <div
           key={data.id}
           className={`flex flex-col sm:flex-row gap-20 ${data.class} justify-between py-14`}
         >
           <div className="flex-col basis-[45%] my-auto">
-            <h3 className="text-4xl font-medium bg-gradient-600 bg-clip-text text-transparent-active">
+            <h3 className="text-xl sm:text-3xl lg:text-4xl text-center sm:text-left font-bold sm:font-medium bg-gradient-600 bg-clip-text text-transparent-active">
               {data.header}
             </h3>
-            <p className="mt-5 text-text-600 text-2xl">{data.body}</p>
+            <p
+              className="mt-5 text-text-600 text-center sm:text-left text-base sm:text-lg
+             lg:text-2xl"
+            >
+              {data.body}
+            </p>
           </div>
 
           <div className="bg-secondary-700 rounded-3xl relative basis-[45%] pt-20">

@@ -15,7 +15,7 @@ const Steps: FC = () => {
       id: 2,
       image: "/img/partners/process-2.svg",
       header: "Get booked",
-      body: "Get boked by a paatient and provide",
+      body: "Get booked by a paatient and provide medical care solutions",
     },
     {
       id: 3,
@@ -26,25 +26,25 @@ const Steps: FC = () => {
   ];
   return (
     <>
-      <div className="container px-10 pb-8 2xl:px-0 mx-auto mt-32">
+      <div className="container px-10 pb-8 2xl:px-0 mx-auto sm:mt-16 lg:mt-32">
         <div className="text-center mx-auto">
-          <h3 className="text-4xl lg:text-6xl text-text-700">
+          <h3 className="text-xl font-bold sm:font-normal sm:text-4xl lg:text-6xl text-text-700">
             Get Started in Just Three Steps{" "}
           </h3>
-          <p className="mt-5 font-normal text-xl">
+          <p className="mt-5 font-normal text-base sm:text-lg lg:text-xl">
             You don’t need any prior Crypto knowledge to begin to earn Crypto on
             StableFit app. All you need to do is to download, register and start
             earning
           </p>
         </div>
       </div>
-      <div className="bg-secondary-700 mt-24">
-        <div className="container px-10 pb-8 2xl:px-0 mx-auto">
-          <div className="flex flex-col sm:flex-row mx-auto gap-10 relative bottom-12">
+      <div className="bg-secondary-700 mt-24 pb-8 ">
+        <div className="container px-10 2xl:px-0 mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto gap-10 relative bottom-12">
             {StepsData.map((data) => (
               <div
                 key={data.id}
-                className="flex flex-col bg-white pt-4 px-1 border border-secondary-400 rounded-[20px] basis-[30%] mx-auto justify-between"
+                className="flex flex-col bg-white pt-4 px-3 sm:px-1 border border-secondary-400 rounded-[20px] mx-auto justify-between"
               >
                 <Image
                   className="mx-auto"
@@ -54,7 +54,7 @@ const Steps: FC = () => {
                   height={200}
                 />
                 <div className="">
-                  <h4 className="text-text-700 font-medium mt-4 text-2xl text-center">
+                  <h4 className="text-text-700 font-medium mt-4 text-xl sm:text-2xl text-center">
                     {data.header}
                   </h4>
                   <p className="mt-4 mb-10 text-text-500 text-base text-center w-full sm:w-3/4 mx-auto">
@@ -64,8 +64,8 @@ const Steps: FC = () => {
               </div>
             ))}
           </div>
-          <AppStore />
         </div>
+        <AppStore />
       </div>
     </>
   );

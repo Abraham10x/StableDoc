@@ -103,8 +103,8 @@ const Services: FC = () => {
     },
   ];
   return (
-    <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-10">
-      <h3 className="bg-gradient-600 bg-clip-text text-transparent-active font-medium text-5xl text-center mb-10">
+    <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-6 lg:mt-10">
+      <h3 className="bg-gradient-600 bg-clip-text text-transparent-active sm:font-medium font-bold text-2xl sm:text-3xl lg:text-5xl text-center mt-8 sm:mt-0 lg:mb-10">
         Premium health services
       </h3>
       {ServicesData.map((data) => (
@@ -116,7 +116,7 @@ const Services: FC = () => {
           image={data.image}
         />
       ))}
-      <h3 className="bg-gradient-600 bg-clip-text text-transparent-active font-medium text-5xl text-center mb-8 mt-24">
+      <h3 className="bg-gradient-600 bg-clip-text text-transparent-active sm:font-medium font-bold text-2xl sm:text-3xl lg:text-5xl text-center mt-8 sm:mt-0 lg:mb-10">
         Cross border Health
       </h3>
       {BorderData.map((data) => (
@@ -129,7 +129,7 @@ const Services: FC = () => {
         />
       ))}
 
-      <h3 className="bg-gradient-600 bg-clip-text text-transparent-active font-medium text-5xl text-center mb-8 mt-24">
+      <h3 className="bg-gradient-600 bg-clip-text text-transparent-active sm:font-medium font-bold text-2xl sm:text-3xl lg:text-5xl text-center mt-8 sm:mt-0 mb-0 lg:mb-10">
         Your health on a blockchain
       </h3>
       {CrytoData.map((data) => (

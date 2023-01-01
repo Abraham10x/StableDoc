@@ -20,10 +20,10 @@ const Hero: FC = () => {
             your schedule
           </p>
           <div className="flex sm:flex-row mt-8 gap-6">
-            <Button className="bg-primary hover:bg-secondary-900 font-semibold text-white px-8 sm:px-11 py-3 leading-7 text-sm sm:text-base rounded-full">
+            <Button className="bg-primary hover:bg-secondary-900 transition-all font-semibold text-white px-8 sm:px-11 py-3 leading-7 text-sm sm:text-base rounded-full">
               Get Started
             </Button>
-            <Button className="border border-primary hover:bg-primary/25 px-8 sm:px-11 py-3 text-primary font-semibold leading-7 text-sm sm:text-base rounded-full">
+            <Button className="border border-primary hover:bg-primary/20 transition-all px-8 sm:px-11 py-3 text-primary font-semibold leading-7 text-sm sm:text-base rounded-full">
               Contact Us
             </Button>
           </div>

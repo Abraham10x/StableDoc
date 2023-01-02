@@ -33,6 +33,42 @@ body {
   }
 }
 
+@media screen and (min-width: 1194px) {
+  .pl-auto {
+    padding-left: 6rem !important;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .pl-auto {
+    padding-left: 3.3rem !important;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .pl-auto {
+    padding-left: 3rem !important;
+  }
+}
+@media screen and (min-width: 1478px) {
+  .pl-auto {
+    padding-left: 6.2rem !important;
+  }
+}
+@media screen and (min-width: 1431px) {
+  .pl-auto {
+    padding-left: 5rem !important;
+  }
+}
+@media screen and (min-width: 1530px) {
+  .pl-auto {
+    padding-left: 11rem !important;
+  }
+}
+/* @media screen and (min-width: 1560px) {
+  .pl-auto {
+    padding-left: 3rem !important;
+  }
+} */
+
 a {
   color: inherit;
   text-decoration: none;

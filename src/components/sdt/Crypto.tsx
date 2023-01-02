@@ -5,7 +5,7 @@ import AppStore from "../general/AppStore";
 
 const Crypto: FC = () => {
   return (
-    <div className="2xl:pl-[11rem] lg:pl-10 px-5 sm:px-10 lg:px-0 flex flex-col-reverse lg:flex-row justify-between my-8 sm:my-36">
+    <div className="pl-auto lg:pl-10 px-5 sm:px-10 lg:px-0 flex flex-col-reverse lg:flex-row justify-between my-8 sm:my-36">
       <div className="my-auto basis-[45%] xl:basis-[38%] mt-6 pt-0">
         <h3 className="font-medium text-2xl sm:text-3xl lg:text-4xl text-[#2C3131]">
           We make crypto easy. Here are 3 easy steps to buy SDT

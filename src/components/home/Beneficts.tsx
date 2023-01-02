@@ -61,7 +61,7 @@ const Beneficts: FC = () => {
             dignissim placerat nisi, adipiscing mauris non purus parturient.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-y-10 gap-x-7 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-7 mt-16">
           {chooseData.map((data) => (
             <div
               key={data.id}
@@ -80,7 +80,7 @@ const Beneficts: FC = () => {
             </div>
           ))}
         </div>
-        <div className="bg-white rounded-xl border border-secondary-400 px-14 py-12 flex flex-row mt-14 justify-evenly relative top-20 z-30">
+        <div className="bg-white rounded-xl border border-secondary-400 px-14 py-12 grid grid-cols-1 sm:grid-cols-3 mt-14 justify-evenly relative top-20 z-30">
           <div className=" flex flex-col text-center py-3">
             <h4 className="text-primary text-5xl">99k</h4>
             <p className="text-lg text-text-500">People have joined</p>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Hero: FC = () => {
   return (
-    <div className="pl-52 flex flex-col sm:flex-row justify-between bg-secondary-600 bg-opacity-10">
+    <div className="pl-auto sm:container lg:max-w-none mx-auto xl:pl-[3rem] pt-9 lg:pt-0 lg:pl-10 px-5 sm:px-10 lg:px-0 flex flex-col lg:flex-row justify-between bg-[#F5FAFF] lg:bg-secondary-600 lg:bg-opacity-10">
       <div className="flex flex-col basis-[39%] gap-2 my-auto">
         <h1 className="font-bold text-4xl sm:text-6xl bg-gradient-600 bg-clip-text text-transparent-active">
           The Future Of Healthcare, Delivered Today

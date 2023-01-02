@@ -31,18 +31,18 @@ const Token: FC = () => {
     },
   ];
   return (
-    <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-10">
-      <p className="font-medium text-[#333333] text-lg text-center">
+    <div className="container pt-12 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-10">
+      <p className="font-medium text-[#333333] text-sm sm:text-base lg:text-lg text-center">
         SFT Token
       </p>
-      <h3 className="bg-gradient-600 bg-clip-text text-transparent-active font-medium text-5xl text-center mb-20 mt-6">
+      <h3 className="bg-gradient-600 bg-clip-text text-transparent-active font-bold sm:font-medium text-xl sm:text-3xl lg:text-5xl text-center mb-20 mt-2 lg:mt-6">
         What can I do with StableFit Token?
       </h3>
       <div className="flex flex-col sm:flex-row mx-auto gap-10">
         {StepsData.map((data) => (
           <div
             key={data.id}
-            className={`flex flex-col ${data.class} pt-4 px-1 rounded-[20px] basis-[30%] mx-auto justify-between gap-y-24`}
+            className={`flex flex-col ${data.class} pt-4 px-4 sm:px-1 rounded-[20px] basis-[30%] mx-auto justify-between gap-y-24`}
           >
             <Image
               className="mx-auto"
@@ -52,10 +52,10 @@ const Token: FC = () => {
               height={data.imageSize}
             />
             <div className="">
-              <h4 className="bg-gradient-600 bg-clip-text text-transparent-active font-medium mt-4 text-3xl text-left sm:w-3/4 mx-auto">
+              <h4 className="bg-gradient-600 bg-clip-text text-transparent-active font-medium mt-4 text-2xl lg:text-3xl text-center sm:text-left sm:w-3/4 mx-auto">
                 {data.header}
               </h4>
-              <p className="mt-4 mb-10 text-text-500 text-base text-left w-full sm:w-3/4 mx-auto">
+              <p className="mt-4 mb-10 text-text-500 text-base text-center sm:text-left w-full sm:w-3/4 mx-auto">
                 {data.body}
               </p>
             </div>

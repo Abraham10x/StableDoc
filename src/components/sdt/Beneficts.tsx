@@ -48,20 +48,22 @@ const Beneficts: FC = () => {
   ];
   return (
     <div className="bg-secondary-900">
-      <div className="container px-10 pb-8 2xl:px-0 mx-auto ">
+      <div className="container px-5 pb-8 2xl:px-0 mx-auto ">
         <div className="flex flex-col sm:flex-row justify-between pt-28">
-          <div className="flex flex-col gap-5">
-            <p className="font-medium text-3xl text-[#9ABDFE]">Features</p>
-            <h3 className="font-medium text-white text-[44px] leading-7">
+          <div className="flex flex-col gap-3 sm:gap-5">
+            <p className="font-medium text-xs sm:text-2xl lg:text-3xl text-[#9ABDFE]">
+              Features
+            </p>
+            <h3 className="font-medium text-white text-2xl sm:text-3xl lg:text-[44px] leading-7">
               Why Invest in SDT
             </h3>
           </div>
-          <p className="text-lg text-white w-2/6">
+          <p className="text-base sm:text-lg lg:text-lg text-white w-full mt-3 sm:mt-0 sm:w-2/4 lg:w-2/6">
             Pellentesque etiam blandit in tincidunt at donec. Eget ipsum
             dignissim placerat nisi, adipiscing mauris non purus parturient.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-y-10 gap-x-7 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-7 mt-16">
           {chooseData.map((data) => (
             <div
               key={data.id}
@@ -73,15 +75,16 @@ const Beneficts: FC = () => {
                 width={60}
                 height={60}
               />
-              <h3 className="font-medium text-2xl text-text-700">
+              <h3 className="font-medium text-lg sm:text-xl lg:text-2xl text-text-700">
                 {data.header}
               </h3>
-              <p className="text-lg text-text-600">{data.body}</p>
+              <p className="text-base sm:text-lg text-text-600">{data.body}</p>
             </div>
           ))}
         </div>
-        <p className="text-white text-3xl font-medium mt-16 text-center">
-          Don’t know how to buy SDT? Click here
+        <p className="text-white text-base sm:text-xl lg:text-3xl font-medium mt-16 text-center">
+          Don’t know how to buy SDT?{" "}
+          <span className="text-primary underline">Click here</span>
         </p>
       </div>
     </div>

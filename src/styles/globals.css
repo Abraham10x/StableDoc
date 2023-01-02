@@ -24,6 +24,14 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+@media screen and (min-width: 640px) {
+  .text-transparent-remove {
+    background: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #151411;
+    background-clip: text;
+  }
+}
 
 a {
   color: inherit;

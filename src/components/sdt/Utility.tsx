@@ -25,17 +25,33 @@ const Utility: FC = () => {
     },
   ];
   return (
-    <div className="container pt-20 px-10 pb-8 2xl:px-0 mx-auto">
-      <div className="flex flex-col gap-5">
-        <p className="font-medium text-lg text-primary text-center">
+    <div className="container pt-20 px-5 pb-8 2xl:px-0 mx-auto">
+      <div className="flex flex-col gap-2 sm:gap-4 lg:gap-5">
+        <p className="font-medium text-sm sm:text-base lg:text-lg text-text-700 sm:text-primary text-center">
           SDT Utility
         </p>
-        <h3 className="font-medium text-text-700 text-[44px] leading-7 text-center mx-auto">
+        <h3 className="font-medium bg-gradient-600 bg-clip-text text-transparent-active text-transparent-remove sm:text-text-700 text-xl sm:text-3xl lg:text-[44px] leading-7 text-center mx-auto">
           What’s possible with StableDoc Token?
         </h3>
       </div>
-      <div className="grid grid-cols-3 grid-rows-3 mt-20">
-        <div className="px-10 py-12 flex flex-col gap-3">
+      <div className="grid grid-rows-1 grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-3 lg:grid-rows-2 sm:gap-x-10 lg:gap-x-0 mt-0 sm:mt-10 lg:mt-20">
+        <div className="mt-16 sm:hidden">
+          <Image
+            src="/img/sdt/mobile-hand.png"
+            alt="squares icon"
+            width={500}
+            height={500}
+          />
+        </div>
+        <div className="mt-16 hidden sm:block lg:hidden mx-auto">
+          <Image
+            src="/img/sdt/desktop-hand.png"
+            alt="squares icon"
+            width={180}
+            height={180}
+          />
+        </div>
+        <div className="lg:px-10 py-12 flex flex-col gap-3">
           <Image
             src="/img/sdt/files-icon.svg"
             alt="squares icon"
@@ -49,7 +65,7 @@ const Utility: FC = () => {
             Add multiple links in Instagram instead of just one.
           </p>
         </div>
-        <div className="row-span-3 mt-36">
+        <div className="row-span-3 mt-36 hidden lg:block">
           <Image
             src="/img/sdt/desktop-hand.png"
             alt="squares icon"
@@ -58,7 +74,7 @@ const Utility: FC = () => {
           />
         </div>
         {TokenData.map((data) => (
-          <div key={data.id} className="px-10 py-12 flex flex-col gap-3">
+          <div key={data.id} className="lg:px-10 py-12 flex flex-col gap-3">
             <Image src={data.image} alt="squares icon" width={30} height={30} />
             <h3 className="font-medium text-2xl text-text-700">
               {data.header}

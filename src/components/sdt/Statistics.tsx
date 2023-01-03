@@ -27,7 +27,7 @@ const Statistics: FC = () => {
   ];
   return (
     <div className="bg-secondary-700 pb-20">
-      <div className="container pt-3 sm:pt-6 lg:pt-12 px-5 pb-4 sm:pb-8 2xl:px-0 mx-auto mt-0 sm:gap-3 2xl:mt-20">
+      <div className="container pt-3 sm:pt-6 lg:pt-12 px-5 sm:px-10 pb-4 sm:pb-8 2xl:px-0 mx-auto mt-0 sm:gap-3 2xl:mt-20">
         <h3 className="bg-gradient-600 bg-clip-text text-transparent-active font-medium text-2xl sm:text-3xl lg:text-4xl text-center mb-5 sm:mb-10 lg:mb-20 mt-8">
           Token Metrics on launch
         </h3>

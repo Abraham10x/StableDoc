@@ -48,7 +48,7 @@ const Beneficts: FC = () => {
   ];
   return (
     <div className="bg-secondary-900">
-      <div className="container px-5 pb-8 2xl:px-0 mx-auto ">
+      <div className="container px-5 sm:px-10 pb-8 2xl:px-0 mx-auto ">
         <div className="flex flex-col sm:flex-row justify-between pt-28">
           <div className="flex flex-col gap-3 sm:gap-5">
             <p className="font-medium text-xs sm:text-2xl lg:text-3xl text-[#9ABDFE]">

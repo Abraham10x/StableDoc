@@ -25,7 +25,7 @@ const Utility: FC = () => {
     },
   ];
   return (
-    <div className="container pt-20 px-5 pb-8 2xl:px-0 mx-auto">
+    <div className="container pt-20 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto">
       <div className="flex flex-col gap-2 sm:gap-4 lg:gap-5">
         <p className="font-medium text-sm sm:text-base lg:text-lg text-text-700 sm:text-primary text-center">
           SDT Utility

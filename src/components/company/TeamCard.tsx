@@ -32,7 +32,7 @@ const TeamCard: FC<IProps> = ({
         onMouseEnter={handleClick}
       >
         {!state ? (
-          <div className="pt-4 sm:pt-8 pb-4 px-8 transition-all bg-team-gradient bg-opacity-20 absolute top-0 right-0 w-full h-full sm:max-h-80 xl:max-h-96 sm:overflow-y-scroll 2xl:overflow-hidden">
+          <div className="pt-4 sm:pt-8 pb-4 px-8 bg-team-gradient bg-opacity-20 absolute top-0 right-0 w-full h-full sm:max-h-80 xl:max-h-96 sm:overflow-y-scroll 2xl:overflow-hidden">
             <p className="text-sm sm:text-base font-medium text-text-600">
               {description}
             </p>

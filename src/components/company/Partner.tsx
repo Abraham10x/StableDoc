@@ -14,19 +14,17 @@ const parnters = [
 const Parnter: FC = () => {
   return (
     <div className="bg-secondary-700">
-      <div className="my-16 sm:my-24 text-center container py-14 px-10 2xl:px-0 mx-auto">
+      <div className="my-16 sm:my-24 text-center container py-14 px-5 sm:px-10 2xl:px-0 mx-auto">
         <h3 className="bg-gradient-600 bg-clip-text text-transparent-active text-center font-bold text-xl sm:text-3xl lg:text-4xl">
           We have partnered with over 10 companies
         </h3>
-        <div className="flex flex-wrap gap-8 mt-10 justify-center">
+        <div className="flex w-full overflow-x-auto gap-12 sm:gap-10 lg:gap-28 justify-start xl:justify-center py-5 my-5 lg:my-0">
           {parnters.map((data, index) => (
             <Image
-              data-aos="flip-down"
               src={data}
-              className=""
               alt="parnters lcon"
-              width={150}
-              height={150}
+              width={180}
+              height={180}
               key={index}
             />
           ))}

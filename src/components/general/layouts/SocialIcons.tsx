@@ -12,7 +12,7 @@ import {
 
 const SocialIcons: FC = () => {
   return (
-    <div className="flex flex-row space-x-3 text-white justify-center sm:justify-start mt-5">
+    <div className="flex flex-row space-x-3 text-white justify-start mt-5">
       <Link href="https://www.facebook.com/myminervahub" target="_blank">
         <RiFacebookCircleFill size={25} />
       </Link>

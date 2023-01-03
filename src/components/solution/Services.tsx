@@ -103,7 +103,7 @@ const Services: FC = () => {
     },
   ];
   return (
-    <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-6 lg:mt-10">
+    <div className="container pt-12 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-6 lg:mt-10">
       <h3 className="bg-gradient-600 bg-clip-text text-transparent-active sm:font-medium font-bold text-2xl sm:text-3xl lg:text-5xl text-center mt-8 sm:mt-0 lg:mb-10">
         Premium health services
       </h3>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const CTA: FC = () => {
   return (
-    <div className="container pt-12 px-10 pb-8 2xl:px-14 mx-auto mt-4 sm:mt-10 mb-28">
+    <div className="container pt-12 px-5 sm:px-10 pb-8 2xl:px-14 mx-auto mt-4 sm:mt-10 mb-28">
       <div className="px-5 sm:pr-0 sm:pl-10 lg:px-20 py-8 sm:py-20 flex flex-col sm:flex-row gap-10 bg-primary rounded-xl sm:rounded-3xl relative h-96 sm:h-auto">
         <div className="flex flex-col pt-4 pb-9 z-20 sm:basis-[60%] lg:basis-auto">
           <h3 className="text-white font-bold font-sans text-xl sm:text-4xl">

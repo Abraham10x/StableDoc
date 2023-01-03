@@ -31,7 +31,7 @@ const Features: FC = () => {
   ];
   return (
     <div className="bg-secondary-700">
-      <div className="container pt-14 px-10 pb-8 2xl:px-0 mx-auto mt-40 mb-24 lg-mb-0">
+      <div className="container pt-14 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-40 mb-24 lg-mb-0">
         <h3 className="bg-gradient-600 bg-clip-text text-transparent-active font-medium text-2xl sm:text-3xl lg:text-4xl text-center mb-6 sm:mb-10">
           The Telehealth app
         </h3>

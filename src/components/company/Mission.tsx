@@ -3,7 +3,7 @@ import { FC } from "react";
 
 const Mission: FC = () => {
   return (
-    <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-0 sm:mt-7 lg:mt-32">
+    <div className="container pt-12 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-0 sm:mt-7 lg:mt-32">
       <div className="flex flex-col sm:flex-row justify-between">
         <div className="flex flex-col basis-[40%]">
           <p className="text-sm font-medium sm:font-bold sm:text-base lg:text-lg text-text-500">

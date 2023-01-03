@@ -8,25 +8,25 @@ const Solutions: FC = () => {
   const BorderData = [
     {
       id: 1,
-      image: "/img/general/nav/doctor-kit.svg",
+      image: "/img/general/nav/doctor-kit.png",
       header: "Abroad Referral & Medical Tourism",
       link: "/solution/#Abroad-Referral-&-Medical-Tourism",
     },
     {
       id: 2,
-      image: "/img/general/nav/report.svg",
+      image: "/img/general/nav/report.png",
       header: "Annual Physical",
       link: "/solution/#Annual-Physical",
     },
     {
       id: 3,
-      image: "/img/general/nav/pod.svg",
+      image: "/img/general/nav/pod.png",
       header: "StablePods",
       link: "/solution/#StablePods",
     },
     {
       id: 4,
-      image: "/img/general/nav/doctor.svg",
+      image: "/img/general/nav/doctor.png",
       header: "Diaspora Sponsored Health",
       link: "/solution/#Diaspora-Sponsored-Health",
     },
@@ -34,25 +34,25 @@ const Solutions: FC = () => {
   const BlockchainData = [
     {
       id: 1,
-      image: "/img/general/nav/chart.svg",
+      image: "/img/general/nav/chart.png",
       header: "Mov2Earn",
       link: "/M2E",
     },
     {
       id: 2,
-      image: "/img/general/nav/VR.svg",
+      image: "/img/general/nav/VR.png",
       header: "Virtual Reality – And The Metaverse",
       link: "/solution/#Virtual-Reality-–-And-The-Metaverse-",
     },
     {
       id: 3,
-      image: "/img/general/nav/robot.svg",
+      image: "/img/general/nav/robot.png",
       header: "AI-Enabled Apps, Tools And Devices",
       link: "/solution/#AI-Enabled-Apps,-Tools-And-Devices",
     },
     {
       id: 4,
-      image: "/img/general/nav/nft-token.svg",
+      image: "/img/general/nav/nft-token.png",
       header: "StableDoc Health NFT",
       link: "/solution/#StableDoc-Health-NFT",
     },
@@ -66,7 +66,7 @@ const Solutions: FC = () => {
         </p>
 
         <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-full hidden z-10 top-full left-0 min-w-[15rem] bg-none before:absolute before:-top-5 before:left-0 before:w-full before:h-5">
-          <div className="w-full lg:w-3/4 mx-auto bg-white sm:shadow-md py-5">
+          <div className="w-full sm:pl-6 lg:pl-0 lg:w-3/4 mx-auto bg-white lg:shadow-md py-5">
             <p className="text-lg text-text-600 my-10 text-center hidden lg:block">
               StableDoc offers many solutions to better the healthcare and
               crypto space in Africa.
@@ -85,10 +85,10 @@ const Solutions: FC = () => {
                   <LinkButton link="/solution/#Home-Health">
                     <div className="flex gap-4">
                       <Image
-                        src="/img/general/nav/home.svg"
+                        src="/img/general/nav/home.png"
                         alt="home health care"
-                        width={40}
-                        height={40}
+                        width={50}
+                        height={50}
                       />
                       <p className="text-sm lg:text-base text-text-600 font-medium my-auto">
                         Home Health
@@ -98,10 +98,10 @@ const Solutions: FC = () => {
                   <LinkButton link="/solution/#Men-and-women’s-health">
                     <div className="flex gap-4">
                       <Image
-                        src="/img/general/nav/health-care.svg"
+                        src="/img/general/nav/health-care.png"
                         alt="healthcare worker"
-                        width={40}
-                        height={40}
+                        width={50}
+                        height={50}
                       />
                       <p className="text-sm lg:text-base text-text-600 font-medium my-auto">
                         Men and women’s health

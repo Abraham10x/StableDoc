@@ -16,7 +16,7 @@ const AdvisvoryTeam: FC = () => {
     });
   }
   return (
-    <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-0 sm:mt-10 lg:mt-32">
+    <div className="container pt-12 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-0 sm:mt-10 lg:mt-32">
       <div className="flex flex-col gap-2">
         <h2 className="bg-gradient-600 bg-clip-text text-transparent-active font-bold text-xl sm:text-3xl lg:text-5xl text-center">
           Our Advsiory Team

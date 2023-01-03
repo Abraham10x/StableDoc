@@ -3,7 +3,7 @@ import { FC } from "react";
 const Timeline: FC = () => {
   return (
     <div className="bg-secondary-700 pb-20 mt-14">
-      <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-20">
+      <div className="container pt-12 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-20">
         <h3 className="bg-gradient-600 bg-clip-text text-transparent-active font-medium text-xl sm:text-3xl lg:text-6xl text-center mt-8">
           Our Roadmap
         </h3>

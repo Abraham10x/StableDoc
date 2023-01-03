@@ -89,7 +89,7 @@ const Guides: FC = () => {
     number: "20",
   });
   return (
-    <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-0 sm:mt-5 lg:mt-10">
+    <div className="container pt-12 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-0 sm:mt-5 lg:mt-10">
       <div className="flex flex-col lg:flex-row justify-between gap-16">
         <div className="basis-full sm:basis-2/5 lg:basis-1/4">
           <div className="relative mt-1">

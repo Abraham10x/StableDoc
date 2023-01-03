@@ -48,13 +48,75 @@ const Header: FC = () => {
           onClick={() => setOpen(!open)}
           className="text-3xl absolute right-8 top-6 cursor-pointer lg:hidden"
         >
-          {open ? <IoClose /> : <IoMenu />}
+          {open ? (
+            <Image
+              className="mt-1"
+              src="/img/general/nav/close-nav.svg"
+              alt="close icon"
+              width={25}
+              height={25}
+            />
+          ) : (
+            <Image
+              className="mt-3"
+              src="/img/general/nav/open-nav.svg"
+              alt="menu icon"
+              width={25}
+              height={25}
+            />
+          )}
         </div>
         <div
-          className={`lg:flex lg:items-center lg:pb-0 pb-12 absolute lg:static lg:z-auto z-[2] left-0 w-full bg-white bg-opacity-100 lg:bg-opacity-[0.0] lg:w-auto lg:pl-0 pl-9 overflow-y-auto transition-all duration-500 ease-in ${
+          className={`lg:flex lg:items-center lg:pb-0 pb-12 absolute lg:static lg:z-auto z-[2] left-0 w-full bg-white bg-opacity-100 lg:bg-opacity-[0.0] lg:w-auto lg:pl-0 px-9 overflow-y-auto transition-all duration-500 ease-in ${
             open ? "top-[4.8rem] sm:top-[4.7rem] max-h-[90vh]" : "top-[-1000px]"
           }`}
         >
+          <div className="mt-6 lg:hidden">
+            <Button className="border-stroke-500 border text-base py-3 px-4 w-40 rounded-full">
+              <div className="flex justify-center">
+                <svg
+                  className="w-5 h-5 mr-2"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlnsXlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 3900 3900"
+                >
+                  <path fill="#b22234" d="M0 0h7410v3900H0z" />
+                  <path
+                    d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0"
+                    stroke="#fff"
+                    stroke-width="300"
+                  />
+                  <path fill="#3c3b6e" d="M0 0h2964v2100H0z" />
+                  <g fill="#fff">
+                    <g id="d">
+                      <g id="c">
+                        <g id="e">
+                          <g id="b">
+                            <path
+                              id="a"
+                              d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z"
+                            />
+                            <use xlinkHref="#a" y="420" />
+                            <use xlinkHref="#a" y="840" />
+                            <use xlinkHref="#a" y="1260" />
+                          </g>
+                          <use xlinkHref="#a" y="1680" />
+                        </g>
+                        <use xlinkHref="#b" x="247" y="210" />
+                      </g>
+                      <use xlinkHref="#c" x="494" />
+                    </g>
+                    <use xlinkHref="#d" x="988" />
+                    <use xlinkHref="#c" x="1976" />
+                    <use xlinkHref="#e" x="2470" />
+                  </g>
+                </svg>
+                <p className="inline">EN</p>
+                <IoChevronDown size={20} className="inline mb-1 ml-1" />
+              </div>
+            </Button>
+          </div>
           <ul className={`flex flex-col lg:flex-row`}>
             {navLinks.map((data) => (
               <li
@@ -66,55 +128,9 @@ const Header: FC = () => {
             ))}
           </ul>
           <div className="flex gap-5 lg:hidden">
-            <Button className=" bg-primary font-semibold text-white px-8 py-4 leading-7 text-base rounded-full">
+            <Button className=" bg-primary font-semibold text-white w-full px-8 py-3 leading-7 text-base rounded-full">
               Get Started
             </Button>
-            <div className="my-auto">
-              <Button className="border-stroke-500 border text-base px-4 py-2 rounded-full">
-                <div className="flex">
-                  <svg
-                    className="w-5 h-5 mr-2"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlnsXlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 0 3900 3900"
-                  >
-                    <path fill="#b22234" d="M0 0h7410v3900H0z" />
-                    <path
-                      d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0"
-                      stroke="#fff"
-                      stroke-width="300"
-                    />
-                    <path fill="#3c3b6e" d="M0 0h2964v2100H0z" />
-                    <g fill="#fff">
-                      <g id="d">
-                        <g id="c">
-                          <g id="e">
-                            <g id="b">
-                              <path
-                                id="a"
-                                d="M247 90l70.534 217.082-184.66-134.164h228.253L176.466 307.082z"
-                              />
-                              <use xlinkHref="#a" y="420" />
-                              <use xlinkHref="#a" y="840" />
-                              <use xlinkHref="#a" y="1260" />
-                            </g>
-                            <use xlinkHref="#a" y="1680" />
-                          </g>
-                          <use xlinkHref="#b" x="247" y="210" />
-                        </g>
-                        <use xlinkHref="#c" x="494" />
-                      </g>
-                      <use xlinkHref="#d" x="988" />
-                      <use xlinkHref="#c" x="1976" />
-                      <use xlinkHref="#e" x="2470" />
-                    </g>
-                  </svg>
-                  <p className="inline">EN</p>
-                  <IoChevronDown size={20} className="inline mb-1 ml-1" />
-                </div>
-              </Button>
-            </div>
           </div>
         </div>
         <div className="lg:flex gap-5 hidden">

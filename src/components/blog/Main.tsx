@@ -45,7 +45,7 @@ const Main: FC = () => {
     number: "05",
   });
   return (
-    <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-0 sm:mt-5 lg:mt-10">
+    <div className="container pt-12 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-0 sm:mt-5 lg:mt-10">
       <div className="flex flex-col lg:flex-row justify-between gap-10 sm:gap-12 lg:gap-16">
         <div className="basis-1/4">
           <div className="relative mt-1">

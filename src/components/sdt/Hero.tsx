@@ -4,7 +4,7 @@ import { Button } from "../general/Button";
 const Hero: FC = () => {
   return (
     <div>
-      <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto">
+      <div className="container pt-12 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto">
         <h1 className="font-extrabold text-3xl sm:text-4xl lg:text-6xl bg-gradient-600 bg-clip-text text-transparent-active text-center">
           Telehealth, meet Blockchain, meet SDT crypto coins
         </h1>

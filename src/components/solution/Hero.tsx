@@ -4,7 +4,7 @@ import { LinkButton } from "../general/Button";
 
 const Hero: FC = () => {
   return (
-    <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-32">
+    <div className="container pt-12 px-5 sm:px-10 sm:pb-8 2xl:px-0 mx-auto mt-32">
       <div className="flex flex-col lg:flex-row justify-between bg-secondary-600 bg-opacity-10 gap-y-24 gap-x-14 px-5 sm:px-16 py-12 rounded-3xl">
         <div className="flex flex-col justify-between h-full basis-[54%] my-auto">
           <div className="flex flex-row justify-start gap-5">
@@ -33,22 +33,22 @@ const Hero: FC = () => {
           height={50}
         />
       </div>
-      <div className="flex flex-wrap mt-16 justify-center gap-7">
+      <div className="flex w-full overflow-x-auto mt-6 py-6 justify-start sm:justify-center gap-7">
         <LinkButton
           link="#"
-          className="bg-primary hover:bg-secondary-900 transition-all text-white px-5 py-3 text-xs sm:text-sm lg:text-lg font-medium sm:font-bold rounded lg:rounded-xl"
+          className="bg-primary hover:bg-secondary-900 transition-all text-white w-48 px-5 py-3 text-xs sm:text-sm lg:text-lg font-medium sm:font-bold rounded lg:rounded-xl"
         >
           Premium health services
         </LinkButton>
         <LinkButton
           link="#"
-          className="border border-primary hover:bg-primary/20 transition-colors text-primary px-5 py-3 text-xs sm:text-sm lg:text-lg font-medium sm:font-bold rounded lg:rounded-xl"
+          className="border border-primary hover:bg-primary/20 transition-colors text-primary w-48 px-5 py-3 text-xs sm:text-sm lg:text-lg font-medium sm:font-bold rounded lg:rounded-xl"
         >
           Cross border Health
         </LinkButton>
         <LinkButton
           link="#"
-          className="border border-primary hover:bg-primary/20 transition-colors text-primary px-5 py-3 text-xs sm:text-sm lg:text-lg font-medium sm:font-bold rounded lg:rounded-xl"
+          className="border border-primary hover:bg-primary/20 transition-colors text-primary w-48 px-5 py-3 text-xs sm:text-sm lg:text-lg font-medium sm:font-bold rounded lg:rounded-xl"
         >
           Your health on a blockchain
         </LinkButton>

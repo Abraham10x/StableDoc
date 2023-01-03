@@ -27,7 +27,7 @@ const Steps: FC = () => {
   return (
     <>
       <div className="bg-secondary-700 sm:bg-white pt-10 sm:pt-0">
-        <div className="container px-10 pb-8 2xl:px-0 mx-auto sm:mt-16 lg:mt-32">
+        <div className="container px-5 sm:px-10 pb-8 2xl:px-0 mx-auto sm:mt-16 lg:mt-32">
           <div className="text-center mx-auto">
             <h3 className="text-xl font-bold sm:font-normal sm:text-4xl lg:text-6xl text-text-700">
               Get Started in Just Three Steps{" "}
@@ -40,7 +40,7 @@ const Steps: FC = () => {
           </div>
         </div>
         <div className="bg-secondary-700 mt-24 pb-8 ">
-          <div className="container px-10 2xl:px-0 mx-auto">
+          <div className="container px-5 sm:px-10 2xl:px-0 mx-auto">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto gap-10 relative sm:bottom-12">
               {StepsData.map((data) => (
                 <div

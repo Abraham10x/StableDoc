@@ -5,7 +5,7 @@ import AppStore from "../general/AppStore";
 
 const Hero: FC = () => {
   return (
-    <div className="sm:container pt-12 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-32">
+    <div className="sm:container pt-12 pb-8 2xl:px-0 mx-auto mt-32">
       <div className="flex flex-col lg:flex-row justify-between bg-secondary-600 bg-opacity-10 gap-y-24 gap-x-14 sm:px-16 lg:py-12 rounded-3xl relative lg:bg-hero-bg bg-right bg-no-repeat">
         <div className="flex flex-col justify-between h-full basis-[45%] my-auto px-8 pt-10 lg:pt-0">
           <p className="font-bold text-xs sm:text-base lg:text-xl uppercase text-text-300">

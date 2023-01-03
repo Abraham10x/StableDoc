@@ -6,7 +6,7 @@ const Hero: FC = () => {
     <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-28 lg:mt-32">
       <div className="flex flex-col lg:flex-row justify-between bg-secondary-600 bg-opacity-10 gap-y-24 gap-x-14 px-5 sm:px-16 py-12 rounded-3xl">
         <div className="flex flex-col justify-between h-full basis-[54%] my-auto">
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-start">
             <h1 className="font-bold text-2xl sm:text-3xl lg:text-5xl bg-gradient-600 bg-clip-text text-transparent-active">
               StableDoc Blog
             </h1>

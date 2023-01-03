@@ -4,17 +4,17 @@ import Image from "next/image";
 
 const Download: FC = () => {
   return (
-    <div className="bg-secondary-700 bg-download-bg bg-no-repeat bg-contain -mt-[32rem] relative pb-64">
-      <div className="container px-10 pb-8 2xl:px-0 mx-auto pt-80">
-        <div className="text-center flex flex-col gap-5">
-          <h3 className="text-white font-bold w-1/2 text-[40px] leading-[3rem] mx-auto">
+    <div className="bg-secondary-700 bg-mobile-download sm:bg-download-bg bg-no-repeat bg-contain -mt-[24rem] sm:-mt-[20.6rem] lg:-mt-[30rem] 2xl:-mt-[32rem] relative pb-[3.8rem] sm:pb-16 xl:pb-40 2xl:pb-64">
+      <div className="container px-5 sm:px-10 pb-8 2xl:px-0 mx-auto pt-10 sm:pt-10 lg:pt-36 xl:pt-40 2xl:pt-80">
+        <div className="text-center flex flex-col gap-5 sm:gap-2 xl:gap-5">
+          <h3 className="text-white font-bold w-full sm:w-4/6 xl:w-1/2 text-base sm:text-3xl lg:text-[40px] lg:leading-[3rem] mx-auto">
             Download our app and start your free trail to get started today!
           </h3>
-          <p className="text-xl font-medium text-[#A9C5DE]">
+          <p className="text-xl font-medium text-[#A9C5DE] hidden sm:block">
             The best care for you – anywhere, anytime.
           </p>
-          <div className="flex flex-row mt-5 gap-5 mx-auto">
-            <Button className="bg-white font-semibold text-primary w-52 py-3 leading-7 text-base rounded-full">
+          <div className="flex flex-row mt-1 sm:mt-5 gap-5 mx-auto">
+            <Button className="bg-white hover:bg-secondary-900 transition-colors font-semibold text-primary w-36 sm:w-44 lg:w-52 py-2 sm:py-3 leading-7 text-sm sm:text-base rounded-full">
               <div className="flex justify-center gap-3 mx-auto">
                 <Image
                   src="/img/home/apple-logo.svg"
@@ -25,8 +25,8 @@ const Download: FC = () => {
                 <p className="my-auto">App store</p>
               </div>
             </Button>
-            <Button className="bg-primary font-semibold text-white w-52 py-3 leading-7 text-base rounded-full">
-              <div className="flex justify-center gap-2">
+            <Button className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white w-[9.8rem] sm:w-44 lg:w-52 py-2 sm:py-3 leading-7 text-sm sm:text-base rounded-full">
+              <div className="flex justify-center gap-1 sm:gap-2">
                 <Image
                   src="/img/home/google-play.svg"
                   alt="Google play store"

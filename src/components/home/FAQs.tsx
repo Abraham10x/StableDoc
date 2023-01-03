@@ -69,18 +69,18 @@ const FAQs: FC = () => {
     },
   ];
   return (
-    <div className="container pt-12 px-10 pb-8 2xl:px-0 mx-auto mt-20">
-      <div className="mb-28" id="FAQs">
-        <h2 className="font-bold bg-gradient-600 bg-clip-text text-transparent-active text-5xl text-center capitalize text-[#212121]">
-          Frequent asked questions
+    <div className="container pt-12 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-20">
+      <div className="mb-8 sm:mb-20 lg:mb-28" id="FAQs">
+        <h2 className="font-bold sm:bg-gradient-600 sm:bg-clip-text sm:text-transparent-active text-2xl sm:text-3xl lg:text-5xl text-center capitalize text-[#212121]">
+          Frequently asked questions
         </h2>
-        <p className="text-xl text-center capitalize text-[#757575] w-6/12 mt-7 mx-auto">
+        <p className="text-base sm:text-xl text-center capitalize text-[#757575] w-full sm:w-5/6 lg:w-6/12 mt-7 mx-auto">
           Pellentesque cras adipiscing tempus libero vel nullam mauris tellus.
           Aliquam ultrices tellus consequat amet, lectus aliquam est in neque.
         </p>
       </div>
 
-      <div className="hs-accordion-group w-4/6 mx-auto">
+      <div className="hs-accordion-group w-full sm:w-5/6 lg:w-4/6 mx-auto">
         {FAQdata.map((data) => (
           <div
             key={data.id}
@@ -88,11 +88,11 @@ const FAQs: FC = () => {
             id={data.qustionId}
           >
             <button
-              className="hs-accordion-toggle hs-accordion-active:text-primary group py-3 inline-flex items-center gap-x-3 w-full font-medium text-left text-black text-xl transition hover:bg-secondary-600/25"
+              className="hs-accordion-toggle hs-accordion-active:text-primary group py-3 inline-flex items-center gap-x-3 w-full font-medium text-left text-black text-base sm:text-xl transition hover:bg-secondary-600/25"
               aria-controls={data.controlId}
             >
               <svg
-                className="hs-accordion-active:hidden hs-accordion-active:text-primary block w-4 h-4 text-primary"
+                className="hs-accordion-active:hidden hs-accordion-active:text-primary block w-3 h-3 sm:w-4 sm:h-4 text-primary"
                 width="16"
                 height="16"
                 viewBox="0 0 16 16"
@@ -131,10 +131,10 @@ const FAQs: FC = () => {
             </button>
             <div
               id={data.controlId}
-              className={`hs-accordion-content ${data.content} w-full overflow-hidden transition-[height] duration-300 border-l-2 border-primary pl-4 ml-10`}
+              className={`hs-accordion-content ${data.content} w-full overflow-hidden transition-[height] duration-300 border-l-2 border-primary pl-4 pr-6 sm:pr-8 ml-5 sm:ml-10`}
               aria-labelledby={data.qustionId}
             >
-              <p className="text-text-700 text-lg">{data.answer}</p>
+              <p className="text-text-700 text-sm sm:text-lg">{data.answer}</p>
             </div>
           </div>
         ))}

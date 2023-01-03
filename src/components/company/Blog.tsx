@@ -5,7 +5,7 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
 const Blog: FC = () => {
   return (
-    <div className="container pt-8 px-10 pb-8 2xl:px-0 mx-auto mt-10 sm:mt-20 lg:mt-36 mb-56">
+    <div className="container pt-8 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-10 sm:mt-20 lg:mt-36 mb-56">
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-2 sm:gap-6 lg:gap-10">
           <h2 className="bg-gradient-600 bg-clip-text text-transparent-active font-bold text-2xl sm:text-3xl lg:text-5xl text-center">
@@ -16,7 +16,7 @@ const Blog: FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-rows-4 sm:grid-rows-3 sm:grid-flow-col gap-10">
+        <div className="grid grid-rows-4 sm:grid-rows-3 sm:grid-flow-col gap-10 sm:gap-5 xl:gap-10">
           <div className="md:row-span-3 md:col-span-2 bg-[url('/img/company/main-news.png')] sm:bg-center bg-no-repeat h-80 sm:h-[auto] lg:h-[50rem] bg-cover relative">
             <div className="absolute bottom-0 sm:bottom-5 bg-gradient-700 border border-primary rounded backdrop-blur-sm sm:backdrop-blur-md px-4 sm:px-8 w-full sm:w-[80%] lg:w-[60%] m-0 sm:ml-10">
               <h3 className="font-bold text-lg sm:text-2xl lg:text-4xl text-gray-500 mt-5 sm:mt-10">
@@ -32,7 +32,7 @@ const Blog: FC = () => {
               </Button>
             </div>
           </div>
-          <div className="bg-[url('/img/company/post-1.png')] relative bg-cover h-80 sm:h-60">
+          <div className="bg-[url('/img/company/post-1.png')] relative bg-cover h-80 sm:h-48 lg:h-60">
             <div className="absolute bottom-0 border-t border-primary bg-gradient-700 backdrop-blur-sm px-8">
               <h3 className="text-gray-500 font-bold text-base sm:text-sm lg:text-xl mb-5 mt-3">
                 StableDoc Plans Launch Of Blockchain-Based Telehealth And Health
@@ -44,7 +44,7 @@ const Blog: FC = () => {
               </Button>
             </div>
           </div>
-          <div className="bg-[url('/img/company/post-2.png')] relative bg-cover h-80 sm:h-60">
+          <div className="bg-[url('/img/company/post-2.png')] relative bg-cover h-80 sm:h-48 lg:h-60">
             <div className="absolute bottom-0 border-t border-primary bg-gradient-700 backdrop-blur-sm px-8">
               <h3 className="text-gray-500 font-bold text-base sm:text-sm lg:text-xl mb-5 mt-3">
                 StableDoc Announces Platform Partnership With PayTalk
@@ -55,7 +55,7 @@ const Blog: FC = () => {
               </Button>
             </div>
           </div>
-          <div className="bg-[url('/img/company/post-3.png')] relative bg-cover h-80 sm:h-60s">
+          <div className="bg-[url('/img/company/post-3.png')] relative bg-cover h-80 sm:h-48 lg:h-60">
             <div className="absolute bottom-0 border-t border-primary bg-gradient-700 backdrop-blur-sm px-8">
               <h3 className="text-gray-500 font-bold text-base sm:text-sm lg:text-xl mb-5 mt-3">
                 StableDoc Announces Platform Partnership With PayTalk

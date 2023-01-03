@@ -26,7 +26,7 @@ export default function Home() {
       <Beneficts />
       <Download />
       <CoreTeam />
-      <div className="bg-beneficts-bg bg-cover bg-no-repeat pt-56 pb-6">
+      <div className="bg-mobile-benefit sm:bg-beneficts-bg bg-cover bg-no-repeat pt-20 sm:pt-56 lg:pt-16 xl:pt-36 2xl:pt-56 pb-6">
         <Blog />
       </div>
       <Testimonial />

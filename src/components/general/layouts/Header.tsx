@@ -52,7 +52,7 @@ const Header: FC = () => {
         </div>
         <div
           className={`lg:flex lg:items-center lg:pb-0 pb-12 absolute lg:static lg:z-auto z-[2] left-0 w-full bg-white bg-opacity-100 lg:bg-opacity-[0.0] lg:w-auto lg:pl-0 pl-9 overflow-y-auto transition-all duration-500 ease-in ${
-            open ? "top-[4.8rem] sm:top-[4.7rem] max-h-screen" : "top-[-1000px]"
+            open ? "top-[4.8rem] sm:top-[4.7rem] max-h-[90vh]" : "top-[-1000px]"
           }`}
         >
           <ul className={`flex flex-col lg:flex-row`}>

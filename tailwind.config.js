@@ -44,6 +44,8 @@ module.exports = {
         "download-bg": "url('/img/home/download-bg.svg')",
         "client-bg": "url('/img/home/testimonial-bg.svg')",
         "SDT-hero": "url('/img/sdt/sdt-bg.svg')",
+        "mobile-benefit": "url('/img/home/benefit-mobile-bg.svg')",
+        "mobile-download": "url('/img/home/download-mobile-bg.svg')",
       },
     },
   },

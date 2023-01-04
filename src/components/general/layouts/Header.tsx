@@ -32,8 +32,19 @@ const Header: FC = () => {
   return (
     <div className="w-full fixed top-0 left-0 bg-secondary-700 sm:px-10 z-40 bg-opacity-100 lg:bg-opacity-[0.93]">
       <div className="md:flex items-center justify-between container mx-auto py-7 lg:py-1 px-7 sm:px-0 2xl:px-0">
-        <Link href="/" className="cursor-pointer">
-          <figure className="w-2/4 lg:w-full lg:h-full">
+        <figure className="w-2/4 sm:w-full lg:h-full lg:hidden">
+          <Link href="/" className="cursor-pointer">
+            <Image
+              className=" z-[999]"
+              alt="logo"
+              src="/img/brand-identity.svg"
+              width={150}
+              height={150}
+            />
+          </Link>
+        </figure>
+        <Link href="/" className="cursor-pointer hidden lg:block my-auto">
+          <figure className="w-2/4 sm:w-full lg:h-full">
             <Image
               className=" z-[999]"
               alt="logo"
@@ -50,7 +61,7 @@ const Header: FC = () => {
         >
           {open ? (
             <Image
-              className="mt-1"
+              className="mt-2"
               src="/img/general/nav/close-nav.svg"
               alt="close icon"
               width={25}

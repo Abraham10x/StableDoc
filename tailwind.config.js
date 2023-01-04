@@ -46,6 +46,8 @@ module.exports = {
         "SDT-hero": "url('/img/sdt/sdt-bg.svg')",
         "mobile-benefit": "url('/img/home/benefit-mobile-bg.svg')",
         "mobile-download": "url('/img/home/download-mobile-bg.svg')",
+        "timeline-bg":
+          "linear-gradient(294.72deg, #4563FF 9.05%, #4388DD 79.28%)",
       },
     },
   },

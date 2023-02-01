@@ -134,8 +134,8 @@ const Guides: FC = () => {
                       <path
                         d="M2 5L8.16086 10.6869C8.35239 10.8637 8.64761 10.8637 8.83914 10.6869L15 5"
                         stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
+                        strokeWidth="2"
+                        strokeLinecap="round"
                       />
                     </svg>
                   </div>
@@ -196,7 +196,7 @@ const Guides: FC = () => {
                   {data.header}
                 </h3>
                 {data.links.map((link, index) => (
-                  <div className="flex flex-row gap-5 my-4 ">
+                  <div className="flex flex-row gap-5 my-1 py-2 hover:bg-secondary-700 transition-colors cursor-pointer">
                     <Image
                       src="/img/support/rocket.svg"
                       alt="rocket icon"

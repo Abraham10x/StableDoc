@@ -74,12 +74,12 @@ const Solutions: FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between px-0 lg:px-16">
               <div className="flex flex-col mb-4 lg:mb-0">
                 <Link legacyBehavior href="#">
-                  <a
+                  <Link
                     href="/solution"
                     className="text-text-600 font-medium text-base sm:text-lg lg:text-xl border-b pb-3 mb-6 w-fit sm:hover:text-[1.4rem] hover:text-primary transition-all"
                   >
                     Premium Health Services
-                  </a>
+                  </Link>
                 </Link>
                 <div className="flex flex-col gap-1 sm:gap-2 lg:gap-4">
                   <LinkButton link="/solution/#Home-Health">

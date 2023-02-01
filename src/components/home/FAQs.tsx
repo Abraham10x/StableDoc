@@ -102,14 +102,14 @@ const FAQs: FC = () => {
                 <path
                   d="M2.62421 7.86L13.6242 7.85999"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M8.12421 13.36V2.35999"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                 />
               </svg>
               <svg
@@ -123,8 +123,8 @@ const FAQs: FC = () => {
                 <path
                   d="M2.62421 7.86L13.6242 7.85999"
                   stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                 />
               </svg>
               {data.question}

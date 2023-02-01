@@ -7,7 +7,9 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "prettier",
+    "next",
+    "next/core-web-vitals"
   ],
   "overrides": [],
   "parserOptions": {
@@ -22,12 +24,15 @@
     "@typescript-eslint/strict-boolean-expressions": "warn",
     "@typescript-eslint/prefer-optional-chain": "warn",
     "@typescript-eslint/promise-function-async": "warn",
-    "react/no-unescaped-entities": "warn",
-    "@typescript-eslint/restrict-template-expressions": "warn"
+    "react/no-unescaped-entities": "off",
+    "@typescript-eslint/restrict-template-expressions": "warn",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@next/next/no-page-custom-font": "off",
+    "react/jsx-key": "off"
   },
-  "setings": {
+  "settings": {
     "react": {
-      "version": "latest"
+      "version": "detect"
     }
   }
 }

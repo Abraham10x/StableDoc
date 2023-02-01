@@ -22,7 +22,7 @@ const Contact: FC = () => {
           </p>
           <div className="flex flex-row gap-5 sm:gap-8 lg:gap-10 mt-5 sm:mt-10 lg:mt-20">
             <Image
-              className="w-8 h-8 sm:w-14 sm:h-14 lg:w-auto lg:h-auto"
+              className="w-8 h-8 sm:w-14 sm:h-14"
               src="/img/support/phone-icon.svg"
               alt="phone icon"
               width={60}
@@ -34,7 +34,7 @@ const Contact: FC = () => {
           </div>
           <div className="flex flex-row gap-5 sm:gap-8 lg:gap-10 mt-5 sm:mt-10 lg:mt-20">
             <Image
-              className="w-8 h-8 sm:w-14 sm:h-14 lg:w-auto lg:h-auto"
+              className="w-8 h-8 sm:w-14 sm:h-14"
               src="/img/support/mail-icon.svg"
               alt="phone icon"
               width={60}
@@ -46,7 +46,7 @@ const Contact: FC = () => {
           </div>
           <div className="flex flex-row gap-5 sm:gap-8 lg:gap-10 mt-5 sm:mt-10 lg:mt-20">
             <Image
-              className="w-8 h-8 sm:w-14 sm:h-14 lg:w-auto lg:h-auto"
+              className="w-8 h-8 sm:w-14 sm:h-14"
               src="/img/support/map-icon.svg"
               alt="phone icon"
               width={60}

@@ -45,7 +45,7 @@ const Steps: FC = () => {
               {StepsData.map((data) => (
                 <div
                   key={data.id}
-                  className="flex flex-col bg-white pt-4 px-3 sm:px-1 border border-secondary-400 rounded-[20px] mx-auto justify-between"
+                  className="flex flex-col bg-white pt-4 px-3 sm:px-1 border border-secondary-400 w-full rounded-[20px] mx-auto justify-between"
                 >
                   <Image
                     className="mx-auto"

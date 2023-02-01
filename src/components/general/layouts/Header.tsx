@@ -83,7 +83,7 @@ const Header: FC = () => {
           }`}
         >
           <div className="mt-6 lg:hidden">
-            <Button className="border-stroke-500 border text-base py-3 px-4 w-40 rounded-full">
+            <Button className="border-stroke-500 hover:bg-primary/20 transition-all border text-base py-3 px-4 w-40 rounded-full">
               <div className="flex justify-center">
                 <svg
                   className="w-5 h-5 mr-2"
@@ -96,7 +96,7 @@ const Header: FC = () => {
                   <path
                     d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0"
                     stroke="#fff"
-                    stroke-width="300"
+                    strokeWidth="300"
                   />
                   <path fill="#3c3b6e" d="M0 0h2964v2100H0z" />
                   <g fill="#fff">
@@ -139,17 +139,17 @@ const Header: FC = () => {
             ))}
           </ul>
           <div className="flex gap-5 lg:hidden">
-            <Button className=" bg-primary font-semibold text-white w-full px-8 py-3 leading-7 text-base rounded-full">
+            <Button className=" bg-primary hover:bg-secondary-900 transition-all font-semibold text-white w-full px-8 py-3 leading-7 text-base rounded-full">
               Get Started
             </Button>
           </div>
         </div>
         <div className="lg:flex gap-5 hidden">
-          <Button className="bg-primary font-semibold text-white px-8  py-3 leading-7 text-base rounded-full">
+          <Button className="bg-primary hover:bg-secondary-900 transition-all font-semibold text-white px-8  py-3 leading-7 text-base rounded-full">
             Get Started
           </Button>
           <div className="my-auto">
-            <Button className="border-stroke-500 border text-base py-2 px-4 rounded-full">
+            <Button className="border-stroke-500 hover:bg-primary/20 transition-all border text-base py-2 px-4 rounded-full">
               <div className="flex">
                 <svg
                   className="w-5 h-5 mr-2"
@@ -162,7 +162,7 @@ const Header: FC = () => {
                   <path
                     d="M0 450h7410m0 600H0m0 600h7410m0 600H0m0 600h7410m0 600H0"
                     stroke="#fff"
-                    stroke-width="300"
+                    strokeWidth="300"
                   />
                   <path fill="#3c3b6e" d="M0 0h2964v2100H0z" />
                   <g fill="#fff">

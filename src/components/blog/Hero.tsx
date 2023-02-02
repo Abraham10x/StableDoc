@@ -21,7 +21,7 @@ const Hero: FC = () => {
           <p className="text-base sm:text-lg lg:text-2xl text-text-300 mt-8">
             Lorem ipsum dolor sit amet doloroli sitiol conse ctetur adipiscing
             elit. dolor sit amet doloroli sitiol conse ctetur adipiscing
-            elitdolor sit amet doloroli sitiol conse ctetur adipiscing elit
+            elitdolor sit amet doloroli sitiol sitiol conse ctetur adipiscing
           </p>
         </div>
         <Image

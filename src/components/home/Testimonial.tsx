@@ -40,6 +40,16 @@ const Testimonial: FC = () => {
         arcu leo vulputate. Magna feugiat ac adipiscing mattis velit
         facilisi metus. Dolor urna, mi at tincidunt. Nulla.`,
     },
+    {
+      id: 4,
+      image: "/img/home/client/user-2.svg",
+      username: "Queen Dare",
+      company: "StableDoc User",
+      text: `Nisl nisi pulvinar dui justo, lorem. Sed quam eu cras at. Sed
+        quis id mauris massa. Eros, nec egestas vestibulum augue aenean
+        arcu leo vulputate. Magna feugiat ac adipiscing mattis velit
+        facilisi metus. Dolor urna, mi at tincidunt. Nulla.`,
+    },
   ];
   return (
     <div className="bg-client-bg bg-no-repeat bg-cover -mt-64">

@@ -9,7 +9,7 @@ const Token: FC = () => {
       id: 1,
       image: "/img/general/nav/contract.png",
       text: "Our whitepaper",
-      link: "/telehealth",
+      link: "/assets/documents/new-whitepaper.pdf",
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ const Token: FC = () => {
       id: 4,
       image: "/img/general/nav/growth.png",
       text: "Staking and farming",
-      link: "#",
+      link: "https://app.stabledoc.com/dashboard",
     },
   ];
   return (
@@ -44,9 +44,13 @@ const Token: FC = () => {
               StableDoc offers many solutions to better the healthcare and
               crypto space in Africa.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-between px-0 lg:px-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center px-0 lg:px-16 mx-auto">
               {TokenData.map((data) => (
-                <LinkButton key={data.id} link={data.link}>
+                <LinkButton
+                  key={data.id}
+                  link={data.link}
+                  target={data.id === 4 || data.id === 1 ? "_blank" : ""}
+                >
                   <div className="flex gap-5">
                     <Image
                       src={data.image}

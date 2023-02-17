@@ -4,10 +4,10 @@ import { useRouter } from "next/router";
 
 // default meta
 const defaultMeta = {
-  title: "Minerva Hub",
-  siteName: "Minerva Hub",
-  description: "Building a world full of solutions",
-  url: "https://myminerva.com",
+  title: "StableDoc",
+  siteName: "StableDoc",
+  description: "The Future Of Healthcare, Delivered Today",
+  url: "https://stabledoc.com",
   type: "website",
   robots: "follow, index",
   image: "",

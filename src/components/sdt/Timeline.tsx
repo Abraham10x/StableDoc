@@ -3,40 +3,73 @@ import { FC } from "react";
 import { BiCheck } from "react-icons/bi";
 
 const Timeline: FC = () => {
-  const Q1 = ["Research into problems", "Proof of concept"];
-  const Q2 = ["Solution possibilitie", "Assemble team", "Solutions design"];
-  const Q3 = [
+  const Q1 = [
+    "Research into problems",
+    "Proof of concept",
+    "Website v1.0",
     "Solution possibilities",
+    "Assemble team",
+    "Solutions design",
     "Development of StableDoc Tokens",
     "Airdrops",
     "Whitelisting",
     "Design, Develop and launch initial website",
     "Initial Campaigns",
     "Token Marketing",
-    "Structure",
+    "Structure / Architecture",
     "Business requirements",
+    "Presale",
+    "Listing on DEX",
+    "Develop Social Media & Community Platforms",
+    "Trynos Token Audit",
+    "Website v2.0",
+    "Whitepaper v2.0",
+    "Engage high-quality Crypto influencers",
+    "Telehealth Maketing Strategy",
+    "StableDoc App Pilot Testing",
+    "Strategic Enrollment Plan",
   ];
-  const Q4 = [
-    "Solution possibilities",
-    "Airdrops",
-    "Whitelisting",
-    "Initial Campaigns",
-    "Token Marketing",
-    "Structure",
-    "Business requirements",
-  ];
-  const Q5 = [
+  const Q2 = [
     "Staking",
     "Farming",
-    "StableDoc App Beta Testing",
-    "Tier 1 CEX Listing",
-    "NFT Auctioning",
+    "CertiK Audit",
+    "StableDoc Mobile Apps Beta Testing",
+    "StableDoc Telehealth Web App Development",
+    "Main App Launch (Andriod/iOS)",
+    "StableFit Move2Earn App Launch",
+    "Forms Parnterships",
+    "StableDoc Pilot Rollouts",
+    "Funding Rounds",
+    "Doctors Onboarding",
   ];
+  const Q3 = [
+    "Finalize Product Development",
+    "StableDoc Pilot Rollout",
+    "Integration of Payment Gateway",
+    "Website v3.0",
+    "Doctors Onboarding",
+    "Telehealth Marketing",
+    "StableDoc Token Marketing",
+  ];
+  const Q4 = [
+    "Main App Launch (Android/iOS), Web App",
+    "Integration of StableDoc AI Diagnositcs",
+    "Forms Parnterships",
+    "StableDoc Token Marketing",
+    "CEX Listing",
+    "Funding Rounds",
+  ];
+  const Q5 = [
+    "StableDoc Token Marketing",
+    "CEX Listing",
+    "Onboarding of US, Indian, UK and Canadian Doctors",
+  ];
+  const Q6 = ["StableDoc Token Buy back and burn"];
   return (
     <div className="bg-secondary-700 pb-0 mt-14">
       <div className="container pt-12 px-5 sm:px-10 pb-0 2xl:px-0 mx-auto mt-20">
         <h3 className="bg-gradient-600 bg-clip-text text-transparent-active font-medium text-xl sm:text-3xl lg:text-6xl text-center mt-8">
-          Our Roadmap
+          Our Updated Roadmap
         </h3>
         <p className="text-[#5A6FA0] font-medium text-base sm:text-xl lg:text-2xl mt-5 text-center">
           Complex healthcare challenges Simplified by StableDoc. Clear road map
@@ -47,7 +80,7 @@ const Timeline: FC = () => {
           <div className="w-full relative ml-4 sm:ml-0">
             <div className="w-full sm:w-2/4">
               <h4 className="bg-timeline-bg bg-clip-text text-transparent-active font-bold text-sm sm:text-xl lg:text-4xl">
-                Q1 2021
+                Q1 - Q4 2021
               </h4>
               <ul className="list-disc mt-2 sm:mt-4 pl-8 lg:pl-10">
                 {Q1.map((data, index) => (
@@ -86,7 +119,7 @@ const Timeline: FC = () => {
           <div className="w-full relative ml-4 sm:ml-0">
             <div className="relative right-0 sm:-right-[0%] w-full text-left sm:text-right">
               <h4 className="bg-timeline-bg bg-clip-text text-transparent-active font-bold text-sm sm:text-xl lg:text-4xl sm:mr-32 lg:mr-[9.5rem] xl:mr-44">
-                Q2 2021
+                Q1 - Q4 2022
               </h4>
               <ul className="list-disc mt-2 sm:mt-4 pl-8 sm:pl-10 relative sm:left-[69%] lg:left-[70%] xl:left-[75%] 2xl:left-[82%]">
                 {Q2.map((data, index) => (
@@ -126,7 +159,7 @@ const Timeline: FC = () => {
           <div className="w-full relative ml-4 sm:ml-0">
             <div className="w-full sm:w-2/4">
               <h4 className="bg-timeline-bg bg-clip-text text-transparent-active font-bold text-sm sm:text-xl lg:text-4xl">
-                Q3 2021
+                Q1 2023
               </h4>
               <ul className="list-disc mt-2 sm:mt-4 pl-8 lg:pl-10">
                 {Q3.map((data, index) => (
@@ -136,7 +169,9 @@ const Timeline: FC = () => {
                   >
                     <div className="flex gap-1">
                       <p>{data}</p>
-                      <BiCheck className="text-primary text-xs sm:text-base lg:text-2xl hidden sm:block" />
+                      {index < 5 && (
+                        <BiCheck className="text-primary text-xs sm:text-base lg:text-2xl hidden sm:block" />
+                      )}
                     </div>
                   </li>
                 ))}
@@ -166,7 +201,7 @@ const Timeline: FC = () => {
           <div className="w-full relative ml-4 sm:ml-0">
             <div className="relative right-0 sm:-right-[0%] w-full text-left sm:text-right">
               <h4 className="bg-timeline-bg bg-clip-text text-transparent-active font-bold text-sm sm:text-xl lg:text-4xl sm:mr-32 lg:mr-[9.5rem] xl:mr-44">
-                Q4 2021
+                Q2 2023
               </h4>
               <ul className="list-disc mt-2 sm:mt-4 pl-8 sm:pl-10 relative sm:left-[69%] lg:left-[70%] xl:left-[75%] 2xl:left-[82%]">
                 {Q4.map((data, index) => (
@@ -176,7 +211,7 @@ const Timeline: FC = () => {
                   >
                     <div className="flex gap-1">
                       <p>{data}</p>
-                      <BiCheck className="text-primary text-xs sm:text-base lg:text-2xl hidden sm:block" />
+                      {/* <BiCheck className="text-primary text-xs sm:text-base lg:text-2xl hidden sm:block" /> */}
                     </div>
                   </li>
                 ))}
@@ -206,7 +241,7 @@ const Timeline: FC = () => {
           <div className="w-full relative ml-4 sm:ml-0">
             <div className="w-full sm:w-2/4">
               <h4 className="bg-timeline-bg bg-clip-text text-transparent-active font-bold text-sm sm:text-xl lg:text-4xl">
-                Q5 2021
+                Q3 2023
               </h4>
               <ul className="list-disc mt-2 sm:mt-4 pl-8 lg:pl-10">
                 {Q5.map((data, index) => (
@@ -216,7 +251,6 @@ const Timeline: FC = () => {
                   >
                     <div className="flex gap-1">
                       <p>{data}</p>
-                      <BiCheck className="text-primary text-xs sm:text-base lg:text-2xl hidden sm:block" />
                     </div>
                   </li>
                 ))}
@@ -246,17 +280,16 @@ const Timeline: FC = () => {
           <div className="w-full relative ml-4 sm:ml-0 pb-10 sm:pb-32">
             <div className="relative right-0 sm:-right-[0%] w-full text-left sm:text-right">
               <h4 className="bg-timeline-bg bg-clip-text text-transparent-active font-bold text-sm sm:text-xl lg:text-4xl sm:mr-32 lg:mr-[9.5rem] xl:mr-44">
-                Q6 2021
+                Q4 2023
               </h4>
               <ul className="list-disc mt-2 sm:mt-4 pl-8 sm:pl-10 relative sm:left-[69%] lg:left-[70%] xl:left-[75%] 2xl:left-[82%]">
-                {Q2.map((data, index) => (
+                {Q6.map((data, index) => (
                   <li
                     key={index}
                     className="text-xs sm:text-base lg:text-xl mt-1"
                   >
                     <div className="flex gap-1">
                       <p>{data}</p>
-                      <BiCheck className="text-primary text-xs sm:text-base lg:text-2xl hidden sm:block" />
                     </div>
                   </li>
                 ))}

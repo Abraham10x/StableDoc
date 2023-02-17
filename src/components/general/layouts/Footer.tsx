@@ -204,8 +204,8 @@ const Footer: FC = () => {
                   className="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
                 >
                   <ul className="pt-1 pl-1">
-                    {data.link.map((item) => (
-                      <li>
+                    {data.link.map((item, index) => (
+                      <li key={index}>
                         <a
                           className="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-md hover:bg-gray-100 text-white font-normal"
                           href={item.url}

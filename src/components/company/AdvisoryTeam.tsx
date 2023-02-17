@@ -1,9 +1,9 @@
 import { FC, useState } from "react";
 import TeamCard from "./TeamCard";
-import TeamData from "./TeamData";
+import AdvisoryData from "./AdvisoryData";
 
 const AdvisvoryTeam: FC = () => {
-  const [desc, setDesc] = useState(TeamData);
+  const [desc, setDesc] = useState(AdvisoryData);
 
   function addDesc(id: number) {
     setDesc((prev) => {

@@ -73,13 +73,10 @@ const Solutions: FC = () => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between px-0 lg:px-16">
               <div className="flex flex-col mb-4 lg:mb-0">
-                <Link legacyBehavior href="#">
-                  <Link
-                    href="/solution"
-                    className="text-text-600 font-medium text-base sm:text-lg lg:text-xl border-b pb-3 mb-6 w-fit sm:hover:text-[1.4rem] hover:text-primary transition-all"
-                  >
+                <Link legacyBehavior href="/solution">
+                  <a className="text-text-600 font-medium text-base sm:text-lg lg:text-xl border-b pb-3 mb-6 w-fit sm:hover:text-[1.4rem] hover:text-primary transition-all">
                     Premium Health Services
-                  </Link>
+                  </a>
                 </Link>
                 <div className="flex flex-col gap-1 sm:gap-2 lg:gap-4">
                   <LinkButton link="/solution/#Home-Health">
@@ -112,10 +109,7 @@ const Solutions: FC = () => {
               </div>
               <div className="flex flex-col mb-4 lg:mb-0">
                 <Link legacyBehavior href="/solution">
-                  <a
-                    href="#"
-                    className="text-text-600 font-medium text-base sm:text-lg lg:text-xl border-b pb-3 mb-6 w-fit sm:hover:text-[1.4rem] hover:text-primary transition-all"
-                  >
+                  <a className="text-text-600 font-medium text-base sm:text-lg lg:text-xl border-b pb-3 mb-6 w-fit sm:hover:text-[1.4rem] hover:text-primary transition-all">
                     Cross Border Health
                   </a>
                 </Link>
@@ -139,10 +133,7 @@ const Solutions: FC = () => {
               </div>
               <div className="flex flex-col mb-4 lg:mb-0">
                 <Link legacyBehavior href="/solution">
-                  <a
-                    href="#"
-                    className="text-text-600 font-medium text-base sm:text-lg lg:text-xl border-b pb-3 mb-6 w-fit sm:hover:text-[1.4rem] hover:text-primary transition-all"
-                  >
+                  <a className="text-text-600 font-medium text-base sm:text-lg lg:text-xl border-b pb-3 mb-6 w-fit sm:hover:text-[1.4rem] hover:text-primary transition-all">
                     Your health on a blockchain
                   </a>
                 </Link>

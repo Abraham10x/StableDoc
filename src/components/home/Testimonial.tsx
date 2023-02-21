@@ -92,14 +92,14 @@ const Testimonial: FC = () => {
                   <Image
                     className="hidden sm:block"
                     src={data.image}
-                    alt={data.username}
+                    alt="user"
                     width={80}
                     height={80}
                   />
                   <Image
                     className="sm:hidden"
                     src={data.image}
-                    alt={data.username}
+                    alt="user"
                     width={50}
                     height={50}
                   />

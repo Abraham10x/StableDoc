@@ -212,9 +212,6 @@ const Header: FC = () => {
                   >
                     <div
                       className={`flag-icon flag-icon-${country_code} mx-2`}
-                      style={{
-                        opacity: currentLanguageCode === code ? 0.5 : 1,
-                      }}
                     ></div>
                     <p className="inline">{name}</p>
                     <IoChevronDown size={20} className="inline mb-1 ml-1" />

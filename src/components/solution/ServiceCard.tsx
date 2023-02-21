@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FC } from "react";
-import { Button } from "../general/Button";
+import { Button, LinkButton } from "../general/Button";
 
 interface IProps {
   id: any;
@@ -25,9 +25,12 @@ const ServiceCard: FC<IProps> = ({ id, className, header, body, image }) => {
           {body}
         </p>
         <div className="mt-10 flex justify-center sm:justify-start">
-          <Button className="bg-primary hover:bg-secondary-900 transition-all font-normal sm:font-semibold text-white px-11 py-2 sm:py-3 leading-7 text-xs sm:text-base rounded-full">
+          <LinkButton
+            link="/support#contact-us"
+            className="bg-primary hover:bg-secondary-900 transition-all font-normal sm:font-semibold text-white px-11 py-2 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
+          >
             Contact Us
-          </Button>
+          </LinkButton>
         </div>
       </div>
 

@@ -3,15 +3,15 @@ import { FC } from "react";
 import { LinkButton } from "../general/Button";
 
 interface IProps {
-  id: any;
-  state: any;
-  profile: any;
-  name: any;
-  role: any;
-  description: any;
+  id: number;
+  state: boolean;
+  profile: string;
+  name: string;
+  role: string;
+  description: string;
   handleClick: any;
-  twitter?: any;
-  linkedin?: any;
+  twitter?: string;
+  linkedin?: string;
 }
 
 const TeamCard: FC<IProps> = ({
@@ -37,7 +37,7 @@ const TeamCard: FC<IProps> = ({
               {description}
             </p>
             <div className="flex flex-row gap-9 mt-2 sm:mt-8 justify-center">
-              {linkedin && (
+              {linkedin != null && (
                 <LinkButton link={linkedin} target="_blank">
                   <Image
                     src="/img/company/linkedin-icon.svg"
@@ -47,7 +47,7 @@ const TeamCard: FC<IProps> = ({
                   />
                 </LinkButton>
               )}
-              {twitter && (
+              {twitter != null && (
                 <LinkButton link={twitter} target="_blank">
                   <Image
                     src="/img/company/twitter-icon.svg"

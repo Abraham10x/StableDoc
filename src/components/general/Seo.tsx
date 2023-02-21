@@ -24,9 +24,10 @@ const Seo: FC<SeoProps> = (props: SeoProps) => {
     ...defaultMeta,
     ...props,
   };
-  meta.title = props.templateTitle
-    ? `${props.templateTitle} | ${meta.siteName}`
-    : meta.title;
+  meta.title =
+    props.templateTitle != null
+      ? `${props.templateTitle} | ${meta.siteName}`
+      : meta.title;
 
   // Use siteName if there is templateTitle
   // but show full title if there is none
@@ -56,7 +57,7 @@ const Seo: FC<SeoProps> = (props: SeoProps) => {
       <meta name="twitter:title" content={meta.title} />
       <meta name="twitter:description" content={meta.description} />
       <meta name="twitter:image" content={meta.image} />
-      {meta.date && (
+      {meta.date != null && (
         <>
           <meta property="article:published_time" content={meta.date} />
           <meta

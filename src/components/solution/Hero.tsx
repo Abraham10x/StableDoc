@@ -35,19 +35,19 @@ const Hero: FC = () => {
       </div>
       <div className="flex w-full overflow-x-auto mt-6 py-6 justify-start sm:justify-center gap-7">
         <LinkButton
-          link="#"
+          link="#premium-health-services"
           className="bg-primary hover:bg-secondary-900 transition-all text-white w-48 sm:w-52 lg:w-72 px-5 py-3 text-xs sm:text-sm lg:text-lg font-medium sm:font-bold rounded lg:rounded-xl"
         >
           Premium health services
         </LinkButton>
         <LinkButton
-          link="#"
+          link="#cross-border-health"
           className="border border-primary hover:bg-primary/20 transition-colors text-primary w-48 sm:w-52 lg:w-72 px-5 py-3 text-xs sm:text-sm lg:text-lg font-medium sm:font-bold rounded lg:rounded-xl"
         >
           Cross border Health
         </LinkButton>
         <LinkButton
-          link="#"
+          link="#health-blockchain"
           className="border border-primary hover:bg-primary/20 transition-colors text-primary w-48 sm:w-[13.5rem] lg:w-72 px-5 py-3 text-xs sm:text-sm lg:text-lg font-medium sm:font-bold rounded lg:rounded-xl"
         >
           Your health on a blockchain

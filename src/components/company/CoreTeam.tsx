@@ -29,6 +29,7 @@ const CoreTeam: FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:gap-8 lg:gap-12">
           {desc.map((data, index) => (
             <TeamCard
+              key={index}
               id={index}
               profile={data.imge}
               name={data.name}

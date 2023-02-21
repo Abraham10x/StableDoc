@@ -8,21 +8,25 @@ const Services: FC = () => {
       image: "/img/solution/service-1.png",
       class: "",
       header: `Home Health`,
-      body: `We offer a suite of home consultation 
-      services for our patients. Our Home Health services 
-      are powered by StableReality, a next generation, 
-      patent-pending telemed gadget with a full hospital 
-      grade diagnostic tool kit. `,
+      body: `We offer home consultation services for our patients. 
+      In this era of highly infectious diseases, you may not want 
+      to visit the busy hospitals for non-emergency cases. Through 
+      a network of partnerships leveraging our technology platforms, 
+      StableDoc is able to deliver a range of complementary healthcare 
+      services – and send the appropriate doctor to your home if you 
+      need one. `,
     },
     {
       id: 2,
       image: "/img/solution/service-2.png",
       class: "",
       header: `Men and women’s health`,
-      body: `We offer a suite of home consultation services for our 
-      patients. Our Home Health services are powered by StableReality, 
-      a next generation, patent-pending telemed gadget with a full 
-      hospital grade diagnostic tool kit.`,
+      body: `What you get – focused attention to your health problems 
+      as a woman or a man As part of annual physical – or anytime you 
+      wish – you have the option to choose a gender-specific version 
+      which includes everything in the StableDoc Comprehensive Health 
+      Assessment (CHA) test plus additional testing for men’s and 
+      women’s test.`,
     },
   ];
   const BorderData = [
@@ -31,42 +35,46 @@ const Services: FC = () => {
       image: "/img/solution/service-3.png",
       class: "sm:flex-row-reverse",
       header: `Abroad Referral & Medical Tourism`,
-      body: `Facilitating pre-travel services & post-discharge care services. 
-      We not only link you to our partner hospitals abroad but we also 
-      help you to schedule the appointment and the visa processes – 
-      and put you on a plane and arrange for comfortable accommodation 
-      and ancillary services `,
+      body: `StableDoc’s fit-for-situation medical tourism package gives you 
+      the best medial treatment abroad from qualified healthcare professionals 
+      and specialists in reputable, well-vetted hospitals. We provide effective, 
+      hassle-free, cost-effective concierge services for those seeking medical 
+      care abroad, and access to quality hospitals that have been vetted by 
+      StableDoc.`,
     },
     {
       id: 2,
       image: "/img/solution/service-4.png",
       class: "sm:flex-row-reverse",
       header: `Annual Physical`,
-      body: `Why take a 2-week trip to a foreign country costing 
-      thousands of dollars for your Annual Physical Exam when 
-      you can have all your testing done in your home country 
-      – and get a second opinion on the results from qualified 
-      doctors anywhere in the world? That’s where StableDoc comes 
-      in. We take the complicated and expensive off your shoulders 
-      and make them simple and affordable.`,
+      body: `Our StableDoc Comprehensive Health Assessment (CHA) is a premium 
+      annual physical and exam provides you with a complete analysis and 
+      review of your health picture and overall wellness. It includes tests 
+      for heart health, kidney health, liver health, bone health, diabetes 
+      risk, and other health factors. Included in this package is a one-on-one 
+      discussion with a doctor to review your results – including the ability 
+      to obtain a second opinion from any doctor of your choice from anywhere 
+      in the world on our platform.`,
     },
     {
       id: 3,
       image: "/img/solution/service-5.png",
       class: "",
       header: `StablePods`,
-      body: `Now you can pay for the healthcare of your relatives 
-      in your home country through any of our choice plans 
-      including using $SDT.`,
+      body: `We have a mission to break down physical boundaries and deliver 
+      quality health care from anywhere it is available to anywhere itis 
+      needed: StablePods. With this service, we arrange for teams of cross-border 
+      specialists collaborating virtually to provide the best healthcare to 
+      our patients, using tailored collaborative practice agreements.`,
     },
     {
       id: 4,
       image: "/img/solution/service-6.png",
       class: "",
       header: `Diaspora Sponsored Health`,
-      body: `We arrange for teams of cross-border specialists collaborating 
-      virtually to provide the best healthcare to our patients around 
-      the world, using tailored collaborative practice agreements.`,
+      body: `Makes it easy and simple to care for a loved one in Africa from 
+      abroad and pay for their medical needs; provides you peace of mind that 
+      your money is used for quality healthcare as intended.`,
     },
   ];
 
@@ -104,43 +112,49 @@ const Services: FC = () => {
   ];
   return (
     <div className="container pt-12 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-6 lg:mt-10">
-      <h3 className="bg-gradient-600 bg-clip-text text-transparent-active sm:font-medium font-bold text-2xl sm:text-3xl lg:text-5xl text-center mt-8 sm:mt-0 lg:mb-10">
-        Premium health services
-      </h3>
-      {ServicesData.map((data) => (
-        <ServiceCard
-          id={data.id}
-          className={data.class}
-          header={data.header}
-          body={data.body}
-          image={data.image}
-        />
-      ))}
-      <h3 className="bg-gradient-600 bg-clip-text text-transparent-active sm:font-medium font-bold text-2xl sm:text-3xl lg:text-5xl text-center mt-8 sm:mt-0 lg:mb-10">
-        Cross border Health
-      </h3>
-      {BorderData.map((data) => (
-        <ServiceCard
-          id={data.id}
-          className={data.class}
-          header={data.header}
-          body={data.body}
-          image={data.image}
-        />
-      ))}
+      <div id="premium-health-services">
+        <h3 className="bg-gradient-600 bg-clip-text text-transparent-active sm:font-medium font-bold text-2xl sm:text-3xl lg:text-5xl text-center mt-8 sm:mt-0 lg:mb-10">
+          Premium health services
+        </h3>
+        {ServicesData.map((data) => (
+          <ServiceCard
+            id={data.id}
+            className={data.class}
+            header={data.header}
+            body={data.body}
+            image={data.image}
+          />
+        ))}
+      </div>
+      <div id="cross-border-health">
+        <h3 className="bg-gradient-600 bg-clip-text text-transparent-active sm:font-medium font-bold text-2xl sm:text-3xl lg:text-5xl text-center mt-8 sm:mt-0 lg:mb-10">
+          Cross border Health
+        </h3>
+        {BorderData.map((data) => (
+          <ServiceCard
+            id={data.id}
+            className={data.class}
+            header={data.header}
+            body={data.body}
+            image={data.image}
+          />
+        ))}
+      </div>
 
-      <h3 className="bg-gradient-600 bg-clip-text text-transparent-active sm:font-medium font-bold text-2xl sm:text-3xl lg:text-5xl text-center mt-8 sm:mt-0 mb-0 lg:mb-10">
-        Your health on a blockchain
-      </h3>
-      {CrytoData.map((data) => (
-        <ServiceCard
-          id={data.id}
-          className={data.class}
-          header={data.header}
-          body={data.body}
-          image={data.image}
-        />
-      ))}
+      <div id="health-blockchain">
+        <h3 className="bg-gradient-600 bg-clip-text text-transparent-active sm:font-medium font-bold text-2xl sm:text-3xl lg:text-5xl text-center mt-8 sm:mt-0 mb-0 lg:mb-10">
+          Your health on a blockchain
+        </h3>
+        {CrytoData.map((data) => (
+          <ServiceCard
+            id={data.id}
+            className={data.class}
+            header={data.header}
+            body={data.body}
+            image={data.image}
+          />
+        ))}
+      </div>
     </div>
   );
 };

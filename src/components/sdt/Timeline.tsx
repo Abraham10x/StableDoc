@@ -118,10 +118,10 @@ const Timeline: FC = () => {
           {/* second quarter */}
           <div className="w-full relative ml-4 sm:ml-0">
             <div className="relative right-0 sm:-right-[0%] w-full text-left sm:text-right">
-              <h4 className="bg-timeline-bg bg-clip-text text-transparent-active font-bold text-sm sm:text-xl lg:text-4xl sm:mr-32 lg:mr-[9.5rem] xl:mr-44">
+              <h4 className="bg-timeline-bg bg-clip-text text-transparent-active font-bold text-sm sm:text-xl lg:text-4xl sm:mr-48 lg:mr-52 2xl:mr-64">
                 Q1 - Q4 2022
               </h4>
-              <ul className="list-disc mt-2 sm:mt-4 pl-8 sm:pl-10 relative sm:left-[69%] lg:left-[70%] xl:left-[75%] 2xl:left-[82%]">
+              <ul className="list-disc mt-2 sm:mt-4 pl-8 sm:pl-10 relative sm:left-[52%] lg:left-[55%] xl:left-[65%] 2xl:left-[69%]">
                 {Q2.map((data, index) => (
                   <li
                     key={index}
@@ -200,10 +200,10 @@ const Timeline: FC = () => {
           {/* fourth quater */}
           <div className="w-full relative ml-4 sm:ml-0">
             <div className="relative right-0 sm:-right-[0%] w-full text-left sm:text-right">
-              <h4 className="bg-timeline-bg bg-clip-text text-transparent-active font-bold text-sm sm:text-xl lg:text-4xl sm:mr-32 lg:mr-[9.5rem] xl:mr-44">
+              <h4 className="bg-timeline-bg bg-clip-text text-transparent-active font-bold text-sm sm:text-xl lg:text-4xl sm:mr-56 lg:mr-[17.2rem] 2xl:mr-[20.5rem]">
                 Q2 2023
               </h4>
-              <ul className="list-disc mt-2 sm:mt-4 pl-8 sm:pl-10 relative sm:left-[69%] lg:left-[70%] xl:left-[75%] 2xl:left-[82%]">
+              <ul className="list-disc mt-2 sm:mt-4 pl-8 sm:pl-10 relative sm:left-[52%] lg:left-[55%] xl:left-[65%] 2xl:left-[69%]">
                 {Q4.map((data, index) => (
                   <li
                     key={index}
@@ -279,10 +279,10 @@ const Timeline: FC = () => {
           {/* sixth quarter */}
           <div className="w-full relative ml-4 sm:ml-0 pb-10 sm:pb-32">
             <div className="relative right-0 sm:-right-[0%] w-full text-left sm:text-right">
-              <h4 className="bg-timeline-bg bg-clip-text text-transparent-active font-bold text-sm sm:text-xl lg:text-4xl sm:mr-32 lg:mr-[9.5rem] xl:mr-44">
+              <h4 className="bg-timeline-bg bg-clip-text text-transparent-active font-bold text-sm sm:text-xl lg:text-4xl sm:mr-32 lg:mr-[17.2rem] 2xl:mr-[20.5rem]">
                 Q4 2023
               </h4>
-              <ul className="list-disc mt-2 sm:mt-4 pl-8 sm:pl-10 relative sm:left-[69%] lg:left-[70%] xl:left-[75%] 2xl:left-[82%]">
+              <ul className="list-disc mt-2 sm:mt-4 pl-8 sm:pl-10 relative sm:left-[52%] lg:left-[55%] xl:left-[65%] 2xl:left-[69%]">
                 {Q6.map((data, index) => (
                   <li
                     key={index}

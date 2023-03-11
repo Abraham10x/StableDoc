@@ -21,7 +21,8 @@ export default function Home() {
       <Seo templateTitle="Home" />
       <SubHeader />
       <Hero />
-      <Partners />
+      <div className="my-20"></div>
+      {/* <Partners /> */}
       <MobileApp />
       <Beneficts />
       <Download />

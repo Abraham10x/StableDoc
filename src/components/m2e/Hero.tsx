@@ -18,7 +18,7 @@ const Hero: FC = () => {
             Get Started
           </Button>
           <Button className="border border-primary hover:bg-primary/20 px-8 sm:px-11 py-2 sm:py-3 text-primary font-semibold leading-7 text-xs sm:text-base rounded-full transition-colors">
-            Whitepaper
+            Litepaper
           </Button>
         </div>
       </div>

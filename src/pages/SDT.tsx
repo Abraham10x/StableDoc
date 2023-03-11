@@ -17,12 +17,13 @@ const SDT: NextPage = () => {
       <Seo templateTitle="SDT Page" />
       <SubHeader />
       <Hero />
-      <Parnters />
+      <div className="my-20"></div>
+      {/* <Parnters /> */}
       <Beneficts />
       <Utility />
       <Statistics />
       <Timeline />
-      <Crypto />
+      {/* <Crypto /> */}
       <CTA />
     </Layout>
   );

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Button } from "../general/Button";
+import { Button, LinkButton } from "../general/Button";
 import Image from "next/image";
 
 const Hero: FC = () => {
@@ -14,9 +14,13 @@ const Hero: FC = () => {
             Redefining the nature of healthcare as ongoing, multi-modal,
             personalized and decentralized.
           </p>
-          <Button className="bg-primary hover:bg-secondary-900 font-semibold text-white w-40 sm:w-40 lg:w-52 py-2 sm:py-3 leading-7 text-xs sm:text-base rounded-full">
+          <LinkButton
+            link="https://telehealth.stabledoc.com/"
+            target="_blank"
+            className="bg-primary hover:bg-secondary-900 font-semibold text-white w-40 sm:w-40 lg:w-52 py-2 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
+          >
             Get Started
-          </Button>
+          </LinkButton>
         </div>
       </div>
       <div className="hidden lg:block">

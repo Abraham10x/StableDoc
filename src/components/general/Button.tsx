@@ -16,6 +16,7 @@ export const Button: FC<AppProps> = ({
   onClick,
 }: AppProps) => {
   return (
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
     <button type="button" className={` mt-0 ${className}`} onClick={onClick}>
       {children}
     </button>

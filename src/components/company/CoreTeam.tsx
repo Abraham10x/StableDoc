@@ -5,12 +5,20 @@ import TeamData from "./TeamData";
 const CoreTeam: FC = () => {
   const [desc, setDesc] = useState(TeamData);
 
-  function addDesc(id: number) {
+  function handleEnter(id: number) {
     setDesc((prev) => {
       return prev.map((square) => {
         return square.id === id
           ? { ...square, on: !square.on }
           : { ...square, on: true };
+      });
+    });
+  }
+
+  function handleLeave(id: number) {
+    setDesc((prev) => {
+      return prev.map((square) => {
+        return square.id === id ? { ...square, on: true } : { ...square };
       });
     });
   }
@@ -38,7 +46,8 @@ const CoreTeam: FC = () => {
               linkedin={data.LinkedIn}
               twitter={data.Twitter}
               description={data.description}
-              handleClick={() => addDesc(data.id)}
+              handleEnter={() => handleEnter(data.id)}
+              handleLeave={() => handleLeave(data.id)}
             />
           ))}
         </div>

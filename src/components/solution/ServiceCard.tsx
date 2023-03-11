@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { FC } from "react";
-import { Button, LinkButton } from "../general/Button";
+import { LinkButton } from "../general/Button";
 
 interface IProps {
-  id: any;
-  className: any;
-  header: any;
-  body: any;
-  image: any;
+  id: number;
+  className: string;
+  header: string;
+  body: string;
+  image: string;
 }
 
 const ServiceCard: FC<IProps> = ({ id, className, header, body, image }) => {

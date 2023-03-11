@@ -171,7 +171,8 @@ const Header: FC = () => {
           </ul>
           <div className="flex gap-5 lg:hidden">
             <LinkButton
-              link="/telehealth"
+              link="https://telehealth.stabledoc.com/"
+              target="_blank"
               className=" bg-primary hover:bg-secondary-900 transition-all font-semibold text-white w-full px-8 py-3 leading-7 text-base rounded-full"
             >
               Get Started
@@ -180,7 +181,8 @@ const Header: FC = () => {
         </div>
         <div className="lg:flex gap-5 hidden">
           <LinkButton
-            link="/telehealth"
+            link="https://telehealth.stabledoc.com/"
+            target="_blank"
             className="bg-primary hover:bg-secondary-900 transition-all font-semibold text-white px-8  py-3 leading-7 text-base rounded-full"
           >
             Get Started

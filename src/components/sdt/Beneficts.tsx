@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 
 const Beneficts: FC = () => {
@@ -83,8 +84,19 @@ const Beneficts: FC = () => {
           ))}
         </div>
         <p className="text-white text-base sm:text-xl lg:text-3xl font-medium mt-16 text-center">
-          Don’t know how to buy SDT?{" "}
-          <span className="text-primary underline">Click here</span>
+          Don’t know where to buy SDT?{" "}
+          <Link
+            href="https://pancakeswap.finance/swap?outputCurrency=0x543c7ebb52d56985f63f246a5b3558aff79037d7"
+            legacyBehavior
+          >
+            <a
+              target="_blank"
+              rel="noopener noreferer"
+              className="text-primary underline"
+            >
+              Click here{" "}
+            </a>
+          </Link>
         </p>
       </div>
     </div>

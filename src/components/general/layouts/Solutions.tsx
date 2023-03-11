@@ -123,7 +123,7 @@ const Solutions: FC = () => {
                           width={data.id === 4 ? 25 : 40}
                           height={data.id === 4 ? 25 : 40}
                         />
-                        <p className="text-sm lg:text-base text-right text-text-600 font-medium my-auto">
+                        <p className="text-sm lg:text-base text-left text-text-600 font-medium my-auto">
                           {data.header}
                         </p>
                       </div>
@@ -147,7 +147,7 @@ const Solutions: FC = () => {
                           width={40}
                           height={40}
                         />
-                        <p className="text-sm lg:text-base text-right text-text-600 font-medium my-auto">
+                        <p className="text-sm lg:text-base text-left text-text-600 font-medium my-auto">
                           {data.header}
                         </p>
                       </div>

@@ -8,7 +8,7 @@ const Hero: FC = () => {
         <div className="flex flex-col justify-between h-full basis-[54%] my-auto">
           <div className="flex flex-row justify-start gap-5">
             <h1 className="font-bold text-3xl sm:text-4xl lg:text-5xl bg-gradient-600 bg-clip-text text-transparent-active">
-              About Stabledoc
+              About StableDoc
             </h1>
             <Image
               className="block lg:hidden"
@@ -19,9 +19,10 @@ const Hero: FC = () => {
             />
           </div>
           <p className="text-base sm:text-xl lg::text-2xl text-text-300 mt-8">
-            Lorem ipsum dolor sit amet doloroli sitiol conse ctetur adipiscing
-            elit. dolor sit amet doloroli sitiol conse ctetur adipiscing
-            elitdolor sit amet doloroli sitiol conse ctetur adipiscing elit
+            We combine cutting-edge, Blockchain-based and AI-driven
+            telemedicine, in-home health and standard hospital services to
+            deliver evidence-based, cross-boundary healthcare to our patients
+            all around the world.
           </p>
         </div>
         <Image

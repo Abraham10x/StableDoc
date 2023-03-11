@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Button } from "../general/Button";
+import { Button, LinkButton } from "../general/Button";
 
 const Hero: FC = () => {
   return (
@@ -14,12 +14,20 @@ const Hero: FC = () => {
           foreign currency exchange challenges.
         </p>
         <div className="flex flex-row mt-10 gap-6 justify-center">
-          <Button className="bg-primary hover:bg-secondary-900 font-semibold text-white px-8 sm:px-11 py-2 sm:py-3 leading-7 text-xs sm:text-base rounded-full">
-            Get Started
-          </Button>
-          <Button className="border border-primary hover:bg-primary/20 px-8 sm:px-11 py-2 sm:py-3 text-primary font-semibold leading-7 text-xs sm:text-base rounded-full">
+          <LinkButton
+            link="https://docs.stabledoc.com/"
+            target="_blank"
+            className="bg-primary hover:bg-secondary-900 font-semibold text-white px-8 sm:px-11 py-2 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
+          >
+            Docs
+          </LinkButton>
+          <LinkButton
+            link="/assets/documents/new-whitepaper.pdf"
+            target="_blank"
+            className="border border-primary hover:bg-primary/20 px-8 sm:px-11 py-2 sm:py-3 text-primary font-semibold leading-7 text-xs sm:text-base rounded-full"
+          >
             Whitepaper
-          </Button>
+          </LinkButton>
         </div>
       </div>
       <div className="bg-SDT-hero bg-no-repeat bg-cover py-[3.2rem] sm:py-24 lg:py-32 xl:py-40 2xl:py-56 mt-10"></div>

@@ -19,7 +19,13 @@ const M2E: NextPage = () => {
       <Features />
       <Token />
       <Statistics />
-      <Steps applestore="" playstore="" />
+      <Steps
+        subtitle="You don’t need any prior Crypto knowledge to begin to earn Crypto
+              on StableFit app. All you need to do is to download, register and
+              start earning"
+        applestore=""
+        playstore=""
+      />
       <CTA />
     </Layout>
   );

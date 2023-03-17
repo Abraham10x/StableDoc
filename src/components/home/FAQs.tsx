@@ -26,7 +26,7 @@ const FAQs: FC = () => {
     },
     {
       id: 3,
-      question: `AIs my online visit to doctors private and secure?`,
+      question: `Is my online visit to doctors private and secure?`,
       answer: `Absolutely, stableDoc telehealth platform is designed to 
       privately and securely enable patient to consult doctor online. 
       We attach great importance to maintaining patient’s privacy and 
@@ -116,11 +116,10 @@ const FAQs: FC = () => {
     },
     {
       id: 8,
-      question: `Would I pay for consultation?`,
-      answer: `Yes, you would pay for consultation. Each physician charges their 
-      own rate. All you need to do is to fund your wallet and you would be 
-      able to consult with our physicians. Your wallet is a prepaid 
-      account with which you can pay for all our services and products. `,
+      question: `How much should I pay for consultation?`,
+      answer: `For pay as you go, each physician charges their 
+      own consultation fee. For monthly subscriptions the rate varies, 
+      please check the mobile app to explore monthly subscription options.`,
       qustionId: `hs-basic-heading-eight`,
       content: "hidden",
       className: `hs-accordion`,
@@ -128,9 +127,9 @@ const FAQs: FC = () => {
     },
     {
       id: 9,
-      question: `How long is a typical online call to doctors on StableDoc telehealth app?`,
-      answer: `A typical consultation time is 15minutes on stableDoc, 
-      you are free to add more time if you think you need it. `,
+      question: `How long does a consultation session with a doctor last on the StableDoc app?`,
+      answer: `A typical consultation duration is 30minutes on stableDoc telehealth app, however
+      a patient is free to add more time if there is need for more air time. `,
       qustionId: `hs-basic-heading-nine`,
       content: "hidden",
       className: `hs-accordion`,
@@ -138,7 +137,7 @@ const FAQs: FC = () => {
     },
     {
       id: 10,
-      question: `What happen when I change or switch devices? `,
+      question: `What happens when I change or switch devices? `,
       answer: `It doesn’t matter which devices you switch to, all you need 
       to do is download the app and login your username and password associated 
       with your account and you would be able to access all your information.`,
@@ -149,11 +148,11 @@ const FAQs: FC = () => {
     },
     {
       id: 11,
-      question: `I can’t fund my wallet, what should I do?`,
-      answer: `We have various channels for funding your wallet, this includes 
-      cards, bank etc. if for any reasons you are unable to fund your 
+      question: `How do I fund my in-app wallet?`,
+      answer: `We have various channels for funding your in-app wallet, which include 
+      ATM cards, bank transfer and SDT etc. if for any reasons you are unable to fund your 
       wallet through these channels, please contact our customer service 
-      via stabledoc@cs.com `,
+      via info@stabledoc.com `,
       qustionId: `hs-basic-heading-eleven`,
       content: "hidden",
       className: `hs-accordion`,

@@ -19,10 +19,12 @@ const Hero: FC = () => {
             />
           </div>
           <p className="text-base sm:text-xl lg::text-2xl text-text-300 mt-8">
-            We combine cutting-edge, Blockchain-based and AI-driven
+            StableDoc combine cutting-edge, Blockchain-based and AI-driven
             telemedicine, in-home health and standard hospital services to
-            deliver evidence-based, cross-boundary healthcare to our patients
-            all around the world.
+            deliver evidence-based, cross-boundary healthcare to patients all
+            around the world. StableDoc telehealth platform virtually connects
+            patients and doctors for the purpose of health consultations,
+            medical advice and prescriptions.
           </p>
         </div>
         <Image

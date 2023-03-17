@@ -19,9 +19,7 @@ const Hero: FC = () => {
             />
           </div>
           <p className="text-base sm:text-lg lg:text-2xl text-text-300 mt-8">
-            Lorem ipsum dolor sit amet doloroli sitiol conse ctetur adipiscing
-            elit. dolor sit amet doloroli sitiol conse ctetur adipiscing
-            elitdolor sit amet doloroli sitiol conse ctetur adipiscing elit
+            Welcome, how can we help you today?
           </p>
         </div>
         <Image

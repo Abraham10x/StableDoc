@@ -244,7 +244,7 @@ const Footer: FC = () => {
       <div className="py-5 border-t border-gray-500 flex flex-row justify-center items-center container mx-auto">
         <hr className="bg-white" />
         <p className="font-normal mr-2 text-white text-center">
-          Copyright © 2022 StableDoc. All Rights Reserved StableDoc
+          Copyright © 2023 StableDoc. All Rights Reserved StableDoc
         </p>
       </div>
     </footer>

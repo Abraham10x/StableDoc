@@ -62,7 +62,7 @@ const Solutions: FC = () => {
       <div className="hs-dropdown [--strategy:static] lg:[--strategy:absolute] [--adaptive:none] lg:[--trigger:hover] overflow-y-auto">
         <p className="md:px-6 lg:px-3 hover:bg-gradient-600 hover:bg-clip-text text-transparent text-text-600 text-base cursor-pointer">
           Solution
-          <IoChevronDown className="hover:bg-gradient-600 hover:bg-clip-text hover:font-semibold inline mb-1 ml-1" />
+          {/* <IoChevronDown className="hover:bg-gradient-600 hover:bg-clip-text hover:font-semibold inline mb-1 ml-1" /> */}
         </p>
 
         <div className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] sm:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-full hidden z-10 top-full left-0 min-w-[15rem] bg-none before:absolute before:-top-5 before:left-0 before:w-full before:h-5">
@@ -74,7 +74,7 @@ const Solutions: FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between px-0 lg:px-16">
               <div className="flex flex-col mb-4 lg:mb-0">
                 <Link legacyBehavior href="/solution">
-                  <a className="text-text-600 font-medium text-base sm:text-lg lg:text-xl border-b pb-3 mb-6 w-fit sm:hover:text-[1.4rem] hover:text-primary transition-all">
+                  <a className="capitalize text-text-600 font-medium text-base sm:text-lg lg:text-xl border-b pb-3 mb-6 w-fit sm:hover:text-[1.4rem] hover:text-primary transition-all">
                     Premium Health Services
                   </a>
                 </Link>
@@ -87,7 +87,7 @@ const Solutions: FC = () => {
                         width={50}
                         height={50}
                       />
-                      <p className="text-sm lg:text-base text-text-600 font-medium my-auto">
+                      <p className="capitalize text-sm lg:text-base text-text-600 font-medium my-auto">
                         Home Health
                       </p>
                     </div>
@@ -100,7 +100,7 @@ const Solutions: FC = () => {
                         width={50}
                         height={50}
                       />
-                      <p className="text-sm lg:text-base text-text-600 font-medium my-auto">
+                      <p className="capitalize text-sm lg:text-base text-text-600 font-medium my-auto">
                         Men and women’s health
                       </p>
                     </div>
@@ -123,7 +123,11 @@ const Solutions: FC = () => {
                           width={data.id === 4 ? 25 : 40}
                           height={data.id === 4 ? 25 : 40}
                         />
-                        <p className="text-sm lg:text-base text-left text-text-600 font-medium my-auto">
+                        <p
+                          className={`capitalize text-sm lg:text-base text-left text-text-600 font-medium my-auto ${
+                            data.id === 4 ? "ml-4" : "ml-0"
+                          }`}
+                        >
                           {data.header}
                         </p>
                       </div>
@@ -133,7 +137,7 @@ const Solutions: FC = () => {
               </div>
               <div className="flex flex-col mb-4 lg:mb-0">
                 <Link legacyBehavior href="/solution">
-                  <a className="text-text-600 font-medium text-base sm:text-lg lg:text-xl border-b pb-3 mb-6 w-fit sm:hover:text-[1.4rem] hover:text-primary transition-all">
+                  <a className="capitalize text-text-600 font-medium text-base sm:text-lg lg:text-xl border-b pb-3 mb-6 w-fit sm:hover:text-[1.4rem] hover:text-primary transition-all">
                     Your health on a blockchain
                   </a>
                 </Link>
@@ -147,7 +151,7 @@ const Solutions: FC = () => {
                           width={40}
                           height={40}
                         />
-                        <p className="text-sm lg:text-base text-left text-text-600 font-medium my-auto">
+                        <p className="capitalize text-sm lg:text-base text-left text-text-600 font-medium my-auto">
                           {data.header}
                         </p>
                       </div>

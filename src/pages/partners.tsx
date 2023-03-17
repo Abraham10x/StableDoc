@@ -14,6 +14,7 @@ const Partners: NextPage = () => {
       <Hero />
       <Features />
       <Steps
+        subtitle="You do not need to be a tech guru in order to earn passive income with StableDoc partner app. All you need to do is to download, register, sign up and start earning."
         applestore="https://apps.apple.com/ng/app/stabledoc-partner/id1602960789"
         playstore="https://play.google.com/store/apps/details?id=com.sdtapp.partnerapp"
       />

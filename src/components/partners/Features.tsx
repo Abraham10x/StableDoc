@@ -8,36 +8,39 @@ const Features: FC = () => {
       image: "/img/partners/feature-1.png",
       class: "",
       header: `Complete control of your schedule`,
-      body: `Lorem ipsum dolor sit amet doloroli sitiol conse ctetur 
-    adipiscing elit. dolor sit amet doloroli sitiol conse ctetur 
-    adipiscing elitdolor sit amet doloroli sitiol conse ctetur `,
+      body: `Whether you are seeing patients from home office or from your 
+      hospital office, you have complete control of your schedules. StableDoc 
+      partner app allows you to easily edit your availabilities based on your 
+      time need to avoid interference with work period.`,
     },
     {
       id: 2,
       image: "/img/partners/feature-2.png",
       class: "sm:flex-row-reverse",
-      header: `Increased Visibility`,
-      body: `Lorem ipsum dolor sit amet doloroli sitiol conse ctetur 
-    adipiscing elit. dolor sit amet doloroli sitiol conse ctetur 
-    adipiscing elitdolor sit amet doloroli sitiol conse ctetur `,
+      header: `Easy to use platform`,
+      body: `The StableDoc partner app is super user friendly with lots of 
+      cool features ranging from fast and easy availability set up, 
+      clinical note entry features, laboratory tests and drugs prescription 
+      feature that mimick the in-hospital setting.`,
     },
     {
       id: 3,
       image: "/img/partners/feature-3.png",
       class: "",
       header: `Earn from the comfort of your home`,
-      body: `Lorem ipsum dolor sit amet doloroli sitiol conse ctetur 
-    adipiscing elit. dolor sit amet doloroli sitiol conse ctetur 
-    adipiscing elitdolor sit amet doloroli sitiol conse ctetur `,
+      body: `With StableDoc partner app, you can earn passive income on the go. 
+      Irrespective of your location per time- be it home or office,  your 
+      patient is just a booking away.`,
     },
     {
       id: 4,
       image: "/img/partners/feature-4.png",
       class: "sm:flex-row-reverse",
       header: `Video and voice consultations`,
-      body: `Lorem ipsum dolor sit amet doloroli sitiol conse ctetur 
-    adipiscing elit. dolor sit amet doloroli sitiol conse ctetur 
-    adipiscing elitdolor sit amet doloroli sitiol conse ctetur `,
+      body: `Our video call feature forms the core part of the StableDoc 
+      healthcare delivery. Our high resolution video conferencing brings 
+      you face to face with your patients for medical consultation, 
+      prescription and referral advices.`,
     },
   ];
   return (

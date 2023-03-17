@@ -23,7 +23,12 @@ const MobileApp: FC = () => {
             to. We provide instant, quality and affordable healthcare delivery
             24/7.
           </p>
-          <div className="grid grid-cols-2 w-full 2xl:w-4/5 gap-y-11 mt-5 justify-center sm:justify-start">
+          <div className="w-full mt-5">
+            <h3 className="text-xl font-bold text-left text-[#689CFD] capitalize">
+              Download Our Mobile App To Get Started
+            </h3>
+          </div>
+          <div className="grid grid-cols-2 w-full 2xl:w-4/5 gap-y-11 justify-center sm:justify-start">
             {/* <Button className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white w-36 lg:w-44 xl:w-52 py-2 sm:py-3 leading-7 text-sm lg:text-base rounded-full">
               Get Started
             </Button>
@@ -34,16 +39,11 @@ const MobileApp: FC = () => {
             >
               Whitepaper
             </LinkButton> */}
-            <div className="w-40 lg:w-44 xl:w-52">
-              <h3 className="text-xl font-bold text-center text-[#689CFD] capitalize">
-                Download StableDoc User App
-              </h3>
-            </div>
-            <div className="w-40 lg:w-44 xl:w-52">
+            {/* <div className="w-40 lg:w-44 xl:w-52">
               <h3 className="text-xl font-bold text-[#689CFD] text-center capitalize">
-                Download StableDoc Partner App
+                Provider
               </h3>
-            </div>
+            </div> */}
             <LinkButton
               link="https://apps.apple.com/ng/app/stabledoc/id1602960544"
               target="_blank"
@@ -59,7 +59,7 @@ const MobileApp: FC = () => {
                 <p className="my-auto">App store</p>
               </div>
             </LinkButton>
-            <LinkButton
+            {/* <LinkButton
               link="https://apps.apple.com/ng/app/stabledoc-partner/id1602960789"
               target="_blank"
               className="bg-white font-semibold hover:bg-primary/20 transition-colors text-primary w-40 lg:w-44 xl:w-52 py-2 sm:py-3 leading-7 text-base rounded-full hidden lg:block"
@@ -73,7 +73,7 @@ const MobileApp: FC = () => {
                 />
                 <p className="my-auto">App store</p>
               </div>
-            </LinkButton>
+            </LinkButton> */}
             <LinkButton
               link="https://play.google.com/store/apps/details?id=com.sdtapp.customer"
               target="_blank"
@@ -89,7 +89,7 @@ const MobileApp: FC = () => {
                 <p className="my-auto">Google Play</p>
               </div>
             </LinkButton>
-            <LinkButton
+            {/* <LinkButton
               link="https://play.google.com/store/apps/details?id=com.sdtapp.partnerapp"
               target="_blank"
               className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white w-40 lg:w-48 xl:w-52 py-3 leading-7 text-base rounded-full hidden lg:block"
@@ -103,7 +103,7 @@ const MobileApp: FC = () => {
                 />
                 <p className="my-auto">Google Play</p>
               </div>
-            </LinkButton>
+            </LinkButton> */}
           </div>
         </div>
       </div>

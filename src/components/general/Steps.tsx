@@ -1,13 +1,15 @@
 import Image from "next/image";
 import { FC } from "react";
 import AppStore from "./AppStore";
+import { title } from "process";
 
 interface IProps {
   applestore: string;
   playstore: string;
+  subtitle: string;
 }
 
-const Steps: FC<IProps> = ({ applestore, playstore }) => {
+const Steps: FC<IProps> = ({ applestore, playstore, subtitle }) => {
   const StepsData = [
     {
       id: 1,
@@ -37,9 +39,7 @@ const Steps: FC<IProps> = ({ applestore, playstore }) => {
               Get Started in Just Three Steps{" "}
             </h3>
             <p className="mt-5 font-normal text-base sm:text-lg lg:text-xl">
-              You don’t need any prior Crypto knowledge to begin to earn Crypto
-              on StableFit app. All you need to do is to download, register and
-              start earning
+              {title}
             </p>
           </div>
         </div>

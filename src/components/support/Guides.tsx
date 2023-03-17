@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FC, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { Button } from "../general/Button";
+import Link from "next/link";
 
 const Guides: FC = () => {
   const FilterData = [
@@ -9,27 +10,61 @@ const Guides: FC = () => {
       id: 1,
       header: "Healthcare Guides",
       links: [
-        "Getting Started ",
-        "Booking a doctor",
-        "Core features",
-        "Ordering your drugs",
+        {
+          url: "solution/#Home-Health",
+          linkText: "Home Health",
+        },
+        {
+          url: "/solution/#Men-and-women’s-health",
+          linkText: "Men and Women's Health",
+        },
+        {
+          url: "/solution/#Abroad-Referral-&-Medical-Tourism",
+          linkText: "Abroad Referral & Medical Tourism",
+        },
+        { url: "/solution/#Annual-Physical", linkText: "Annual Physical" },
+        { url: "/solution/#StablePods", linkText: "Stablepods" },
+        {
+          url: "/solution/#Diaspora-Sponsored-Health",
+          linkText: "Diaspora Sponsored Health",
+        },
       ],
     },
     {
       id: 2,
       header: "Crypto Guides",
       links: [
-        "Staking and farming",
-        "Buying our tokens",
-        "Swapping our tokens",
-        "Swapping our tokens",
-        "Swapping our tokens",
+        { url: "/SDT", linkText: "StableDoc Token" },
+        { url: "/assets/documents/new-whitepaper.pdf", linkText: "Whitepaper" },
+        {
+          url: "https://app.stabledoc.com/dashboard",
+          linkText: "Staking and Farming",
+        },
+        { url: "https://docs.stabledoc.com/", linkText: "Docs" },
+        { url: "/SDT/#road-map", linkText: "Road map" },
+        {
+          url: "https://docs.stabledoc.com/information/smart-comtract-audit",
+          linkText: "Smart Contracts",
+        },
+        {
+          url: "/solution/#AI-Enabled-Apps,-Tools-And-Devices",
+          linkText: "AI Diagnoistics",
+        },
       ],
     },
     {
       id: 3,
       header: "FAQs",
-      links: ["Subscription plans", "Billings", "Privacy and security"],
+      links: [
+        { url: "/about", linkText: "About StableDoc" },
+        {
+          url: "/careers",
+          linkText:
+            "How do I book for appointment on the StableDoc telehealth app?",
+        },
+        { url: "/faqs", linkText: "Why should I see an online doctor?" },
+        { url: "/faqs", linkText: "More FAQ..." },
+      ],
     },
   ];
 
@@ -161,7 +196,7 @@ const Guides: FC = () => {
                   </div>
                 </Button>
                 <Button
-                  className=" gap-x-3.5 py-2 px-3 pr-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 w-full"
+                  className="gap-x-3.5 py-2 px-3 pr-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 w-full"
                   link=""
                   onClick={() =>
                     setCategories({ title: "Crypto guides", number: "50" })
@@ -196,19 +231,21 @@ const Guides: FC = () => {
                   {data.header}
                 </h3>
                 {data.links.map((link, index) => (
-                  <div className="flex flex-row gap-5 my-1 py-2 hover:bg-secondary-700 transition-colors cursor-pointer">
+                  <div
+                    key={index}
+                    className="flex flex-row gap-5 my-1 py-2 hover:bg-secondary-700 transition-colors cursor-pointer"
+                  >
                     <Image
                       src="/img/support/rocket.svg"
                       alt="rocket icon"
                       width={25}
                       height={25}
                     />
-                    <p
-                      key={index}
-                      className="text-[#547196] font-medium text-xl"
-                    >
-                      {link}
-                    </p>
+                    <Link legacyBehavior href={link.url}>
+                      <a className="text-[#547196] font-medium text-xl">
+                        {link.linkText}
+                      </a>
+                    </Link>
                   </div>
                 ))}
               </div>

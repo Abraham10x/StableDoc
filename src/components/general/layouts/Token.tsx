@@ -7,21 +7,21 @@ const Token: FC = () => {
   const TokenData = [
     {
       id: 1,
+      image: "/img/general/nav/wallet.png",
+      text: "StableDoc Token",
+      link: "/SDT",
+    },
+    {
+      id: 2,
       image: "/img/general/nav/contract.png",
       text: "Our whitepaper",
       link: "/assets/documents/new-whitepaper.pdf",
     },
     {
-      id: 2,
-      image: "/img/general/nav/wallet.png",
-      text: "Token Utility",
-      link: "/SDT",
-    },
-    {
       id: 3,
       image: "/img/general/nav/crypto-contract.png",
-      text: "Smart Contracts",
-      link: "#",
+      text: "Move2Earn",
+      link: "/M2E",
     },
     {
       id: 4,
@@ -34,7 +34,7 @@ const Token: FC = () => {
     <div>
       <div className="hs-dropdown [--strategy:static] lg:[--strategy:absolute] [--adaptive:none] lg:[--trigger:hover]">
         <p className="md:px-6 lg:px-3 hover:bg-gradient-600 hover:bg-clip-text text-transparent text-text-600 text-base cursor-pointer">
-          StableDoc Token
+          Blockchain
           <IoChevronDown className="hover:bg-gradient-600 hover:bg-clip-text hover:font-semibold inline mb-1 ml-1" />
         </p>
 
@@ -49,7 +49,7 @@ const Token: FC = () => {
                 <LinkButton
                   key={data.id}
                   link={data.link}
-                  target={data.id === 4 || data.id === 1 ? "_blank" : ""}
+                  target={data.id === 4 || data.id === 2 ? "_blank" : ""}
                 >
                   <div className="flex gap-5">
                     <Image

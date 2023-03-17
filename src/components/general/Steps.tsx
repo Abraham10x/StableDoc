@@ -1,27 +1,31 @@
 import Image from "next/image";
 import { FC } from "react";
-import { Button } from "./Button";
 import AppStore from "./AppStore";
 
-const Steps: FC = () => {
+interface IProps {
+  applestore: string;
+  playstore: string;
+}
+
+const Steps: FC<IProps> = ({ applestore, playstore }) => {
   const StepsData = [
     {
       id: 1,
       image: "/img/partners/process-1.svg",
-      header: "Download and register",
-      body: "Download The IOS Or Android Versions Of Our App And Sign Up as a doctor",
+      header: "Download and Register",
+      body: "Visit Playstore or Applestore below and download the StableDoc partner app and sign up",
     },
     {
       id: 2,
       image: "/img/partners/process-2.svg",
-      header: "Get booked",
-      body: "Get booked by a paatient and provide medical care solutions",
+      header: "Get Approved",
+      body: "Upload your license and registration to get approved by the StableDoc approval team",
     },
     {
       id: 3,
       image: "/img/partners/process-3.svg",
-      header: "Earn SDT/Cash",
-      body: "Earn cash or SDT for your services rendereds",
+      header: "Get Booked and Earn",
+      body: "Set availability and get booked by patients and start earning passive income right away",
     },
   ];
   return (
@@ -66,7 +70,7 @@ const Steps: FC = () => {
               ))}
             </div>
           </div>
-          <AppStore />
+          <AppStore applestore={applestore} playstore={playstore} />
         </div>
       </div>
     </>

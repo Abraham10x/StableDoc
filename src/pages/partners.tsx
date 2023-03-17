@@ -13,7 +13,10 @@ const Partners: NextPage = () => {
       <Seo templateTitle="Parnters" />
       <Hero />
       <Features />
-      <Steps />
+      <Steps
+        applestore="https://apps.apple.com/ng/app/stabledoc-partner/id1602960789"
+        playstore="https://play.google.com/store/apps/details?id=com.sdtapp.partnerapp"
+      />
       <Contact />
       <CTA />
     </Layout>

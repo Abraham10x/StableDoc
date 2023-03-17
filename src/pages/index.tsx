@@ -3,9 +3,7 @@ import Image from "next/image";
 import Seo from "../components/general/Seo";
 import { Layout } from "../layouts/default";
 import styles from "../styles/Home.module.css";
-import SubHeader from "../components/general/SubHeader";
 import Hero from "../components/home/Hero";
-import Partners from "../components/home/Partners";
 import MobileApp from "../components/home/MobileApp";
 import Beneficts from "../components/home/Beneficts";
 import Download from "../components/home/Download";
@@ -19,9 +17,9 @@ export default function Home() {
   return (
     <Layout>
       <Seo templateTitle="Home" />
-      <SubHeader />
+      <div className="my-[6rem]"></div>
+      {/* <SubHeader /> */}
       <Hero />
-      <div className="my-20"></div>
       {/* <Partners /> */}
       <MobileApp />
       <Beneficts />

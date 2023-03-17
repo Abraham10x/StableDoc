@@ -1,26 +1,31 @@
 import Image from "next/image";
 import { FC } from "react";
-import { Button } from "./Button";
+import { Button, LinkButton } from "./Button";
 
-const AppStore: FC = () => {
+interface IProps {
+  applestore: string;
+  playstore: string;
+}
+
+const AppStore: FC<IProps> = ({ applestore, playstore }) => {
   return (
     <div className="flex flex-row gap-6 justify-center my-6 sm:my-10 px-8 sm:px-0">
-      <Button className="">
+      <LinkButton link={applestore} target="_blank" className="">
         <Image
           src="/img/partners/apple-store.svg"
           alt="apple-store"
           width={200}
           height={200}
         />
-      </Button>
-      <Button className="">
+      </LinkButton>
+      <LinkButton target="_blank" link={playstore} className="">
         <Image
           src="/img/partners/play-store.svg"
           alt="apple-store"
           width={200}
           height={200}
         />
-      </Button>
+      </LinkButton>
     </div>
   );
 };

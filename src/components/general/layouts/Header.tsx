@@ -10,8 +10,13 @@ import Solutions from "./Solutions";
 import Token from "./Token";
 import Company from "./Company";
 import Support from "./Support";
+import SubHeader from "./SubHeader";
 
 const navLinks = [
+  {
+    id: 1,
+    url: <SubHeader />,
+  },
   {
     id: 1,
     url: <Solutions />,

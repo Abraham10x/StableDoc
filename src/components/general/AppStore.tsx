@@ -3,8 +3,8 @@ import { FC } from "react";
 import { Button, LinkButton } from "./Button";
 
 interface IProps {
-  applestore: string;
-  playstore: string;
+  applestore?: string;
+  playstore?: string;
 }
 
 const AppStore: FC<IProps> = ({ applestore, playstore }) => {

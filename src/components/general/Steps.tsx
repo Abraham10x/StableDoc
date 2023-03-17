@@ -39,7 +39,7 @@ const Steps: FC<IProps> = ({ applestore, playstore, subtitle }) => {
               Get Started in Just Three Steps{" "}
             </h3>
             <p className="mt-5 font-normal text-base sm:text-lg lg:text-xl">
-              {title}
+              {subtitle}
             </p>
           </div>
         </div>

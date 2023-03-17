@@ -71,51 +71,60 @@ const Guides: FC = () => {
   const GuideData = [
     {
       id: 1,
-      header: "Getting started overview",
-      body: `Get started quickly with the usual spreadsheet basics as 
-      well as some special features that you won't find anywhere else.`,
+      header: "Onboarding as a patient",
+      body: `Are you tired of driving long distances to the hospital only 
+      to go wait in long line to see your doctor? Download our app today 
+      to consult a doctor from the comfort of your home or office.`,
     },
     {
       id: 2,
-      header: "Signing up ",
-      body: `Get started quickly with the usual spreadsheet basics as 
-      well as some special features that you won't find anywhere else.`,
+      header: "Onboarding as a doctor",
+      body: `Visit Playstore or Applestore below and download the StableDoc 
+      partner app and sign up, upload your documents to get approved, set 
+      availability and get booked by patients and start earning`,
     },
     {
       id: 3,
-      header: "Getting started overview",
-      body: `Get started quickly with the usual spreadsheet basics as 
-      well as some special features that you won't find anywhere else.`,
+      header: "Trackers & Health Plan",
+      body: `Set daily, weekly, monthly goals – and reach them! Whatever your 
+      goals are, StableDoc will help you to reach and stick to them: steps, 
+      calories, water intake, etc. You can manually enter readings from fitness 
+      trackers & wearables or via Bluetooth interface.`,
     },
     {
       id: 4,
-      header: "Signing up ",
-      body: `Get started quickly with the usual spreadsheet basics as 
-      well as some special features that you won't find anywhere else.`,
+      header: "Vitals",
+      body: `Use your own device or the StableReality suite of gadgets to 
+      record such health vitals as body temperature, pulse rate, respiration 
+      rate and blood pressure. Making these vitals available to the physician 
+      is critical to a successful virtual consultation.`,
     },
     {
       id: 5,
-      header: "Getting started overview",
-      body: `Get started quickly with the usual spreadsheet basics as 
-      well as some special features that you won't find anywhere else.`,
+      header: "Health Symptom Checker",
+      body: `Perform symptom assessments with our physician-trained artificial 
+      intelligence health assessor. The health checker helps you navigate 
+      through your symptoms and provides you with possible health conditions 
+      and treatment options`,
     },
     {
       id: 6,
-      header: "Signing up ",
-      body: `Get started quickly with the usual spreadsheet basics as 
-      well as some special features that you won't find anywhere else.`,
+      header: "Virtual Consultation",
+      body: `Our hassle-free, truly “doctor anywhere, anytime” virtual 
+      consultation forms the flagship core of the StableDoc healthcare 
+      delivery.`,
     },
     {
       id: 7,
-      header: "Getting started overview",
-      body: `Get started quickly with the usual spreadsheet basics as 
-      well as some special features that you won't find anywhere else.`,
+      header: "Video Conferencing",
+      body: `Get instant or scheduled face-to-face medical advise, 
+      prescription, tests and referrals.`,
     },
     {
       id: 8,
-      header: "Signing up ",
-      body: `Get started quickly with the usual spreadsheet basics as 
-      well as some special features that you won't find anywhere else.`,
+      header: "Audio Conferencing",
+      body: `Consult with a healthcare provider via audio calls when a 
+      video call is infeasible.`,
     },
   ];
 

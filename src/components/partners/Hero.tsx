@@ -56,7 +56,7 @@ const Hero: FC = () => {
       </div>
       <div className="flex flex-col mt-20">
         <h2 className=" bg-gradient-600 bg-clip-text text-transparent-active font-medium text-2xl sm:text-3xl lg:text-4xl text-center">
-          Why provoiders use stabledoc
+          Why provoiders choose StableDoc
         </h2>
         <AppStore
           applestore="https://apps.apple.com/ng/app/stabledoc-partner/id1602960789"

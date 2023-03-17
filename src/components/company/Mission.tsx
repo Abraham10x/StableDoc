@@ -64,7 +64,7 @@ const Mission: FC = () => {
           </div>
           <div className="flex flex-row my-8">
             <Image
-              src="/img/support/map-icon.svg"
+              src="/img/company/message.svg"
               alt="phone-icon"
               className="mt-0 lg:h-16 lg:w-auto h-11 w-11 sm:w-14 sm:h-14"
               width={60}
@@ -84,7 +84,7 @@ const Mission: FC = () => {
           </div>
           <div className="flex flex-row">
             <Image
-              src="/img/support/map-icon.svg"
+              src="/img/company/badge.svg"
               alt="phone-icon"
               className="mt-0 lg:h-16 lg:w-auto h-11 w-11 sm:w-14 sm:h-14"
               width={60}

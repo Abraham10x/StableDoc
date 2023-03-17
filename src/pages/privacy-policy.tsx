@@ -8,7 +8,7 @@ import Main from "../components/privacy/Main";
 const PrivacyPolicy: NextPage = () => {
   return (
     <Layout>
-      <Seo templateTitle="PrivacyPolicy" />
+      <Seo templateTitle="Privacy Policy" />
       <Hero />
       <Main />
       <CTA />

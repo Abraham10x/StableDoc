@@ -12,7 +12,7 @@ const Telehealth: NextPage = () => {
       <Seo templateTitle="Tele-health" />
       <Hero />
       <Features />
-      <Steps />
+      <Steps subtitle="You do not need to be a tech guru in order to earn passive income with StableDoc partner app. All you need to do is to download, register, sign up and start earning." />
       <CTA />
     </Layout>
   );

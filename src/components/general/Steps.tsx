@@ -4,8 +4,8 @@ import AppStore from "./AppStore";
 import { title } from "process";
 
 interface IProps {
-  applestore: string;
-  playstore: string;
+  applestore?: string;
+  playstore?: string;
   subtitle: string;
 }
 

@@ -38,7 +38,7 @@ const Main: FC = () => {
         </h3>
         <div className="text-center text-[#7889B2] text-base sm:text-lg lg:text-2xl">
           <p className="mt-4">4 Olu Agabi Close Life Camp Abuja FCT Nigeria</p>
-          <p className="mt-4">Cell Phone: Phone: +234 91 6262 7430</p>
+          <p className="mt-4">WhatsApp: +234 91 6262 7430</p>
         </div>
       </div>
       <div className="border-2 p-6 mt-8 border-[#A9C5DE] mx-auto">
@@ -74,7 +74,7 @@ const Main: FC = () => {
             Email here
           </h3>
           <p className="mt-4 text-center text-[#7889B2] text-base sm:text-lg lg:text-2xl">
-            contact@stabledoc.com
+            info@stabledoc.com
           </p>
         </div>
         <div className="border-2 p-6 mt-8 border-[#A9C5DE] w-full">

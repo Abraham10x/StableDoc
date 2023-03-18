@@ -8,7 +8,7 @@ const Hero: FC = () => {
         <div className="flex flex-col justify-between h-full basis-[54%] my-auto">
           <div className="flex flex-row gap-5">
             <h1 className="font-bold text-2xl sm:text-3xl lg:text-5xl bg-gradient-600 bg-clip-text text-transparent-active">
-              Support
+              Help Center
             </h1>
             <Image
               className="lg:hidden"

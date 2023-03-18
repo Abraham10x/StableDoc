@@ -12,20 +12,28 @@ const Guides: FC = () => {
       links: [
         {
           url: "solution/#Home-Health",
+          target: "",
           linkText: "Home Health",
         },
         {
           url: "/solution/#Men-and-women’s-health",
+          target: "",
           linkText: "Men and Women's Health",
         },
         {
           url: "/solution/#Abroad-Referral-&-Medical-Tourism",
+          target: "",
           linkText: "Abroad Referral & Medical Tourism",
         },
-        { url: "/solution/#Annual-Physical", linkText: "Annual Physical" },
-        { url: "/solution/#StablePods", linkText: "Stablepods" },
+        {
+          url: "/solution/#Annual-Physical",
+          target: "",
+          linkText: "Annual Physical",
+        },
+        { url: "/solution/#StablePods", target: "", linkText: "Stablepods" },
         {
           url: "/solution/#Diaspora-Sponsored-Health",
+          target: "",
           linkText: "Diaspora Sponsored Health",
         },
       ],
@@ -35,19 +43,30 @@ const Guides: FC = () => {
       header: "Crypto Guides",
       links: [
         { url: "/SDT", linkText: "StableDoc Token" },
-        { url: "/assets/documents/new-whitepaper.pdf", linkText: "Whitepaper" },
+        {
+          url: "/assets/documents/new-whitepaper.pdf",
+          target: "_blank",
+          linkText: "Whitepaper",
+        },
         {
           url: "https://app.stabledoc.com/dashboard",
+          target: "_blank",
           linkText: "Staking and Farming",
         },
-        { url: "https://docs.stabledoc.com/", linkText: "Docs" },
-        { url: "/SDT/#road-map", linkText: "Road map" },
+        {
+          url: "https://docs.stabledoc.com/",
+          target: "_blank",
+          linkText: "Docs",
+        },
+        { url: "/SDT/#road-map", target: "", linkText: "Road map" },
         {
           url: "https://docs.stabledoc.com/information/smart-comtract-audit",
+          target: "_blank",
           linkText: "Smart Contracts",
         },
         {
           url: "/solution/#AI-Enabled-Apps,-Tools-And-Devices",
+          target: "",
           linkText: "AI Diagnoistics",
         },
       ],
@@ -56,14 +75,19 @@ const Guides: FC = () => {
       id: 3,
       header: "FAQs",
       links: [
-        { url: "/about", linkText: "About StableDoc" },
+        { url: "/about", target: "", linkText: "About StableDoc" },
         {
           url: "/careers",
+          target: "",
           linkText:
             "How do I book for appointment on the StableDoc telehealth app?",
         },
-        { url: "/faqs", linkText: "Why should I see an online doctor?" },
-        { url: "/faqs", linkText: "More FAQ..." },
+        {
+          url: "/faqs",
+          target: "",
+          linkText: "Why should I see an online doctor?",
+        },
+        { url: "/faqs", target: "", linkText: "More FAQ..." },
       ],
     },
   ];
@@ -251,7 +275,11 @@ const Guides: FC = () => {
                       height={25}
                     />
                     <Link legacyBehavior href={link.url}>
-                      <a className="text-[#547196] font-medium text-xl">
+                      <a
+                        target={link.target}
+                        rel="noreferer noopener"
+                        className="text-[#547196] font-medium text-xl"
+                      >
                         {link.linkText}
                       </a>
                     </Link>

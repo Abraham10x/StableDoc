@@ -20,7 +20,7 @@ const Company: FC = () => {
     {
       id: 3,
       image: "/img/general/nav/Partners.png",
-      text: "provider",
+      text: "Provider",
       link: "/partners",
     },
     {

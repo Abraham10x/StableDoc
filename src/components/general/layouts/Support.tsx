@@ -8,7 +8,7 @@ const Support: FC = () => {
     {
       id: 1,
       image: "/img/general/nav/learn.png",
-      text: "Support",
+      text: "Help Center",
       link: "/support",
     },
     {

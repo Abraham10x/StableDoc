@@ -27,7 +27,7 @@ const Mission: FC = () => {
                 2K+
               </h2>
               <p className="text-xs sm:text-sm lg:text-lg font-medium sm:font-normal text-text-300 mt-1 sm:mt-2">
-                Happy Csutomers
+                Happy Customers
               </p>
             </div>
             <div className="flex flex-col">
@@ -92,7 +92,7 @@ const Mission: FC = () => {
             />
             <div className="flex flex-col ml-5">
               <h3 className="capitalize font-bold text-base sm:text-xl lg:text-[26px] sm:leading-tight bg-gradient-600 bg-clip-text text-transparent-active">
-                Health Symptoms Checker
+                AI diagnostics
               </h3>
               <div className="font-normal text-[15px] sm:text-lg lg:text-xl text-text-500 mt-3">
                 <p>

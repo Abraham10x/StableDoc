@@ -375,6 +375,16 @@ const Main: FC = () => {
           </p>
         </div>
       </div>
+      {Term1.map((data) => (
+        <div key={data.id} className="border-2 p-6 mt-10 border-[#A9C5DE]">
+          <h3 className="font-bold text-xl sm:text-2xl lg:text-4xl bg-gradient-600 bg-clip-text text-transparent-active">
+            {data.header}
+          </h3>
+          <div className="text-[#7889B2] text-base sm:text-lg lg:text-2xl">
+            <p className="mt-4">{data.body}</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

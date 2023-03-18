@@ -14,7 +14,7 @@ const Parnter: FC = () => {
         <h3 className="bg-gradient-600 bg-clip-text text-transparent-active text-center font-bold text-xl sm:text-3xl lg:text-4xl">
           Our Parnters
         </h3>
-        <div className="flex w-full overflow-x-auto gap-12 sm:gap-10 lg:gap-28 justify-start xl:justify-center py-5 my-5 lg:my-0">
+        <div className="flex w-full overflow-x-auto gap-12 sm:gap-10 lg:gap-28 justify-start xl:justify-center py-5 my-5 lg:my-0 mx-auto">
           {parnters.map((data, index) => (
             <Image
               src={data}

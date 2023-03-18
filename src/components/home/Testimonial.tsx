@@ -15,21 +15,27 @@ const Testimonial: FC = () => {
       image: "/img/home/client/user-1.svg",
       username: "Amanda Michael",
       company: "Consultant",
-      text: `Using StableDoc telehealth app saves me from waiting long hours to see a doctor`,
+      text: `Using StableDoc telehealth app saves me from waiting 
+      long hours to see a doctor`,
     },
     {
       id: 2,
       image: "/img/home/client/user-2.svg",
       username: "Musa Abdullahi",
       company: "Entrepreneur",
-      text: `Consulting StableDoc doctors virtually on my mobile phone was an interesting experience, the doctors were so professional and friendly.`,
+      text: `Consulting StableDoc doctors virtually on my mobile 
+      phone was an interesting experience, the doctors were so 
+      professional and friendly.`,
     },
     {
       id: 3,
       image: "/img/home/client/user-1.svg",
       username: "Toyin Alabi",
       company: "Banker",
-      text: `I no longer need to drive long hours to the hospital to see my doctor for none emergency healthcare needs. With StableDoc app I can now access doctors from the comfort of my office.`,
+      text: `I don't have to drive long hours to the hospital to 
+      see my doctor for none emergency healthcare needs any more. 
+      With StableDoc app I can now access doctors from the comfort 
+      of my office. It's fast and easy`,
     },
   ];
   return (

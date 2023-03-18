@@ -54,7 +54,7 @@ const Hero: FC = () => {
             </div>
           </div>
         ))}
-        <div className="flex flex-row gap-4 sm:gap-10 mt-10">
+        {/* <div className="flex flex-row gap-4 sm:gap-10 mt-10">
           <Button className="flex flex-row bg-secondary-700 hover:bg-primary/20 text-black rounded-lg px-6 py-3 gap-4">
             <Image
               src="/img/general/app-store-white.svg"
@@ -71,7 +71,7 @@ const Hero: FC = () => {
               height={210}
             />
           </Button>
-        </div>
+        </div> */}
       </div>
       <div className="bg-secondary-700 hidden lg:block basis-[50%] pl-6 xl:pl-20 py-36">
         <Image

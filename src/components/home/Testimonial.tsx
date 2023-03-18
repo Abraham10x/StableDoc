@@ -13,52 +13,34 @@ const Testimonial: FC = () => {
     {
       id: 1,
       image: "/img/home/client/user-1.svg",
-      username: "Casi Henry",
-      company: "Forbes",
-      text: `Nisl nisi pulvinar dui justo, lorem. Sed quam eu cras at. Sed
-        quis id mauris massa. Eros, nec egestas vestibulum augue aenean
-        arcu leo vulputate. Magna feugiat ac adipiscing mattis velit
-        facilisi metus. Dolor urna, mi at tincidunt. Nulla.`,
+      username: "Amanda Michael",
+      company: "Consultant",
+      text: `Using StableDoc telehealth app saves me from waiting long hours to see a doctor`,
     },
     {
       id: 2,
       image: "/img/home/client/user-2.svg",
-      username: "Queen Dare",
-      company: "StableDoc User",
-      text: `Nisl nisi pulvinar dui justo, lorem. Sed quam eu cras at. Sed
-        quis id mauris massa. Eros, nec egestas vestibulum augue aenean
-        arcu leo vulputate. Magna feugiat ac adipiscing mattis velit
-        facilisi metus. Dolor urna, mi at tincidunt. Nulla.`,
+      username: "Musa Abdullahi",
+      company: "Entrepreneur",
+      text: `Consulting StableDoc doctors virtually on my mobile phone was an interesting experience, the doctors were so professional and friendly.`,
     },
     {
       id: 3,
       image: "/img/home/client/user-1.svg",
-      username: "Casi Henry",
-      company: "Forbes",
-      text: `Nisl nisi pulvinar dui justo, lorem. Sed quam eu cras at. Sed
-        quis id mauris massa. Eros, nec egestas vestibulum augue aenean
-        arcu leo vulputate. Magna feugiat ac adipiscing mattis velit
-        facilisi metus. Dolor urna, mi at tincidunt. Nulla.`,
-    },
-    {
-      id: 4,
-      image: "/img/home/client/user-2.svg",
-      username: "Queen Dare",
-      company: "StableDoc User",
-      text: `Nisl nisi pulvinar dui justo, lorem. Sed quam eu cras at. Sed
-        quis id mauris massa. Eros, nec egestas vestibulum augue aenean
-        arcu leo vulputate. Magna feugiat ac adipiscing mattis velit
-        facilisi metus. Dolor urna, mi at tincidunt. Nulla.`,
+      username: "Toyin Alabi",
+      company: "Banker",
+      text: `I no longer need to drive long hours to the hospital to see my doctor for none emergency healthcare needs. With StableDoc app I can now access doctors from the comfort of my office.`,
     },
   ];
   return (
     <div className="bg-client-bg bg-no-repeat bg-cover -mt-64">
       <div className="container 2xl:px-0 mx-auto py-40 sm::py-80">
         <h3 className="text-white capitalize text-center font-medium text-2xl lg:3xl lg:text-5xl">
-          what our Users say
+          what our Users are saying
         </h3>
-        <p className="text-white capitalize text-base sm:text-xl mt-4 text-center">
-          Neque, pulvinar vestibulum non aliquam.
+        <p className="text-white text-base sm:text-xl mt-4 text-center">
+          Join the community of smart people using StableDoc telehealth app to
+          access doctors anywhere anytime
         </p>
 
         <Swiper
@@ -87,7 +69,7 @@ const Testimonial: FC = () => {
         >
           {TestimonialData.map((data) => (
             <SwiperSlide key={data.id}>
-              <div className="p-8 border border-white rounded-xl flex flex-col gap-6 mt-20 mx-12">
+              <div className="p-8 border border-white rounded-xl flex flex-col gap-6 mt-20 mx-12 h-56 sm:h-80 lg:h-60">
                 <div className="flex flex-row">
                   <Image
                     className="hidden sm:block"
@@ -112,7 +94,7 @@ const Testimonial: FC = () => {
                     </p>
                   </div>
                 </div>
-                <p className="text-xs sm:text-sm lg:text-base capitalize text-white">
+                <p className="text-xs sm:text-sm lg:text-base text-white">
                   {data.text}
                 </p>
               </div>

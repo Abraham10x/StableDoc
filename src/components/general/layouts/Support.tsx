@@ -27,7 +27,7 @@ const Support: FC = () => {
       id: 4,
       image: "/img/general/nav/contact.png",
       text: "Get In Touch",
-      link: "/support/#contact-us",
+      link: "/contact",
     },
   ];
   return (

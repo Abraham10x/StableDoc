@@ -7,44 +7,26 @@ const Beneficts: FC = () => {
     {
       id: 1,
       image: "/img/home/square-icon.svg",
-      header: "Flexibility",
-      body: `Adaptable for any patient or device so you can 
-      choose when, where, and how you get medical help..`,
+      header: "Crypto Trading",
+      body: `Investors buy SDT and trade it against other crypto to earn 
+      profit. SDT's use case makes it easy for it's price to appreciate 
+      and this means good profit for investors.`,
     },
     {
       id: 2,
       image: "/img/home/calendar-icon.svg",
-      header: "Inclusive",
-      body: `Equal experiences for eveyone regardless 
-      of where you are located, language, or communication style. `,
+      header: "Staking and Farming ",
+      body: `Investors who buy into SDT can farm and stake their tokens 
+      to earn more crypto which they can convert to fiat such as US 
+      dollars for a good profit`,
     },
     {
       id: 3,
       image: "/img/home/ticket-icon.svg",
-      header: "Secure",
-      body: `Thoughfull secure design and private by deafult, 
-      we keep your meidcal data secure. `,
-    },
-    {
-      id: 4,
-      image: "/img/home/square-icon.svg",
-      header: "Flexibility",
-      body: `Adaptable for any patient or device so you can 
-      choose when, where, and how you get medical help..`,
-    },
-    {
-      id: 5,
-      image: "/img/home/calendar-icon.svg",
-      header: "Inclusive",
-      body: `Equal experiences for eveyone regardless 
-      of where you are located, language, or communication style. `,
-    },
-    {
-      id: 6,
-      image: "/img/home/ticket-icon.svg",
-      header: "Secure",
-      body: `Thoughfull secure design and private by deafult, 
-      we keep your meidcal data secure. `,
+      header: "Easy payment on StableDoc Ecosystem. ",
+      body: `Payment for product and services using SDT on the StableDoc 
+      platform is fast, secure and transparent. No third-party is required 
+      to settle payment disputes.`,
     },
   ];
   return (
@@ -59,9 +41,9 @@ const Beneficts: FC = () => {
               Why Invest in SDT
             </h3>
           </div>
-          <p className="text-base sm:text-lg lg:text-lg text-white w-full mt-3 sm:mt-0 sm:w-2/4 lg:w-2/6">
-            Pellentesque etiam blandit in tincidunt at donec. Eget ipsum
-            dignissim placerat nisi, adipiscing mauris non purus parturient.
+          <p className="text-base sm:text-lg lg:text-lg text-white w-full mt-3 sm:mt-0 sm:w-2/4 lg:w-[28%]">
+            Our investors choose SDT because of its robust utilities. Great use
+            cases drives token values!
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-7 mt-16">

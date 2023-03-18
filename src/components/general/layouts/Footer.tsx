@@ -30,19 +30,19 @@ const Footer: FC = () => {
       link: [
         {
           linkTitle: "Whitepaper",
-          url: "/about",
+          url: "/assets/documents/new-whitepaper.pdf",
         },
         {
-          linkTitle: "Token Utility",
-          url: "/about",
+          linkTitle: "StableDoc Token",
+          url: "/SDT",
         },
         {
-          linkTitle: "Smart contracts",
-          url: "/about",
+          linkTitle: "Smart Contracts",
+          url: "https://docs.stabledoc.com/information/smart-comtract-audit",
         },
         {
           linkTitle: "Staking and farming",
-          url: "/about",
+          url: "https://app.stabledoc.com/dashboard",
         },
       ],
     },
@@ -56,11 +56,15 @@ const Footer: FC = () => {
         },
         {
           linkTitle: "Contact us",
-          url: "/support/#contact-us",
+          url: "/contact",
         },
         {
-          linkTitle: "Social media links",
-          url: "/support/#social-media",
+          linkTitle: "Privacy Policy",
+          url: "/privacy-policy",
+        },
+        {
+          linkTitle: "Terms and Condition",
+          url: "/terms-and-condition",
         },
       ],
     },
@@ -114,44 +118,81 @@ const Footer: FC = () => {
           <FooterLinks
             header="Solutions"
             data={[
-              { url: "/about", linkText: "Premium health" },
-              { url: "/careers", linkText: "Cross border health" },
-              { url: "/faqs", linkText: "Your health on a blockchain" },
+              {
+                url: "/solution/#Home-Health",
+                linkText: "Premium health",
+              },
+              {
+                linkText: "Cross border health",
+                url: "/solution/#Abroad-Referral-&-Medical-Tourism",
+              },
+              {
+                linkText: "Your health on a blockchain",
+                url: "/solution/#Virtual-Reality-–-And-The-Metaverse-",
+              },
             ]}
           />
           <FooterLinks
             header="SDT"
             data={[
-              { url: "/about/#core-values", linkText: "Whitepaper" },
-              { url: "/about/#core-team", linkText: "Token Utility" },
-              { url: "/#our-products", linkText: "Smart contracts" },
               {
-                url: "/careers/#open-postions",
+                linkText: "Whitepaper",
+                url: "/assets/documents/new-whitepaper.pdf",
+              },
+              {
+                linkText: "StableDoc Token",
+                url: "/SDT",
+              },
+              {
+                linkText: "Smart Contracts",
+                url: "https://docs.stabledoc.com/information/smart-comtract-audit",
+              },
+              {
                 linkText: "Staking and farming",
+                url: "https://app.stabledoc.com/dashboard",
               },
             ]}
           />
           <FooterLinks
             header="Support"
             data={[
-              { url: "/product/school", linkText: "Tutorials and FAQs" },
               {
-                url: "/product/corebanking",
-                linkText: "Contact us",
+                linkText: "Tutorials and FAQs",
+                url: "/support",
               },
-              { url: "/product/plux", linkText: "Social media links" },
+              {
+                linkText: "Contact us",
+                url: "/contact",
+              },
+              {
+                linkText: "Privacy Policy",
+                url: "/privacy-policy",
+              },
+              {
+                linkText: "Terms and Condition",
+                url: "/terms-and-condition",
+              },
             ]}
           />
           <FooterLinks
             header="Company"
             data={[
-              { url: "/product/school", linkText: "About" },
               {
-                url: "/product/corebanking",
-                linkText: "Team",
+                linkText: "About",
+                url: "/company",
               },
-              { url: "/product/plux", linkText: "Partners" },
-              { url: "/product/plux", linkText: "Blog" },
+              {
+                linkText: "Team",
+                url: "/company/#core-team",
+              },
+              {
+                linkText: "Partners",
+                url: "/partners",
+              },
+              {
+                linkText: "Blog",
+                url: "/blog",
+              },
             ]}
           />
         </div>

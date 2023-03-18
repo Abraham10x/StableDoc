@@ -9,25 +9,25 @@ interface IProps {
   subtitle: string;
 }
 
-const Steps: FC<IProps> = ({ applestore, playstore, subtitle }) => {
+const PatientSteps: FC<IProps> = ({ applestore, playstore, subtitle }) => {
   const StepsData = [
     {
       id: 1,
       image: "/img/partners/process-1.svg",
       header: "Download and Register",
-      body: "Visit Playstore or Applestore below and download the StableDoc partner app and sign up",
+      body: " Download the IOS Or android version of  the StableDoc app usind the links below and sign up",
     },
     {
       id: 2,
       image: "/img/partners/process-2.svg",
-      header: "Get Approved",
-      body: "Upload your license and registration to get approved by the StableDoc approval team",
+      header: "Fund Your Account",
+      body: "Choose a payment option and fund you wallet.",
     },
     {
       id: 3,
       image: "/img/partners/process-3.svg",
-      header: "Get Booked and Earn",
-      body: "Set availability and get booked by patients and start earning passive income right away",
+      header: "Get Appointment",
+      body: "Choose pay as you go or subscribe to one of our plans and book an appointment",
     },
   ];
   return (
@@ -76,4 +76,4 @@ const Steps: FC<IProps> = ({ applestore, playstore, subtitle }) => {
     </>
   );
 };
-export default Steps;
+export default PatientSteps;

@@ -94,20 +94,24 @@ const Services: FC = () => {
       image: "/img/solution/service-8.png",
       class: "",
       header: `Virtual Reality – And The Metaverse `,
-      body: `Cutting edge artificial intelligence and machine learning 
-        (AI/ML) is utilized for diagnostics of diseases. This can be 
-        utilized directly by patients as a first-level check and/or 
-        used as diagnostic support for clinicians during telemedicine calls. `,
+      body: `One other key feature in our road map is the development 
+      of StableReality, a virtual reality telemed that will further 
+      support patient-doctor interaction and build trust. We are putting 
+      resources into our futuristic foray into the Metaverse, where our 
+      suite of StableReality gadgets, VR and supporting processes will 
+      be used to deliver healthcare in the Metaverse. Your StableDoc 
+      Digital Twin will be configured to mimic activities and 
+      physiological changes in the Metaverse, which will be used to 
+      inform your real-world healthcare delivery and services.
+
+`,
     },
     {
       id: 3,
       image: "/img/solution/service-9.png",
       class: "sm:flex-row-reverse",
       header: `StableDoc Health NFT`,
-      body: `Cutting edge artificial intelligence and machine learning 
-        (AI/ML) is utilized for diagnostics of diseases. This can be 
-        utilized directly by patients as a first-level check and/or 
-        used as diagnostic support for clinicians during telemedicine calls. `,
+      body: `Patients are now aware that their data exist but they typically do not have access to it or control over where the data is used. StableDoc NFT aims at solving this problem by allowing patients to track how their data is being used and opportunity to earn from the use of their data. An NFT of a patient's data would not only identify the data as belonging to that individual but would also confer ownership, allowing the patient to access it and track it wherever it is being used, and provide revenue to the data owner. Patient-control of data and robust ethical and jurisdiction-specific regulatory considerations underpin our design of this product and service offering.`,
     },
   ];
   return (

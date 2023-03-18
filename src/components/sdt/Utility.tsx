@@ -9,29 +9,29 @@ const Utility: FC = () => {
       image: "/img/sdt/files-icon.svg",
       header: `Convenient hospital eVisits 
           via video call, voice call or text`,
-      body: `AAdd multiple links in Instagram instead of just one.`,
+      body: ``,
     },
     {
       id: 2,
       image: "/img/sdt/files-icon.svg",
       header: `Instant cross-border payment settlement`,
-      body: `Add multiple links in Instagram instead of just one.`,
+      body: ``,
     },
     {
       id: 3,
       image: "/img/sdt/files-icon.svg",
-      header: `View and manage medical bills`,
-      body: `Add multiple links in Instagram instead of just one. `,
+      header: `SDT will be used to auction NFT of patient health data in the future.`,
+      body: ` `,
     },
   ];
   return (
     <div className="container pt-20 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto">
       <div className="flex flex-col gap-2 sm:gap-4 lg:gap-5">
-        <p className="font-medium text-sm sm:text-base lg:text-lg text-text-700 sm:text-primary text-center">
+        {/* <p className="font-medium text-sm sm:text-base lg:text-lg text-text-700 sm:text-primary text-center">
           SDT Utility
-        </p>
+        </p> */}
         <h3 className="font-medium bg-gradient-600 bg-clip-text text-transparent-active text-transparent-remove sm:text-text-700 text-xl sm:text-3xl lg:text-[44px] leading-7 text-center mx-auto">
-          What’s possible with StableDoc Token?
+          What more can you do with with StableDoc token?
         </h3>
       </div>
       <div className="grid grid-rows-1 grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-3 lg:grid-rows-2 sm:gap-x-10 lg:gap-x-0 mt-0 sm:mt-10 lg:mt-20">
@@ -59,11 +59,9 @@ const Utility: FC = () => {
             height={30}
           />
           <h3 className="font-medium text-2xl text-text-700">
-            Payment between healthcare providers and consumers
+            View and manage medical bills
           </h3>
-          <p className="text-lg text-text-600">
-            Add multiple links in Instagram instead of just one.
-          </p>
+          {/* <p className="text-lg text-text-600"></p> */}
         </div>
         <div className="row-span-3 mt-36 hidden lg:block">
           <Image
@@ -79,7 +77,7 @@ const Utility: FC = () => {
             <h3 className="font-medium text-2xl text-text-700">
               {data.header}
             </h3>
-            <p className="text-lg text-text-600">{data.body}</p>
+            {/* <p className="text-lg text-text-600">{data.body}</p> */}
           </div>
         ))}
       </div>

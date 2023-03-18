@@ -20,9 +20,14 @@ const Hero: FC = () => {
             />
           </div>
           <p className="text-base lg:text-2xl text-text-300 mt-8">
-            Lorem ipsum dolor sit amet doloroli sitiol conse ctetur adipiscing
-            elit. dolor sit amet doloroli sitiol conse ctetur adipiscing
-            elitdolor sit amet doloroli sitiol conse ctetur adipiscing elit
+            Our solution offering constitute a suite of telehealth apps and
+            devices with in-built cutting edge artificial intelligence and
+            machine learning (AI/ML) which can be utilized directly by patients
+            as a first-level check and/or used as diagnostic support to deliver
+            our “anytime, anywhere” telehealth. Premium health services such as
+            home health, men and women's health, and cross border health.
+            Another core part of our solution is StableDoc Tokens ($SDT) that
+            underpins the payments system on the expansive StableDoc ecosystem.
           </p>
         </div>
         <Image

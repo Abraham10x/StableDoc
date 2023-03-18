@@ -6,7 +6,7 @@ import Beneficts from "../components/m2e/Beneficts";
 import Features from "../components/m2e/Feature";
 import Token from "../components/m2e/Token";
 import Statistics from "../components/m2e/Statistics";
-import Steps from "../components/general/Steps";
+import ProviderSteps from "../components/general/ProviderSteps";
 import CTA from "../components/general/CTA";
 
 const M2E: NextPage = () => {
@@ -19,7 +19,7 @@ const M2E: NextPage = () => {
       <Features />
       <Token />
       <Statistics />
-      <Steps
+      <ProviderSteps
         subtitle="You don’t need any prior Crypto knowledge to begin to earn Crypto
               on StableFit app. All you need to do is to download, register and
               start earning"

@@ -26,7 +26,7 @@ const ServiceCard: FC<IProps> = ({ id, className, header, body, image }) => {
         </p>
         <div className="mt-10 flex justify-center sm:justify-start">
           <LinkButton
-            link="/support#contact-us"
+            link="/contact"
             className="bg-primary hover:bg-secondary-900 transition-all font-normal sm:font-semibold text-white px-11 py-2 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
           >
             Contact Us

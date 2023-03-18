@@ -52,9 +52,13 @@ const Statistics: FC = () => {
               </div>
             ))}
             <div className="flex flex-row mt-8 gap-10">
-              <Button className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white w-44 sm:w-36 lg:w-44 py-2 sm:py-4 leading-7 text-sm sm:text-base lg:text-xl rounded-full">
-                Buy SFT
-              </Button>
+              <LinkButton
+                target="_blank"
+                link="https://pancakeswap.finance/swap?outputCurrency=0x543c7ebb52d56985f63f246a5b3558aff79037d7"
+                className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white w-44 sm:w-36 lg:w-44 py-2 sm:py-4 leading-7 text-sm sm:text-base lg:text-xl rounded-full"
+              >
+                Buy SDT
+              </LinkButton>
               <LinkButton
                 target="_blank"
                 link="/assets/documents/new-whitepaper.pdf"

@@ -34,7 +34,7 @@ const Download: FC = () => {
             <LinkButton
               link="https://apps.apple.com/ng/app/stabledoc/id1602960544"
               target="_blank"
-              className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white w-[9.8rem] sm:w-44 lg:w-52 py-2 sm:py-3 leading-7 text-sm sm:text-base rounded-full"
+              className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white w-[9.8rem] sm:w-44 lg:w-52 py-2 sm:py-2 leading-7 text-sm sm:text-base rounded-full"
             >
               <div className="flex justify-center gap-1 sm:gap-2">
                 <Image

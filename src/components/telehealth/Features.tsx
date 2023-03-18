@@ -35,7 +35,10 @@ const Features: FC = () => {
         <h3 className="bg-gradient-600 bg-clip-text text-transparent-active font-medium text-2xl sm:text-3xl lg:text-4xl text-center mb-6 sm:mb-10">
           The Telehealth app
         </h3>
-        <AppStore />
+        <AppStore
+          applestore="https://apps.apple.com/ng/app/stabledoc/id1602960544"
+          playstore="https://play.google.com/store/apps/details?id=com.sdtapp.customer"
+        />
         <div className="lg:container pt-6 sm:pt-12 lg:px-10 pb-8 2xl:px-0 mx-auto mt-10 mb-10">
           {FeatureData.map((data) => (
             <div

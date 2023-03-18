@@ -11,9 +11,9 @@ const Blog: FC = () => {
           <h2 className="bg-gradient-600 bg-clip-text text-transparent-active font-bold text-2xl sm:text-3xl lg:text-5xl text-center">
             News Flash/Blog Snippets
           </h2>
-          <p className="text-text-500 text-base sm:text-2xl text-center">
+          {/* <p className="text-text-500 text-base sm:text-2xl text-center">
             Neque, pulvinar vestibulum non aliquam.
-          </p>
+          </p> */}
         </div>
 
         <div className="grid grid-rows-4 sm:grid-rows-3 sm:grid-flow-col gap-10 sm:gap-5 xl:gap-10">

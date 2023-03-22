@@ -15,11 +15,11 @@ const Hero: FC = () => {
             personalized and decentralized.
           </p>
           <LinkButton
-            link="https://telehealth.stabledoc.com/"
+            link="https://patient.stabledoc.com/auth"
             target="_blank"
             className="bg-primary hover:bg-secondary-900 font-semibold text-white w-40 sm:w-40 lg:w-52 py-2 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
           >
-            Get Started
+            Talk to a doctor
           </LinkButton>
         </div>
       </div>

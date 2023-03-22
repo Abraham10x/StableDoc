@@ -36,7 +36,6 @@ const Timeline: FC = () => {
     "StableDoc Mobile Apps Beta Testing",
     "StableDoc Telehealth Web App Development",
     "Main App Launch (Andriod/iOS)",
-    "StableFit Move2Earn App Launch",
     "Forms Parnterships",
     "StableDoc Pilot Rollouts",
     "Funding Rounds",
@@ -50,7 +49,7 @@ const Timeline: FC = () => {
     "Doctors Onboarding",
   ];
   const Q4 = [
-    "Main App Launch (Android/iOS), Web App",
+    "Revamped App Launch (Android/iOS), Web App",
     "Integration of StableDoc AI Diagnositcs",
     "Forms Parnterships",
     "StableDoc Token Marketing",
@@ -58,6 +57,7 @@ const Timeline: FC = () => {
     "Funding Rounds",
     "Telehealth Marketing",
     "StableDoc Token Marketing",
+    "StableFit Move2Earn App Launch",
   ];
   const Q5 = [
     "StableDoc Token Marketing",

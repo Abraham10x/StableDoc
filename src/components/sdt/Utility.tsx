@@ -7,21 +7,20 @@ const Utility: FC = () => {
     {
       id: 1,
       image: "/img/sdt/files-icon.svg",
-      header: `Convenient hospital eVisits 
-          via video call, voice call or text`,
-      body: ``,
+      header: `Instant cross-border payment settlement`,
+      body: `SDT has eliminated the hassles in foreign exchange 
+      transactions. Cross boarder payment using SDT is fast, 
+      secure, transparent and auditable.`,
     },
     {
       id: 2,
       image: "/img/sdt/files-icon.svg",
-      header: `Instant cross-border payment settlement`,
-      body: ``,
-    },
-    {
-      id: 3,
-      image: "/img/sdt/files-icon.svg",
-      header: `SDT will be used to auction NFT of patient health data in the future.`,
-      body: ` `,
+      header: `SDT will be used to auction NFT of patient health data 
+      in the future.`,
+      body: `The value of the patient data NFTs is sure to rise as 
+      different clinical research entities constantly scavenge for 
+      the type of limited, fit-for-purpose data that our platform 
+      will be able to capture.`,
     },
   ];
   return (
@@ -51,7 +50,7 @@ const Utility: FC = () => {
             height={180}
           />
         </div>
-        <div className="lg:px-10 py-12 flex flex-col gap-3">
+        {/* <div className="lg:px-10 py-12 flex flex-col gap-3">
           <Image
             src="/img/sdt/files-icon.svg"
             alt="squares icon"
@@ -61,8 +60,8 @@ const Utility: FC = () => {
           <h3 className="font-medium text-2xl text-text-700">
             View and manage medical bills
           </h3>
-          {/* <p className="text-lg text-text-600"></p> */}
-        </div>
+          <p className="text-lg text-text-600"></p>
+        </div> */}
         <div className="row-span-3 mt-36 hidden lg:block">
           <Image
             src="/img/sdt/desktop-hand.png"
@@ -77,7 +76,7 @@ const Utility: FC = () => {
             <h3 className="font-medium text-2xl text-text-700">
               {data.header}
             </h3>
-            {/* <p className="text-lg text-text-600">{data.body}</p> */}
+            <p className="text-lg text-text-600">{data.body}</p>
           </div>
         ))}
       </div>

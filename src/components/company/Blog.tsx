@@ -27,7 +27,7 @@ const Blog: FC = () => {
                 motherhood in a third class country
               </p> */}
               <LinkButton
-                link="/blog/hypertension"
+                link="/blog/diabetes"
                 target="_blank"
                 className="bg-primary hover:bg-secondary-900 transition-all text-white text-xs sm:text-base font-bold rounded-full sm:rounded-none px-5 sm:px-10 py-4 mb-4 sm:mb-10"
               >
@@ -52,26 +52,19 @@ const Blog: FC = () => {
               </LinkButton>
             </div>
           </div>
-          <div className="bg-[url('/img/company/post-2.png')] relative bg-cover h-80 sm:h-48 lg:h-60">
+          <div className="bg-[url('/img/blog-images/diabeties.png')] relative bg-cover h-80 sm:h-48 lg:h-60">
             <div className="absolute bottom-0 border-t border-primary bg-gradient-700 backdrop-blur-sm px-8">
               <h3 className="text-gray-500 font-bold text-base sm:text-sm lg:text-xl mb-5 mt-3">
-                StableDoc Announces Platform Partnership With PayTalk
+                Simple Facts You Must Know about Diabetes
               </h3>
-              <Button className="border-2 border-gray-500 text-white hover:bg-secondary-400/20 transition-all text-xs sm:text-base font-bold rounded-full sm:rounded-none mb-5 px-5 py-2">
+              <LinkButton
+                link="/blog/diabetes"
+                target="_blank"
+                className="border-2 border-gray-500 text-white hover:bg-secondary-400/20 transition-all text-xs sm:text-base font-bold rounded-full sm:rounded-none mb-5 px-5 py-2"
+              >
                 Read
                 <BsFillArrowRightCircleFill className="inline ml-4" />
-              </Button>
-            </div>
-          </div>
-          <div className="bg-[url('/img/company/post-3.png')] relative bg-cover h-80 sm:h-48 lg:h-60">
-            <div className="absolute bottom-0 border-t border-primary bg-gradient-700 backdrop-blur-sm px-8">
-              <h3 className="text-gray-500 font-bold text-base sm:text-sm lg:text-xl mb-5 mt-3">
-                StableDoc Announces Platform Partnership With PayTalk
-              </h3>
-              <Button className="border-2 border-gray-500 text-white hover:bg-secondary-400/20 transition-all text-xs sm:text-base font-bold rounded-full sm:rounded-none mb-5 px-5 py-2">
-                Read
-                <BsFillArrowRightCircleFill className="inline ml-4" />
-              </Button>
+              </LinkButton>
             </div>
           </div>
         </div>

@@ -44,13 +44,28 @@ const Main: FC = () => {
   const Blogdata = [
     {
       id: 1,
-      name: "Dr Anzaa Msonter",
+      name: "Dr Msonter Anzaa",
       date: "March 29, 2023",
+      image: "/img/blog/blog-post.png",
+      header: `Key Things You Need to Know about the Silent Killer – Hypertension`,
+      body: `A person is said to have hypertension when their blood pressure
+      is higher than the normal range. The heart pumps blood round all
+      parts of the body to supply them oxygen and nutrients, and to
+      remove waste from where it is generated to where it is excreted
+      from the body.`,
+      link: "blog/hypertension",
+    },
+    {
+      id: 2,
+      name: "Dr Msonter Anzaa",
+      date: "March 27, 2023",
       image: "/img/blog-images/diabeties.png",
       header: `Simple Facts You Must Know about Diabetes`,
-      body: `Diabetes mellitus is the medical name for what is commonly 
-      known as sugar disease. Medically, it is diagnosed when a person 
-      has a blood sugar greater than the normal level. `,
+      body: `Diabetes mellitus is the medical name for what is commonly known 
+      as sugar disease. Medically, it is diagnosed when a person has a blood 
+      sugar greater than the normal level. Blood sugar comes from a number of 
+      sources, but the body of a healthy person has mechanisms to control the 
+      sugar and keep it within the normal range. `,
       link: "blog/diabetes",
     },
   ];
@@ -97,19 +112,24 @@ const Main: FC = () => {
                 </div>
               </a>
             </Link>
-            <div className="flex flex-row gap-6 mt-2 sm:mt-6 lg:mt-8 hover:bg-secondary-700 transition-colors p-2 cursor-pointer">
-              <Image
-                src="/img/blog/latest-posts.png"
-                className="object-cover rounded-[100%]"
-                alt="post image"
-                width={50}
-                height={50}
-              />
-              <p className="text-base sm:text-lg lg:text-xl my-auto text-[#547196]">
-                StableDoc Plans Launch Of Blockchain-Based Telehealth{" "}
-              </p>
-            </div>
+            <Link href="blog/diabetes" legacyBehavior>
+              <a target="_blank" rel="noopener noreferrer">
+                <div className="flex flex-row gap-6 mt-2 sm:mt-6 lg:mt-8 hover:bg-secondary-700 transition-colors p-2 cursor-pointer">
+                  <Image
+                    src="/img/blog/latest-posts.png"
+                    className="object-cover rounded-[100%]"
+                    alt="post image"
+                    width={50}
+                    height={50}
+                  />
+                  <p className="text-base sm:text-lg lg:text-xl my-auto text-[#547196]">
+                    Simple Facts You Must Know about Diabetes
+                  </p>
+                </div>
+              </a>
+            </Link>
           </div>
+
           <div className="lg:hidden mt-8">
             <h3 className="text-xl font-medium bg-gradient-600 bg-clip-text text-transparent-active">
               Categories
@@ -213,7 +233,7 @@ const Main: FC = () => {
                 <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
                   <BiUser className="text-text-500 text-base sm:text-xl lg:text-2xl" />
                   <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
-                    Dr Anzaa Msonter
+                    Dr Msonter Anzaa
                   </p>
                 </div>
               </div>
@@ -246,7 +266,7 @@ const Main: FC = () => {
         {Blogdata.map((data) => (
           <div key={data.id} className="border-stroke-500 border rounded-3xl">
             <Image
-              className="rounded-t-3xl"
+              className="rounded-t-3xl object-cover w-full h-44 sm:h-72 lg:h-96"
               src={data.image}
               alt="checking BP"
               width={1200}

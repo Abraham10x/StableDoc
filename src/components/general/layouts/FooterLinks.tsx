@@ -2,12 +2,12 @@ import { FC } from "react";
 import Link from "next/link";
 
 interface LinkInfo {
-  url: any;
-  linkText: any;
+  url: string;
+  linkText: string;
 }
 
 interface IProps {
-  header: any;
+  header: string;
   data: LinkInfo[];
 }
 

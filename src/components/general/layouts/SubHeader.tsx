@@ -5,7 +5,7 @@ const SubHeader: FC = () => {
   return (
     <div className="">
       <Link legacyBehavior href={"/telehealth"}>
-        <a className="md:px-6 lg:px-3 hover:bg-gradient-600 hover:bg-clip-text text-transparent text-text-600 text-sm sm:text-base cursor-pointer transition-all">
+        <a className="md:px-6 lg:px-3 hover:bg-gradient-600 hover:bg-clip-text text-transparent text-text-600 text-base cursor-pointer">
           Telehealth
         </a>
       </Link>

@@ -18,7 +18,7 @@ const Hero: FC = () => {
             <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
               <BsStopwatch className="text-text-500 text-base sm:text-xl lg:text-2xl" />
               <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
-                March 29, 2023
+                March 27, 2023
               </p>
             </div>
             <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">

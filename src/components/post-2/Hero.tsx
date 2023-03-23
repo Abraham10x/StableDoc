@@ -11,7 +11,7 @@ const Hero: FC = () => {
         <div className="flex flex-col justify-between h-full basis-full my-auto">
           <div className="flex flex-row justify-start gap-5">
             <h1 className="font-bold text-2xl sm:text-4xl lg:text-5xl bg-gradient-600 bg-clip-text text-transparent-active">
-              Key Things You Need to Know about the Silent Killer – Hypertension
+              Simple Facts You Must Know about Diabetes
             </h1>
           </div>
           <div className="flex flex-row gap-4 sm:gap-20 mt-9">

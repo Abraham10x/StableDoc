@@ -1,11 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FC, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { BsFillArrowRightCircleFill, BsStopwatch } from "react-icons/bs";
 import { BiUser } from "react-icons/bi";
 import { FaRegCommentDots } from "react-icons/fa";
 import { Button, LinkButton } from "../general/Button";
-import Link from "next/link";
 
 const Main: FC = () => {
   const CategoriesData = [
@@ -41,7 +41,19 @@ const Main: FC = () => {
     },
   ];
 
-  const Blogdata = [{ id: 1 }, { id: 2 }];
+  const Blogdata = [
+    {
+      id: 1,
+      name: "Dr Anzaa Msonter",
+      date: "March 29, 2023",
+      image: "/img/blog-images/diabeties.png",
+      header: `Simple Facts You Must Know about Diabetes`,
+      body: `Diabetes mellitus is the medical name for what is commonly 
+      known as sugar disease. Medically, it is diagnosed when a person 
+      has a blood sugar greater than the normal level. `,
+      link: "blog/diabetes",
+    },
+  ];
 
   const [categories, setCategories] = useState({
     title: "Health",
@@ -68,7 +80,7 @@ const Main: FC = () => {
             <h3 className="bg-gradient-600 bg-clip-text text-transparent-active font-medium text-xl sm:text-2xl lg:text-3xl">
               Latest posts
             </h3>
-            <Link href="/read-blog" legacyBehavior>
+            <Link href="blog/hypertension" legacyBehavior>
               <a target="_blank" rel="noopener noreferrer">
                 <div className="flex flex-row gap-6 mt-4 sm:mt-7 lg:mt-8 hover:bg-secondary-700 transition-colors p-2 cursor-pointer">
                   <Image
@@ -219,7 +231,7 @@ const Main: FC = () => {
                 from the body.
               </p>
               <LinkButton
-                link="/read-blog"
+                link="/blog/hypertension"
                 target="_blank"
                 className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white px-7 sm:px-11 py-1.5 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
               >
@@ -235,39 +247,40 @@ const Main: FC = () => {
           <div key={data.id} className="border-stroke-500 border rounded-3xl">
             <Image
               className="rounded-t-3xl"
-              src="/img/blog/blog-post.png"
+              src={data.image}
               alt="checking BP"
               width={1200}
               height={1200}
             />
             <div className="px-5 py-8">
               <h3 className="text-base sm:text-2xl lg:text-4xl text-text-600">
-                Key Things You Need to Know about the Silent Killer –
-                Hypertension
+                {data.header}
               </h3>
               <div className="flex flex-row gap-4 sm:gap-20 mt-5">
                 <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
                   <BsStopwatch className="text-text-500 text-base sm:text-xl lg:text-2xl" />
                   <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
-                    January 25, 2021
+                    {data.date}
                   </p>
                 </div>
                 <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
                   <BiUser className="text-text-500 text-base sm:text-xl lg:text-2xl" />
                   <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
-                    Queen Dare
+                    {data.name}
                   </p>
                 </div>
               </div>
               <p className="my-7 text-sm sm:text-lg lg:text-2xl text-text-500">
-                A person is said to have hypertension when their blood pressure
-                is higher than the normal range. The heart pumps blood round all
-                parts of the body to supply them oxygen and nutrients,
+                {data.body}
               </p>
-              <Button className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white px-7 sm:px-11 py-1.5 sm:py-3 leading-7 text-xs sm:text-base rounded-full">
+              <LinkButton
+                link={data.link}
+                target="_blank"
+                className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white px-7 sm:px-11 py-1.5 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
+              >
                 Read More
                 <BsFillArrowRightCircleFill className="inline ml-4" />
-              </Button>
+              </LinkButton>
             </div>
           </div>
         ))}

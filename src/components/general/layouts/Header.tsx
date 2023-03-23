@@ -18,19 +18,19 @@ const navLinks = [
     url: <SubHeader />,
   },
   {
-    id: 1,
+    id: 2,
     url: <Solutions />,
   },
   {
-    id: 2,
+    id: 3,
     url: <Token />,
   },
   {
-    id: 3,
+    id: 4,
     url: <Company />,
   },
   {
-    id: 4,
+    id: 5,
     url: <Support />,
   },
 ];
@@ -164,7 +164,9 @@ const Header: FC = () => {
               </div>
             </Button>
           </div>
-          <ul className={`flex flex-col lg:flex-row`}>
+          <ul
+            className={`flex flex-col lg:flex-row justify-center align-middle`}
+          >
             {navLinks.map((data) => (
               <li
                 key={data.id}

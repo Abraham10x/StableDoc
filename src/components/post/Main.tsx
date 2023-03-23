@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FC } from "react";
 
 const Main: FC = () => {
@@ -130,6 +131,21 @@ const Main: FC = () => {
             spans if the condition is well controlled. All members of the
             population should develop the habit of checking their blood pressure
             routinely.
+          </p>
+          <p className="my-3">
+            Do you have a family history of hypertension, currently taking
+            antihypertensive medications or do you think you are at risk of
+            developing hypertension in some ways?{" "}
+            <Link legacyBehavior href="https://patient.stabledoc.com/auth">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline font-semibold text-primary cursor-pointer"
+              >
+                Click here
+              </a>
+            </Link>{" "}
+            to talk to a doctor today.
           </p>
         </div>
       ),

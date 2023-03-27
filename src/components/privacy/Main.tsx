@@ -98,19 +98,254 @@ const Main: FC = () => {
       </div>
       <div className="border-2 p-6 mt-10 border-[#A9C5DE]">
         <h3 className="font-bold text-xl sm:text-2xl lg:text-4xl bg-gradient-600 bg-clip-text text-transparent-active">
-          Healthcare Services
+          Text Messaging And E-Mail Notification
         </h3>
         <div className="text-[#7889B2] text-base sm:text-lg lg:text-2xl">
           <p className="mt-4">
-            All Health Professionals who deliver Services through StableDoc are
-            medical professionals practicing within a group of corporately owned
-            professional practices collectively known as “StableDoc
-            Professionals”. Each healthcare professional is responsible for his
-            or her services and compliance with the requirements applicable to
-            his or her profession and license. Neither StableDoc nor any third
-            parties who promote the Services or provide you with a link to the
-            Services shall be liable for any professional advice you obtain from
-            a Healthcare Professional via the Services.
+            If you provide a mobile telephone number and/or email address to us,
+            you are giving your consent and authorizing us or a third party to
+            send you text messages or e-mail notifications especially to notify
+            you of our services such as appointment booking with us. You are not
+            required to give us your consent for these text messages and e-mail
+            notifications. However, withholding your consent may interfere or
+            prevent us from providing you with some or all of our services. You
+            can choose to stop receiving text messages and email notifications
+            from us at any time by simply contacting us.
+          </p>
+        </div>
+      </div>
+      <div className="border-2 p-6 mt-10 border-[#A9C5DE]">
+        <h3 className="font-bold text-xl sm:text-2xl lg:text-4xl bg-gradient-600 bg-clip-text text-transparent-active">
+          Profile Information
+        </h3>
+        <div className="text-[#7889B2] text-base sm:text-lg lg:text-2xl">
+          <p className="mt-4">
+            Profile information such as profile picture/image, name, gender or
+            biography provided to us is always visible to our providers. Other
+            than being visible to our provider, we can share your profile or
+            other personal information only in the circumstances listed below.
+          </p>
+        </div>
+      </div>
+      <div className="border-2 p-6 mt-10 border-[#A9C5DE]">
+        <h3 className="font-bold text-xl sm:text-2xl lg:text-4xl bg-gradient-600 bg-clip-text text-transparent-active">
+          How We Use And Share Your Personal Information
+        </h3>
+        <div className="text-[#7889B2] text-base sm:text-lg lg:text-2xl">
+          <p className="mt-4">We use your personal information to:</p>
+          <ul className="list-disc ml-6 my-3">
+            <li>
+              Depict your EMR using NFT to confirm ownership to you. You may
+              earn revenue on this use of your Health Data by researchers
+              (individuals or organizations) or anybody you so wish to grant
+              access to your data.
+            </li>
+            <li>
+              Provide the Services and create personalized products and services
+              that are unique and relevant to you. For example, we may use your
+              information to remember who you are so you don’t have to enter it
+              again.
+            </li>
+            <li>
+              We also use your personal information to analyze how people use
+              our services, and try to understand what they like about our
+              services.
+            </li>
+            <li>
+              We may use your personal information to communicate with you or to
+              send you marketing promotions and advertising.
+            </li>
+            <li>
+              We may use your personal information as necessary to comply with
+              our legal obligations and to establish, exercise and defend legal
+              claims or enforce our Terms of Use.
+            </li>
+            <li>
+              Sometimes we combine personal information about you from different
+              sources. We might use this information to make guesses about you.
+              We do this to make our products better and to make sure we send
+              you info we think you will be interested in getting.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="border-2 p-6 mt-10 border-[#A9C5DE]">
+        <h3 className="font-bold text-xl sm:text-2xl lg:text-4xl bg-gradient-600 bg-clip-text text-transparent-active">
+          We Share Your Personal Information In The Following Circumstances:
+        </h3>
+        <div className="text-[#7889B2] text-base sm:text-lg lg:text-2xl">
+          <ul className="list-disc ml-6 my-3">
+            <li>
+              Your personal information may be shared with affiliated companies.
+              This means companies related by common ownership or control. These
+              may be companies that make their clinical services available
+              through our app.
+            </li>
+            <li>
+              We work with third-party services that provide technical support
+              like development, hosting, and other services. They may have
+              access to or may use personal information we have collected to
+              help provide our services.
+            </li>
+            <li>
+              Your personal information may be transferred to advisors, a
+              business partner, or others if any of the following events happen:
+            </li>
+            <li>Another company buys or merges with StableDoc</li>
+            <li>
+              We sell, liquidate, or transfer our assets, such as in the
+              unlikely event of bankruptcy
+            </li>
+            <li>
+              We share your information if we believe doing so is necessary or
+              for legal reasons, for example:
+            </li>
+            <li>
+              We share your information if we believe doing so is necessary or
+              for legal reasons, for example:
+            </li>
+            <li>
+              If we are required by law, regulation, legal process, court order,
+              or subpoena
+            </li>
+            <li>
+              If we are required by law, regulation, legal process, court order,
+              or subpoena
+            </li>
+            <li>
+              If we think releasing information will protect against physical,
+              financial, or other harm, injury or loss of property
+            </li>
+            <li>
+              In connection with an investigation of suspected or actual
+              unlawful activity.
+            </li>
+            <li>
+              We share your personal information with your consent or at your
+              direction
+            </li>
+          </ul>
+          <p className="mt-5">
+            Some of the information we collect may be shared with others in a
+            way that does not identify you. We may combine this information and
+            use it to create statistics or other information. We do not sell or
+            share your information with third parties for their own marketing
+            purposes. For every time we share your data for any other reason
+            outside the above stated reasons, we will ask for your consent
+            before doing so.
+          </p>
+        </div>
+      </div>
+      <div className="border-2 p-6 mt-10 border-[#A9C5DE]">
+        <h3 className="font-bold text-xl sm:text-2xl lg:text-4xl bg-gradient-600 bg-clip-text text-transparent-active">
+          Third-Party Services
+        </h3>
+        <div className="text-[#7889B2] text-base sm:text-lg lg:text-2xl">
+          <p className="mt-4">
+            StableDoc may link to other websites or services provided by third
+            parties. Third-party websites or services do not fall under
+            StableDoc's privacy or security policies. We are not responsible for
+            any third party’s collection of personal information and we
+            encourage you to review their privacy and security policies before
+            giving them any of your personal information.
+          </p>
+          <p className="mt-4">
+            We allow third-parties like the following to collect your personal
+            information:
+          </p>
+          <ul className="list-disc ml-6 mt-3">
+            <li>Business partners</li>
+            <li>Advertising Networks</li>
+            <li>Other advertising services</li>
+          </ul>
+          <p className="mt-4">
+            They may do this through cookies, web beacons, or other types of
+            technologies. This information can be taken and mixed with other
+            personal information across different online services.
+          </p>
+          <p className="mt-4">
+            Exceptions to request for Deletion of information You may request
+            deletion of your Personal Information by us, however, we may be
+            required (by law or otherwise) to keep this information and not
+            delete it (or to keep this information for a certain time, in which
+            case we will comply with your deletion request only after we have
+            fulfilled such requirements). When we delete Personal Information,
+            it will be deleted from the active database, but may remain in our
+            archives and we may also retain Anonymous Information about your use
+            of our services. Once we disclose some of your Personal Information
+            to third parties, we may not be able to access that Personal
+            Information and cannot force the deletion or modification of any
+            such information by the parties to whom we have made those
+            disclosures. After we delete Personal Information, we may retain
+            De-Identified Data and will continue to use De- Identified Data as
+            permitted under this Site Privacy Policy.
+          </p>
+        </div>
+      </div>
+      <div className="border-2 p-6 mt-10 border-[#A9C5DE]">
+        <h3 className="font-bold text-xl sm:text-2xl lg:text-4xl bg-gradient-600 bg-clip-text text-transparent-active">
+          How StableDoc Protects Your Information:
+        </h3>
+        <div className="text-[#7889B2] text-base sm:text-lg lg:text-2xl">
+          <p className="mt-4">
+            On our part, we ensure to keep personal information we collect and
+            maintain safe from unauthorized access by way of encryption of data
+            when stored in secure facilities, encryption of data in transit
+            where possible and ensuring strict access controls to personal data
+            in our care.
+          </p>
+          <p className="mt-4">
+            Please note that we can’t guarantee that personal information about
+            you will not be accessed, viewed, disclosed, altered, or destroyed
+            if the safety steps we use to protect information are broken; as no
+            security measures are perfect or impenetrable. StableDoc cannot
+            guarantee the security of any information you transmit to us via
+            network we not control such as internet and any wireless networks.
+          </p>
+        </div>
+      </div>
+      <div className="border-2 p-6 mt-10 border-[#A9C5DE]">
+        <h3 className="font-bold text-xl sm:text-2xl lg:text-4xl bg-gradient-600 bg-clip-text text-transparent-active">
+          Children's Privacy
+        </h3>
+        <div className="text-[#7889B2] text-base sm:text-lg lg:text-2xl">
+          <p className="mt-4">
+            We do not deliberately collect personal information online from
+            under age children depending on the country. If we find someone
+            submitting information to our services is under age based on country
+            law, we will delete any information collected as soon as possible.
+          </p>
+        </div>
+      </div>
+      <div className="border-2 p-6 mt-10 border-[#A9C5DE]">
+        <h3 className="font-bold text-xl sm:text-2xl lg:text-4xl bg-gradient-600 bg-clip-text text-transparent-active">
+          Refund Policy
+        </h3>
+        <div className="text-[#7889B2] text-base sm:text-lg lg:text-2xl">
+          <p className="mt-4">
+            We offer full refund for an appointment canceled 72 hours before the
+            due date, and for a missed appointment resulting from failure of the
+            Doctor to join the call at the appointed time.
+          </p>
+        </div>
+      </div>
+      <div className="border-2 p-6 mt-10 border-[#A9C5DE]">
+        <h3 className="font-bold text-xl sm:text-2xl lg:text-4xl bg-gradient-600 bg-clip-text text-transparent-active">
+          Changes To Our Privacy Policy
+        </h3>
+        <div className="text-[#7889B2] text-base sm:text-lg lg:text-2xl">
+          <p className="mt-4">
+            This privacy policy is subject to change from time to time as the
+            need arises to show changes in our information practices or relevant
+            laws. We may do this without giving prior notice to you. We will
+            post any revised version of the Site Privacy Policy on this page.
+            Continued use of our services following notice of such changes
+            indicates automatic acknowledgement of such updates and you agree to
+            be bound by the terms and conditions of such policy updates. By
+            using our website, mobile app, web app and other product and
+            services, you are agreeing to our collection, use and disposal of
+            Personal Information and other data as described in this our current
+            Privacy Policy and in future updated versions
           </p>
         </div>
       </div>

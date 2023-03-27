@@ -8,16 +8,23 @@ interface AppProps {
   type?: any;
   onClick?: any;
   target?: any;
+  id?: any;
 }
 
 export const Button: FC<AppProps> = ({
   children,
   className,
   onClick,
+  id,
 }: AppProps) => {
   return (
     // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-    <button type="button" className={` mt-0 ${className}`} onClick={onClick}>
+    <button
+      id={id}
+      type="button"
+      className={` mt-0 ${className}`}
+      onClick={onClick}
+    >
       {children}
     </button>
   );

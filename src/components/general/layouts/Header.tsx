@@ -127,13 +127,14 @@ const Header: FC = () => {
           </LinkButton>
           <div className="my-auto relative inline-flex">
             <Button
+              id="google_translate_element"
               type="button"
               className="border-stroke-500 hover:bg-primary/20 transition-all border text-base py-2 px-4 rounded-full"
             >
-              <div className="flex justify-center">
+              {/* <div className="flex justify-center">
                 <p className="inline">EN</p>
                 <IoChevronDown size={20} className="inline mb-1 ml-1" />
-              </div>
+              </div> */}
             </Button>
           </div>
         </div>

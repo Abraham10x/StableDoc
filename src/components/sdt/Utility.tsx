@@ -34,6 +34,24 @@ const Utility: FC = () => {
         </h3>
       </div>
       <div className="grid grid-rows-1 grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 lg:grid-cols-3 lg:grid-rows-2 sm:gap-x-10 lg:gap-x-0 mt-0 sm:mt-10 lg:mt-20">
+        <div className="lg:px-10 py-12 flex flex-col gap-3">
+          <Image
+            src="/img/sdt/files-icon.svg"
+            alt="squares icon"
+            width={30}
+            height={30}
+          />
+          <h3 className="font-medium text-2xl text-text-700">
+            SDT will be used to auction NFT of patient health data in the
+            future.
+          </h3>
+          <p className="text-lg text-text-600">
+            The value of the patient data NFTs is sure to rise as different
+            clinical research entities constantly scavenge for the type of
+            limited, fit-for-purpose data that our platform will be able to
+            capture.
+          </p>
+        </div>
         <div className="mt-16 sm:hidden">
           <Image
             src="/img/sdt/mobile-hand.png"
@@ -70,15 +88,22 @@ const Utility: FC = () => {
             height={1000}
           />
         </div>
-        {TokenData.map((data) => (
-          <div key={data.id} className="lg:px-10 py-12 flex flex-col gap-3">
-            <Image src={data.image} alt="squares icon" width={30} height={30} />
-            <h3 className="font-medium text-2xl text-text-700">
-              {data.header}
-            </h3>
-            <p className="text-lg text-text-600">{data.body}</p>
-          </div>
-        ))}
+        <div className="lg:px-10 py-12 flex flex-col gap-3">
+          <Image
+            src="/img/sdt/files-icon.svg"
+            alt="squares icon"
+            width={30}
+            height={30}
+          />
+          <h3 className="font-medium text-2xl text-text-700">
+            Instant cross-border payment settlement
+          </h3>
+          <p className="text-lg text-text-600">
+            SDT has eliminated the hassles in foreign exchange transactions.
+            Cross boarder payment using SDT is fast, secure, transparent and
+            auditable.
+          </p>
+        </div>
       </div>
     </div>
   );

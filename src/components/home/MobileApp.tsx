@@ -47,7 +47,7 @@ const MobileApp: FC = () => {
             <LinkButton
               link="https://apps.apple.com/ng/app/stabledoc/id1602960544"
               target="_blank"
-              className="bg-white font-semibold hover:bg-primary/20 transition-colors text-primary w-40 lg:w-44 xl:w-52 py-2 sm:py-3 leading-7 text-base rounded-full hidden lg:block"
+              className="bg-white font-semibold hover:bg-primary/20 transition-colors text-primary w-40 lg:w-44 xl:w-52 py-2 sm:py-3 leading-7 text-sm sm:text-base rounded-full"
             >
               <div className="flex justify-center gap-3">
                 <Image
@@ -77,7 +77,7 @@ const MobileApp: FC = () => {
             <LinkButton
               link="https://play.google.com/store/apps/details?id=com.sdtapp.customer"
               target="_blank"
-              className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white w-40 lg:w-48 xl:w-52 py-2 sm:py-2.5 leading-7 text-base rounded-full hidden lg:block"
+              className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white w-40 lg:w-48 xl:w-52 py-2 sm:py-2.5 leading-7 text-sm sm:text-base rounded-full"
             >
               <div className="flex justify-center gap-2">
                 <Image

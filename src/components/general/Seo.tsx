@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import { FC } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -79,6 +80,25 @@ const Seo: FC<SeoProps> = (props: SeoProps) => {
         content="/favicon/ms-icon-144x144.png"
       />
       <meta name="theme-color" content="#ffffff" />
+      {/* <script type="text/javascript">
+        function googleTranslateElementInit ()
+        {
+          new google.translate.TranslateElement(
+            {
+              defaultLanguage: "en",
+              pageLanguage: "en",
+              autoDisplay: false,
+              layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+              multilanguagePage: true,
+            },
+            "google_translate_element"
+          )
+        }
+      </script>
+      <script
+        type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+      ></script> */}
     </Head>
   );
 };

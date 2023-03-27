@@ -7,7 +7,7 @@ const Main: FC = () => {
       header: `Corrections Of The Terms Of Use`,
       body: (
         <div>
-          <p>
+          <p className="mt-5">
             There may be information on the Site that contains typographical
             errors, inaccuracies, or omissions, including descriptions, pricing,
             availability, and various other information. We reserve the right to
@@ -15,7 +15,7 @@ const Main: FC = () => {
             update the information on the Site at any time, without prior
             notice.
           </p>
-          <p>
+          <p className="mt-5">
             Your continued use of the App following the posting of revised Terms
             of Use means that you accept and agree to the changes. Although we
             will use commercially reasonable efforts to notify you when these
@@ -32,7 +32,7 @@ const Main: FC = () => {
       header: `Healthcare Services`,
       body: (
         <div>
-          <p>
+          <p className="mt-5">
             All Health Professionals who deliver Services through StableDoc are
             medical professionals practicing within a group of corporately owned
             professional practices collectively known as “StableDoc
@@ -153,7 +153,7 @@ const Main: FC = () => {
       header: `Accessing The App And Account Security`,
       body: (
         <div>
-          <p>
+          <p className="my-4">
             We reserve the right to withdraw or amend the StableDoc Mobile App,
             and any service or material we provide on the App, in our sole
             discretion without notice. We will not be liable if for any reason
@@ -163,7 +163,7 @@ const Main: FC = () => {
             discontinue or deny your access to and use of the App for any lawful
             reason.
           </p>
-          <p>
+          <p className="mt-5">
             You are responsible for making all arrangements necessary for you to
             have access to the App. We offer remote services using the internet,
             data networks, and devices which can access the internet and which
@@ -183,7 +183,7 @@ const Main: FC = () => {
             services in order to ensure they are secure and/or operating
             optimally.
           </p>
-          <p>
+          <p className="mt-5">
             You are responsible for ensuring the security of the device you use
             to access the App. We strongly recommend that if you are using a
             wireless network to access the App, you avoid use of public wi-fi
@@ -193,7 +193,7 @@ const Main: FC = () => {
             protected, set to lock after a short period of inactivity, and
             protected with suitable security features.
           </p>
-          <p>
+          <p className="mt-5">
             You understand that the risk that ePHI contained in an email will be
             read by a third party, other than the intended recipient, cannot be
             eliminated. Reasonable measures will be used to protect the security
@@ -207,7 +207,7 @@ const Main: FC = () => {
             transmission. Moreover, we bear no responsibility for safeguarding
             the ePHI once it is transmitted to you.
           </p>
-          <p>
+          <p className="mt-5">
             From time to time, updates to the App may be made available to you.
             We recommend that you use the latest version of the App at all
             times, to take advantage of the latest enhancements and important
@@ -215,7 +215,7 @@ const Main: FC = () => {
             until you have downloaded the latest version of the App and accepted
             any updated Terms of Use.
           </p>
-          <p>
+          <p className="mt-5">
             To access the App or some of the resources it offers, you may be
             asked to provide certain registration details or other information.
             It is a condition of your use of the App that all the information
@@ -225,7 +225,7 @@ const Main: FC = () => {
             you agree to provide such further information to ensure you have not
             fraudulently created your Account.
           </p>
-          <p>
+          <p className="mt-5">
             If you choose, or are provided with, a user name, password, or any
             other piece of information as part of our security procedures, you
             must treat such information as confidential, and you must not
@@ -240,11 +240,174 @@ const Main: FC = () => {
             public or shared device so that others are not able to view or
             record your password or other personal information.
           </p>
-          <p>
+          <p className="mt-5">
             We have the right to disable any user name, password, or other
             identifier, whether chosen by you or provided by us, at any time if,
             in our opinion, you have violated any provision of these Terms of
             Use.
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 7,
+      header: `Prohibited Uses`,
+      body: (
+        <div>
+          <p>
+            You may use the App only for lawful purposes and in accordance with
+            these Terms of Use. You agree not to use the App:
+          </p>
+          <ul className="list-disc ml-6 my-4">
+            <li>
+              In any way that violates any applicable federal, state, or local
+              law or regulation of the country where you are accessing our app
+              from.
+            </li>
+            <li>
+              On a device that has had its operating system compromised by the
+              process of Jail breaking (Apple iOS) or Rooting (Android), which
+              may result in the security of your personal data being
+              compromised.
+            </li>
+            <li>
+              For the purpose of exploiting, harming, or attempting to exploit
+              or harm minors in any way by exposing them to inappropriate
+              content, asking for personally identifiable information, or
+              otherwise.
+            </li>
+            <li>
+              To send, knowingly receive, upload, download, use, or re-use any
+              material that does not comply with these Terms of Use.
+            </li>
+            <li>
+              To transmit, or procure the sending of, any advertising or
+              promotional material, including any “junk mail,” “chain letter,”
+              “spam,” or any other similar solicitation.
+            </li>
+            <li>
+              To impersonate or attempt to impersonate another user or any other
+              person or entity, or to access any other user’s account through
+              the App.
+            </li>
+            <li>
+              To impersonate or attempt to impersonate another user or any other
+              person or entity, or to access any other user’s account through
+              the App.
+            </li>
+          </ul>
+          <p>More so, you agree nt</p>
+          <ul className="list-disc ml-6 my-3">
+            <li>
+              Use the App in any manner that could disable, overburden, damage,
+              or impair the site or interfere with any other party’s use of the
+              App, including their ability to engage in real time activities
+              through the App.
+            </li>
+            <li>
+              Rse any robot, spider, or other automatic device, process, or
+              means to access the App for any purpose, including monitoring or
+              copying any of the material on the App.
+            </li>
+            <li>
+              Use any manual process to monitor or copy any of the material on
+              the App, or for any other purpose not expressly authorized in
+              these Terms of Use, without our prior written consent.
+            </li>
+            <li>
+              Use any device, software, or routine that interferes with the
+              proper working of the App.
+            </li>
+            <li>
+              Introduce any viruses, Trojan horses, worms, logic bombs, or other
+              material that is malicious or technologically harmful.
+            </li>
+            <li>
+              Attempt to gain unauthorized access to, interfere with, damage, or
+              disrupt any parts of the App, the server on which the App is
+              stored, or any server, computer, or database connected to the App.
+            </li>
+            <li>
+              Attack the App via a denial-of-service attack or a distributed
+              denial-of-service attack
+            </li>
+            <li>
+              Otherwise attempt to interfere with the proper working of the App
+            </li>
+          </ul>
+        </div>
+      ),
+    },
+    {
+      id: 8,
+      header: `Indemnification`,
+      body: (
+        <div>
+          <p>
+            You agree to defend, indemnify, and hold us harmless, including our
+            subsidiaries, affiliates, and all of our respective officers,
+            agents, partners, and employees, from and against any loss, damage,
+            liability, claim, or demand, including reasonable attorneys’ fees
+            and expenses, made by any third party due to or arising out of: (1)
+            your Contributions; (2) use of the Site; breach of these Terms of
+            Use; (3) any breach of your representations and warranties set forth
+            in these Terms of Use; (4) your violation of the rights of a third
+            party, including but not limited to intellectual property rights;
+            (5) or any overt harmful act toward any other user of the Site with
+            whom you connected via the Site. Notwithstanding the foregoing, we
+            reserve the right, at your expense, to assume the exclusive defence
+            and control of any matter for which you are required to indemnify
+            us, and you agree to cooperate, at your expense, with our defence of
+            such claims. We will use reasonable efforts to notify you of any
+            such claim, action, or proceeding which is subject to this
+            indemnification upon becoming aware of it.
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 9,
+      header: `Limitation On Time To File Claims`,
+      body: (
+        <div>
+          <p>
+            To The Greatest Extent Permitted By Applicable Law, Any Cause Of
+            Action Or Claim You May Have Arising Out Of Or Relating To These
+            Terms Of Use Or The App Must Be Commenced Within Twelve (12) Months
+            After The Cause Of Action Accrues; Otherwise, Such Cause Of Action
+            Or Claim Is Permanently Barred.
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 10,
+      header: `Assignments Of Rights`,
+      body: (
+        <div>
+          <p>
+            The agreement for our services is between you and us, and no other
+            party. There are no intended third party beneficiaries of this
+            agreement. You may not assign or transfer your rights or obligations
+            under these Terms of Use without our prior written consent. We may
+            assign our rights and obligations under these terms to another
+            organization, but this will not affect your rights under these Terms
+            of Use.
+          </p>
+        </div>
+      ),
+    },
+    {
+      id: 11,
+      header: `Entire Agreement`,
+      body: (
+        <div>
+          <p>
+            These Terms of Use constitute the sole and entire agreement between
+            you and us regarding the App and the Clinical Services and supersede
+            all prior and contemporaneous understandings, agreements,
+            representations, and warranties, both written and oral, regarding
+            the App and the Clinical Services.
           </p>
         </div>
       ),

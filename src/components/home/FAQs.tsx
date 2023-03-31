@@ -178,8 +178,8 @@ const FAQs: FC = () => {
             Once all due diligence are completed and satisfactory, you would get
             a mail from the StableDoc team confirming completion of due
             diligence. Your stableDoc partners app would be activated and you
-            would be able consult with patients. Please note that only certified
-            doctors are engaged.
+            would be able to consult with patients. Please note that only
+            certified doctors are engaged.
           </p>
         </div>
       ),

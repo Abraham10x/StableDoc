@@ -44,7 +44,7 @@ const Features: FC = () => {
     },
   ];
   return (
-    <div className="container pt-12 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-0 sm:mt-10">
+    <div className="container px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-0 sm:mt-5">
       {FeatureData.map((data) => (
         <div
           key={data.id}

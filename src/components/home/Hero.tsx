@@ -11,8 +11,8 @@ const Hero: FC = () => {
         </h1>
         <div className="flex flex-col border-l-2 sm:border-l-4 lg:border-l-8 border-primary pl-3 sm:pl-5 lg:pl-8 gap-y-3 sm:gap-y-6 lg:gap-y-8 mt-5">
           <p className="text-lg sm:text-xl lg:text-2xl text-text-300 mt-1 sm:mt-2 lg:mt-8">
-            Redefining the nature of healthcare as ongoing, multi-modal,
-            personalized and decentralized.
+            Combining Blockchain-based and AI-driven telemedicine to deliver
+            cross-boundary healthcare to our patients all around the world
           </p>
           <LinkButton
             link="https://patient.stabledoc.com/auth"

@@ -20,9 +20,9 @@ const Services: FC = () => {
       id: 2,
       image: "/img/solution/service-2.png",
       class: "",
-      header: `Men and women’s health`,
+      header: `Men And Women’s Health`,
       body: `What you get – focused attention to your health problems 
-      as a woman or a man As part of annual physical – or anytime you 
+      as a woman or a man as part of annual physical – or anytime you 
       wish – you have the option to choose a gender-specific version 
       which includes everything in the StableDoc Comprehensive Health 
       Assessment (CHA) test plus additional testing for men’s and 
@@ -111,7 +111,17 @@ const Services: FC = () => {
       image: "/img/solution/service-9.png",
       class: "sm:flex-row-reverse",
       header: `StableDoc Health NFT`,
-      body: `Patients are now aware that their data exist but they typically do not have access to it or control over where the data is used. StableDoc NFT aims at solving this problem by allowing patients to track how their data is being used and opportunity to earn from the use of their data. An NFT of a patient's data would not only identify the data as belonging to that individual but would also confer ownership, allowing the patient to access it and track it wherever it is being used, and provide revenue to the data owner. Patient-control of data and robust ethical and jurisdiction-specific regulatory considerations underpin our design of this product and service offering.`,
+      body: `Patients are now aware that their data exist but they 
+      typically do not have access to it or control over where the 
+      data is used. StableDoc NFT aims at solving this problem by 
+      allowing patients to track how their data is being used and 
+      opportunity to earn from the use of their data. An NFT of a 
+      patient's data would not only identify the data as belonging 
+      to that individual but would also confer ownership, allowing 
+      the patient to access it and track it wherever it is being used, 
+      and provide revenue to the data owner. Patient-control of data 
+      and robust ethical and jurisdiction-specific regulatory 
+      considerations underpin our design of this product and service offering.`,
     },
   ];
   return (
@@ -132,7 +142,7 @@ const Services: FC = () => {
       </div>
       <div id="cross-border-health">
         <h3 className="bg-gradient-600 bg-clip-text text-transparent-active sm:font-medium font-bold text-2xl sm:text-3xl lg:text-5xl text-center mt-8 sm:mt-0 lg:mb-10">
-          Cross border Health
+          Cross border health
         </h3>
         {BorderData.map((data) => (
           <ServiceCard
@@ -147,7 +157,7 @@ const Services: FC = () => {
 
       <div id="health-blockchain">
         <h3 className="bg-gradient-600 bg-clip-text text-transparent-active sm:font-medium font-bold text-2xl sm:text-3xl lg:text-5xl text-center mt-8 sm:mt-0 mb-0 lg:mb-10">
-          Your health on a blockchain
+          Your health on a Blockchain
         </h3>
         {CrytoData.map((data) => (
           <ServiceCard

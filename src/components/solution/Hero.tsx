@@ -49,7 +49,7 @@ const Hero: FC = () => {
           link="#cross-border-health"
           className="border border-primary hover:bg-primary/20 transition-colors text-primary w-48 sm:w-52 lg:w-72 px-5 py-3 text-xs sm:text-sm lg:text-lg font-medium sm:font-bold rounded lg:rounded-xl"
         >
-          Cross border Health
+          Cross border health
         </LinkButton>
         <LinkButton
           link="#health-blockchain"

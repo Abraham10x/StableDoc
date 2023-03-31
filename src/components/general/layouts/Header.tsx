@@ -87,14 +87,14 @@ const Header: FC = () => {
             open ? "top-[4.8rem] sm:top-[4.7rem] max-h-[90vh]" : "top-[-1000px]"
           }`}
         >
-          <div className="mt-6 lg:hidden">
+          {/* <div className="mt-6 lg:hidden">
             <Button className="border-stroke-500 hover:bg-primary/20 transition-all border text-base py-3 px-4 w-40 rounded-full">
               <div className="flex justify-center">
                 <p className="inline">EN</p>
                 <IoChevronDown size={20} className="inline mb-1 ml-1" />
               </div>
             </Button>
-          </div>
+          </div> */}
           <ul
             className={`flex flex-col lg:flex-row justify-center align-middle`}
           >
@@ -125,18 +125,18 @@ const Header: FC = () => {
           >
             Get Started
           </LinkButton>
-          <div className="my-auto relative inline-flex">
+          {/* <div className="my-auto relative inline-flex">
             <Button
               id="google_translate_element"
               type="button"
               className="border-stroke-500 hover:bg-primary/20 transition-all border text-base py-2 px-4 rounded-full"
             >
-              {/* <div className="flex justify-center">
+              <div className="flex justify-center">
                 <p className="inline">EN</p>
                 <IoChevronDown size={20} className="inline mb-1 ml-1" />
-              </div> */}
+              </div>
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

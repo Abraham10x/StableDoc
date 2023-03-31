@@ -30,7 +30,7 @@ const Beneficts: FC = () => {
   ];
   return (
     <div className="bg-mobile-benefit sm:bg-beneficts-bg bg-no-repeat bg-cover bg-top pb-40 pt-24 sm:pt-36 lg:pt-44 xl:pt-80 bottom-40 sm:bottom-32 lg:bottom-72 relative">
-      <div className="container px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-10">
+      <div className="container 2xl:px-0 mx-auto px-5 sm:px-10 lg:px=20 xl:px-28 pt-10 sm:pt-20 lg:pt-36 pb-48 sm:pb-20 lg:pb-64">
         <div className="flex flex-col sm:flex-row justify-between">
           <div className="flex flex-col gap-5">
             {/* <p className="font-medium text-[#1A4187] text-sm sm:text-lg">
@@ -71,7 +71,7 @@ const Beneficts: FC = () => {
               Web App
             </h5>
             <h4 className="text-primary text-xl sm:text-3xl lg:text-5xl">
-              1k+
+              3k+
             </h4>
             <p className="text-xs sm:text-base lg:text-lg text-text-500">
               People have joined
@@ -88,7 +88,7 @@ const Beneficts: FC = () => {
               People have joined
             </p>
           </div>
-          <div className=" flex flex-col gap-3 text-center">
+          <div className=" flex flex-col text-center gap-3 py-0 xl:py-3">
             <h5 className="text-primary text-xl sm:text-lg lg:text-xl">
               Google Play Store
             </h5>

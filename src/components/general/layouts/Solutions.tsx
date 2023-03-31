@@ -34,24 +34,18 @@ const Solutions: FC = () => {
   const BlockchainData = [
     {
       id: 1,
-      image: "/img/general/nav/chart.png",
-      header: "Mov2Earn",
-      link: "/M2E",
-    },
-    {
-      id: 2,
       image: "/img/general/nav/VR.png",
       header: "Virtual Reality – And The Metaverse",
       link: "/solution/#Virtual-Reality-–-And-The-Metaverse-",
     },
     {
-      id: 3,
+      id: 2,
       image: "/img/general/nav/robot.png",
       header: "AI-Enabled Apps, Tools And Devices",
       link: "/solution/#AI-Enabled-Apps,-Tools-And-Devices",
     },
     {
-      id: 4,
+      id: 3,
       image: "/img/general/nav/nft-token.png",
       header: "StableDoc Health NFT",
       link: "/solution/#StableDoc-Health-NFT",
@@ -61,7 +55,7 @@ const Solutions: FC = () => {
     <div>
       <div className="hs-dropdown [--strategy:static] lg:[--strategy:absolute] [--adaptive:none] lg:[--trigger:hover] overflow-y-auto">
         <p className="md:px-6 lg:px-3 hover:bg-gradient-600 hover:bg-clip-text text-transparent text-text-600 text-base cursor-pointer">
-          Solution
+          Solutions
           {/* <IoChevronDown className="hover:bg-gradient-600 hover:bg-clip-text hover:font-semibold inline mb-1 ml-1" /> */}
         </p>
 

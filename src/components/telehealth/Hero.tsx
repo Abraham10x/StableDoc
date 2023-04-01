@@ -25,7 +25,7 @@ const Hero: FC = () => {
     },
   ];
   return (
-    <div className="pl-auto sm:container lg:max-w-none mx-auto xl:pl-[3rem] lg:pl-10 px-5 sm:px-10 lg:px-0 flex flex-col-reverse lg:flex-row justify-between my-36">
+    <div className="pl-auto sm:container lg:max-w-none mx-auto xl:pl-[3rem] lg:pl-10 px-5 sm:px-10 lg:px-0 flex flex-col-reverse lg:flex-row justify-between my-10">
       <div className="my-auto flex flex-col basis-full lg:basis-[45%] mt-20">
         <h1 className="font-extrabold sm:font-bold text-3xl sm:text-4xl lg:text-5xl bg-gradient-600 bg-clip-text text-transparent-active">
           The Future Of Healthcare, Delivered Today

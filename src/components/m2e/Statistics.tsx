@@ -47,7 +47,7 @@ const Statistics: FC = () => {
     {
       id: 9,
       color: "bg-[#ACC3FD]",
-      text: "Core Partners, Advisors & Consultants 20,000 - 2%",
+      text: "Core Partners, Advisors & Consultants 20,000,000 - 2%",
     },
   ];
   return (

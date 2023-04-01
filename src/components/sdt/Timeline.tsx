@@ -50,16 +50,16 @@ const Timeline: FC = () => {
   ];
   const Q4 = [
     "Revamped App Launch (Android/iOS), Web App",
-    "Integration of StableDoc AI Diagnositcs",
     "Forms Parnterships",
-    "StableDoc Token Marketing",
-    "CEX Listing",
     "Funding Rounds",
-    "Telehealth Marketing",
     "StableDoc Token Marketing",
-    "StableFit Move2Earn App Launch",
+    "Telehealth Marketing",
+    "CEX Listing",
+    "Bridging Of SDT (BSC) To Other Network",
   ];
   const Q5 = [
+    "StableFit Move2Earn App Launch",
+    "Integration of StableDoc AI Diagnositcs",
     "StableDoc Token Marketing",
     "CEX Listing",
     "Onboarding of US, Indian, UK and Canadian Doctors",

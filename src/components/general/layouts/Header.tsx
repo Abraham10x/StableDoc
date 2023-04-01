@@ -125,38 +125,19 @@ const Header: FC = () => {
               </li>
             ))}
           </ul>
-          <div className="flex gap-5 lg:hidden">
+          <div className="flex flex-col lg:flex-row gap-5 lg:ml-16 xl:ml-14 2xl:ml-36">
             <LinkButton
               link="https://telehealth.stabledoc.com/"
               target="_blank"
-              className=" bg-primary hover:bg-secondary-900 transition-all font-semibold text-white w-full px-8 py-3 leading-7 text-base rounded-full"
+              className="bg-primary hover:bg-secondary-900 transition-all font-semibold text-white px-8  py-3 leading-7 text-base rounded-full"
             >
               Get Started
             </LinkButton>
-          </div>
-        </div>
-        <div className="lg:flex gap-5 hidden">
-          <LinkButton
-            link="https://telehealth.stabledoc.com/"
-            target="_blank"
-            className="bg-primary hover:bg-secondary-900 transition-all font-semibold text-white px-8  py-3 leading-7 text-base rounded-full"
-          >
-            Get Started
-          </LinkButton>
-          <div className="my-auto relative">
-            <div
-              id="google_translate_element"
-              className="w-[11.1rem] h-12 overflow-hidden"
-            >
-              {/* <Button
-              type="button"
-              className="border-stroke-500 hover:bg-primary/20 transition-all border text-base py-2 px-4 rounded-full"
-            >
-              <div className="flex justify-center">
-                <p className="inline">EN</p>
-                <IoChevronDown size={20} className="inline mb-1 ml-1" />
-              </div>
-            </Button> */}
+            <div className="my-auto relative lg:hidden xl:block">
+              <div
+                id="google_translate_element"
+                className="w-[11.1rem] h-12 overflow-hidden"
+              ></div>
             </div>
           </div>
         </div>

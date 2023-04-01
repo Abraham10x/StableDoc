@@ -13,7 +13,6 @@ const M2E: NextPage = () => {
   return (
     <Layout>
       <Seo templateTitle="Move2Earn" />
-      <div className="my-[4rem]"></div>
       <Hero />
       <Beneficts />
       <Features />

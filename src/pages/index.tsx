@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <Layout>
       <Seo templateTitle="Home" />
-      <div className="my-[6rem]"></div>
+      <div className="my-[4rem]"></div>
       <Hero />
       <MobileApp />
       <Beneficts />

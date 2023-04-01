@@ -7,11 +7,12 @@ const Hero: FC = () => {
     <div className="pl-auto sm:container lg:max-w-none mx-auto xl:pl-[3rem] pt-9 lg:pt-0 lg:pl-10 px-5 sm:px-10 lg:px-0 flex flex-col lg:flex-row justify-between bg-[#F5FAFF] lg:bg-secondary-600 lg:bg-opacity-10">
       <div className="flex flex-col lg:basis-[70%] xl:basis-[50%] 2xl:basis-[39%] gap-2 xl my-auto">
         <h1 className="font-extrabold lg:font-bold text-3xl sm:text-4xl lg:text-6xl bg-gradient-600 bg-clip-text text-transparent-active">
-          Move your way to fitness with StableFit app – and a healthier planet
+          Move your way to fitness with StableFit app – and a healthier planet.{" "}
+          <span className="text-base">(Launching Soon)</span>
         </h1>
         <p className="text-lg sm:text-xl lg:text-2xl text-text-300 mt-8">
           Walk, run, jump, jog or dance your way to earn crypto rewards. Redeem
-          your earnings for cash or donate them to save the planet.{" "}
+          your earnings for cash or donate them to save the planet.
         </p>
         <div className="flex flex-row mt-10 gap-6 justify-center sm:justify-start">
           <Button className="bg-primary hover:bg-secondary-900 font-semibold text-white px-8 sm:px-11 py-2 sm:py-3 leading-7 text-xs sm:text-base rounded-full transition-colors">

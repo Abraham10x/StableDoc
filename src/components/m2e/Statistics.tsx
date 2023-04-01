@@ -16,38 +16,38 @@ const Statistics: FC = () => {
     },
     {
       id: 3,
-      color: "bg-[#F5FAFF]",
-      text: "Liquidity: 150,000,000 (75% of generated fund)",
+      color: "bg-[#A9FCFC]",
+      text: "Liquidity DEX: 100,000,000 (50% of generated fund) - 10%",
     },
     {
       id: 4,
-      color: "bg-[#F72585]",
-      text: "LReserve: 30,000,000 – 3%",
+      color: "bg-[#FEB169]",
+      text: "Immediate CEx Listing: 100,000,000 (50% of generated fund) - 10%",
     },
     {
       id: 5,
+      color: "bg-[#F72585]",
+      text: "Reserve: 50,000,000 – 5%",
+    },
+    {
+      id: 6,
       color: "bg-[#C4BCF3]",
       text: "Marketing: 50,000,000 – 5%",
     },
     {
-      id: 6,
-      color: "bg-[#CEDFC1]",
-      text: "Development: 20,000,000 – 2%",
-    },
-    {
       id: 7,
-      color: "bg-[#FEB169]",
-      text: "Immediate CEx Listing: (25% of generated fund)",
+      color: "bg-[#CEDFC1]",
+      text: "Development: 30,000,000 – 3%",
     },
     {
       id: 8,
-      color: "bg-[#A9FCFC]",
-      text: "Core Team",
+      color: "bg-[#F5FAFF]",
+      text: "Rewards 400,000,000 - 40%",
     },
     {
       id: 9,
       color: "bg-[#ACC3FD]",
-      text: "Core Partners, Advisors & Consultants",
+      text: "Core Partners, Advisors & Consultants 20,000 - 2%",
     },
   ];
   return (
@@ -74,7 +74,10 @@ const Statistics: FC = () => {
         </div>
         <div className="flex flex-col basis-5/12">
           {StatsData.map((data) => (
-            <div key={data.id} className="flex gap-5 mb-6">
+            <div
+              key={data.id}
+              className="flex flex-row justify-start align-middle gap-5 mb-6"
+            >
               <div
                 className={`w-7 h-7 sm:w-7 sm:h-7 lg:h-10 lg:w-10 ${data.color} my-auto rounded-md`}
               ></div>

@@ -25,7 +25,7 @@ const Token: FC = () => {
       image: "/img/m2e/money-savings.png",
       imageSize: 180,
       class: "bg-[#F5FAFF]",
-      header: "Farm Green",
+      header: "Stake or Farm SFT",
       body: `SFT holders will be able to Stake and Farm 
       SFT or SDT on our Staking Platform: app.stabledoc.com`,
     },

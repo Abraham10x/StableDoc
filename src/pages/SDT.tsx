@@ -13,7 +13,7 @@ const SDT: NextPage = () => {
   return (
     <Layout>
       <Seo templateTitle="SDT Page" />
-      <div className="my-[10rem]"></div>
+      <div className="my-[4rem]"></div>
       <Hero />
       <div className="my-20"></div>
       {/* <Parnters /> */}

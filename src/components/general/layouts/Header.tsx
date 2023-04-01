@@ -34,8 +34,26 @@ const navLinks = [
 
 const Header: FC = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const googleTranslateElementInit = () => {
+    new window.google.translate.TranslateElement(
+      {
+        pageLanguage: "en",
+        autoDisplay: false,
+      },
+      "google_translate_element"
+    );
+  };
+  useEffect(() => {
+    const addScript = document.createElement("script");
+    addScript.setAttribute(
+      "src",
+      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    );
+    document.body.appendChild(addScript);
+    window.googleTranslateElementInit = googleTranslateElementInit;
+  }, []);
   return (
-    <div className="w-full fixed top-0 left-0 bg-secondary-700 sm:px-10 z-40 bg-opacity-100 lg:bg-opacity-[0.93]">
+    <div className="w-full sticky top-0 left-0 bg-secondary-700 sm:px-10 z-40 bg-opacity-100 lg:bg-opacity-[0.93]">
       <div className="md:flex items-center justify-between container mx-auto py-7 lg:py-1 px-7 sm:px-0 2xl:px-0">
         <figure className="w-2/4 sm:w-full lg:h-full lg:hidden">
           <Link href="/" className="cursor-pointer">
@@ -125,9 +143,12 @@ const Header: FC = () => {
           >
             Get Started
           </LinkButton>
-          {/* <div className="my-auto relative inline-flex">
-            <Button
+          <div className="my-auto relative">
+            <div
               id="google_translate_element"
+              className="w-[11.1rem] h-12 overflow-hidden"
+            >
+              {/* <Button
               type="button"
               className="border-stroke-500 hover:bg-primary/20 transition-all border text-base py-2 px-4 rounded-full"
             >
@@ -135,8 +156,9 @@ const Header: FC = () => {
                 <p className="inline">EN</p>
                 <IoChevronDown size={20} className="inline mb-1 ml-1" />
               </div>
-            </Button>
-          </div> */}
+            </Button> */}
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ const Token: FC = () => {
       id: 2,
       image: "/img/general/nav/contract.png",
       text: "Our whitepaper",
-      link: "#",
+      link: "/assets/documents/new-whitepaper.pdf",
     },
     {
       id: 3,

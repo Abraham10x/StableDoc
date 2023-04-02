@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors");
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx}",
@@ -24,6 +25,7 @@ module.exports = {
       "gray-500": "#F8FBFF",
       black: "#000000",
       white: "#FFFFFF",
+      red: colors.red,
     },
     fontFamily: {
       sans: ["Cabinet Grotesk", "sans-serif"],

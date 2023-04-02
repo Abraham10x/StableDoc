@@ -12,32 +12,32 @@ const Main: FC = () => {
     {
       id: 1,
       title: "Health",
-      number: "05",
+      number: "02",
     },
     {
       id: 2,
       title: "Wellness",
-      number: "15",
+      number: "00",
     },
     {
       id: 3,
       title: "Mental Health",
-      number: "65",
+      number: "00",
     },
     {
       id: 4,
       title: "StableDoc news",
-      number: "08",
+      number: "00",
     },
     {
       id: 5,
       title: "Fitness",
-      number: "16",
+      number: "00",
     },
     {
       id: 6,
       title: "Lifestyle",
-      number: "16",
+      number: "00",
     },
   ];
 

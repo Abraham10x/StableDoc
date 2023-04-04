@@ -90,4 +90,40 @@ export default [
     Twitter: "",
     LinkedIn: "",
   },
+  {
+    id: 7,
+    imge: "/img/company/core-team/chigozie.png",
+    name: "Chigozie Ofoji",
+    role: "Senior Software Engineer",
+    description: `Chigozie Ofoji is a senior software engineer 
+    with expertise in web2 and web3 technologies, known for 
+    his problem-solving skills, attention to detail, and 
+    collaborative approach. With 5+ years of experience and a 
+    degree in Computer Engineering, he has delivered high-quality 
+    software products for numerous clients and organizations. 
+    In his free time, Chigozie stays up-to-date with the latest 
+    tech developments and enjoys experimenting with new technologies.
+    `,
+    on: true,
+    Twitter: "",
+    LinkedIn: "",
+  },
+  {
+    id: 8,
+    imge: "/img/company/core-team/alex.png",
+    name: "Alex",
+    role: "Software Engineer",
+    description: `Alex is a highly skilled software engineer with 10+ 
+    years of experience in web and mobile application development. He 
+    holds a Bachelor's degree in Computer Science from the University 
+    of Abuja and has a proven track record of quickly rising to lead 
+    developer positions at startups. Alex excels at solving complex 
+    problems, writing efficient code, and working with databases, APIs, 
+    and cloud technologies. He also enjoys mentoring junior developers 
+    in his free time.
+    `,
+    on: true,
+    Twitter: "",
+    LinkedIn: "",
+  },
 ];

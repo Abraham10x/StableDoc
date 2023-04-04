@@ -91,8 +91,8 @@ const Statistics: FC = () => {
               Buy SFT
             </Button>
             <LinkButton
-              link="/assets/documents/LitePaper.pdf"
-              target="_blank"
+              // link="/assets/documents/LitePaper.pdf"
+              // target="_blank"
               className="border border-white hover:bg-primary/20 transition-colors w-44 sm:w-36 lg:w-44  py-2 sm:py-4 text-white font-semibold leading-7 text-sm sm:text-base lg:text-xl rounded-full"
             >
               Litepaper

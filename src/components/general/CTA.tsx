@@ -24,7 +24,7 @@ const CTA: FC = () => {
       )
       .then(
         (result) => {
-          toast.success("Your email has been added! 🎉");
+          toast.success("Your email has been added! 🎉", { duration: 5000 });
           console.log(result.text);
         },
         (error) => {

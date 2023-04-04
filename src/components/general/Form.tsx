@@ -69,7 +69,7 @@ const Form: FC = () => {
             />
           </svg>
           <p className="text-black text-base sm:text-lg text-center">
-            Thank you for your submission. I will get back to you as soon as
+            Thank you for your submission. We will get back to you as soon as
             possible.
           </p>
         </div>

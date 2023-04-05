@@ -34,7 +34,7 @@ const CoreTeam: FC = () => {
         </p> */}
       </div>
       <div className="mt-2 sm:mt-10 lg:mt-9">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 sm:gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:flex xl:flex-row xl:flex-wrap gap-0 sm:gap-8 lg:gap-12 xl:gap-x-20 justify-center">
           {desc.map((data, index) => (
             <TeamCard
               key={index}

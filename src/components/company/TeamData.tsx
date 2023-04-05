@@ -94,7 +94,7 @@ export default [
     id: 7,
     imge: "/img/company/core-team/chigozie.png",
     name: "Chigozie Ofoji",
-    role: "Senior Software Engineer",
+    role: "Software Engineer",
     description: `Chigozie Ofoji is a senior software engineer 
     with expertise in web2 and web3 technologies, known for 
     his problem-solving skills, attention to detail, and 

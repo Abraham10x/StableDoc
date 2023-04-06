@@ -111,7 +111,7 @@ export default [
   {
     id: 8,
     imge: "/img/company/core-team/alex.png",
-    name: "Alex",
+    name: "Alex Nwogbo",
     role: "Software Engineer",
     description: `Alex is a highly skilled software engineer with 10+ 
     years of experience in web and mobile application development. He 

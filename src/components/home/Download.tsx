@@ -10,7 +10,7 @@ const Download: FC = () => {
           <h3 className="text-white font-bold w-full sm:w-4/6 xl:w-1/2 text-base sm:text-3xl lg:text-[40px] lg:leading-[3rem] mx-auto">
             Download our app and get started today!
           </h3>
-          <p className="text-xl font-medium text-[#A9C5DE] hidden sm:block w-full sm:w-2/3 lg:w-2/5 mx-auto">
+          <p className="text-xs sm:text-base lg:text-xl font-medium text-[#A9C5DE] w-full sm:w-2/3 lg:w-2/5 mx-auto">
             Are you tired of driving long distances to the hospital only to go
             wait in long line to see your doctor? Download our app today to
             consult a doctor from the comfort of your home or office.
@@ -34,7 +34,7 @@ const Download: FC = () => {
             <LinkButton
               link="https://apps.apple.com/ng/app/stabledoc/id1602960544"
               target="_blank"
-              className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white w-[9.8rem] sm:w-44 lg:w-52 py-2 sm:py-2 leading-7 text-sm sm:text-base rounded-full"
+              className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white w-[9.8rem] sm:w-44 lg:w-52 py-1.5 sm:py-2 leading-7 text-sm sm:text-base rounded-full"
             >
               <div className="flex justify-center gap-1 sm:gap-2">
                 <Image

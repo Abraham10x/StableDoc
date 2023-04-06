@@ -16,7 +16,7 @@ const Company: NextPage = () => {
       <Mission />
       <CoreTeam />
       <AdvisvoryTeam />
-      <Parnter />
+      {/* <Parnter /> */}
       <Blog />
     </Layout>
   );

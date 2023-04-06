@@ -9,13 +9,13 @@ interface IProps {
 
 const AppStore: FC<IProps> = ({ applestore, playstore }) => {
   return (
-    <div className="flex flex-row gap-6 justify-center my-6 sm:my-10 px-8 sm:px-0">
+    <div className="flex flex-row gap-6 justify-center align-middle my-6 sm:my-10 px-8 sm:px-0">
       <LinkButton link={applestore} target="_blank" className="">
         <Image
           src="/img/partners/apple-store.svg"
           alt="apple-store"
-          width={200}
-          height={200}
+          width={180}
+          height={180}
         />
       </LinkButton>
       <LinkButton target="_blank" link={playstore} className="">

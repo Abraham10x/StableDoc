@@ -77,7 +77,7 @@ const MobileApp: FC = () => {
             <LinkButton
               link="https://play.google.com/store/apps/details?id=com.sdtapp.customer"
               target="_blank"
-              className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white w-40 lg:w-48 xl:w-52 py-2 sm:py-2.5 leading-7 text-sm sm:text-base rounded-full"
+              className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white w-40 lg:w-48 xl:w-52 py-1.5 sm:py-2.5 leading-7 text-sm sm:text-base rounded-full"
             >
               <div className="flex justify-center gap-2">
                 <Image

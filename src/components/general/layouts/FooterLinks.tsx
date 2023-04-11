@@ -4,6 +4,7 @@ import Link from "next/link";
 interface LinkInfo {
   url: string;
   linkText: string;
+  target?: string;
 }
 
 interface IProps {
@@ -19,7 +20,11 @@ const FooterLinks: FC<IProps> = ({ header, data }: IProps) => {
         {data.map((items, index) => (
           <li className="mb-2" key={index}>
             <Link legacyBehavior href={items.url}>
-              <a className="hover:text-blue-light duration-500 text-base text-white font-medium">
+              <a
+                target={items.target}
+                rel="noopener noreferrer"
+                className="hover:text-blue-light duration-500 text-base text-white font-medium"
+              >
                 {items.linkText}
               </a>
             </Link>

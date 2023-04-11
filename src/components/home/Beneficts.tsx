@@ -65,7 +65,7 @@ const Beneficts: FC = () => {
             </div>
           ))}
         </div>
-        <div className="bg-white rounded-xl border border-secondary-400 px-3 sm:px-8 lg:px-14 py-6 sm:py-12 grid grid-cols-3 mt-14 justify-evenly relative top-0 sm:top-8 lg:top-20 z-30">
+        <div className="bg-white rounded-xl border border-secondary-400 px-3 sm:px-8 lg:px-14 py-6 sm:py-12 grid grid-cols-1 gap-y-6 sm:grid-cols-3 mt-14 justify-evenly relative top-0 sm:top-8 lg:top-20 z-30">
           <div className=" flex flex-col text-center gap-3 py-0 xl:py-3">
             <h5 className="text-primary text-xl sm:text-lg lg:text-xl">
               Web App

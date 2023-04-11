@@ -31,18 +31,22 @@ const Footer: FC = () => {
         {
           linkTitle: "Whitepaper",
           url: "/assets/documents/new-whitepaper.pdf",
+          target: "_blank",
         },
         {
           linkTitle: "StableDoc Token",
           url: "/SDT",
+          target: "",
         },
         {
           linkTitle: "Smart Contracts",
           url: "https://docs.stabledoc.com/information/smart-comtract-audit",
+          target: "_blank",
         },
         {
           linkTitle: "Staking and farming",
           url: "https://app.stabledoc.com/dashboard",
+          target: "_blank",
         },
       ],
     },
@@ -138,18 +142,22 @@ const Footer: FC = () => {
               {
                 linkText: "Whitepaper",
                 url: "/assets/documents/new-whitepaper.pdf",
+                target: "_blank",
               },
               {
                 linkText: "StableDoc Token",
                 url: "/SDT",
+                target: "",
               },
               {
                 linkText: "Smart Contracts",
                 url: "https://docs.stabledoc.com/information/smart-comtract-audit",
+                target: "_blank",
               },
               {
                 linkText: "Staking and farming",
                 url: "https://app.stabledoc.com/dashboard",
+                target: "_blank",
               },
             ]}
           />

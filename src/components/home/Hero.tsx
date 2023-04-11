@@ -14,13 +14,15 @@ const Hero: FC = () => {
             Combining Blockchain-based and AI-driven telemedicine to deliver
             cross-boundary healthcare to our patients all around the world
           </p>
-          <LinkButton
-            link="https://patient.stabledoc.com/auth"
-            target="_blank"
-            className="bg-primary hover:bg-secondary-900 font-semibold text-white w-40 sm:w-40 lg:w-52 py-2 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
-          >
-            Talk to a doctor
-          </LinkButton>
+          <div>
+            <LinkButton
+              link="https://patient.stabledoc.com/auth"
+              target="_blank"
+              className="bg-primary hover:bg-secondary-900 font-semibold text-white w-40 sm:w-40 lg:w-52 py-2 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
+            >
+              Talk to a doctor
+            </LinkButton>
+          </div>
         </div>
       </div>
       <div className="hidden lg:block">

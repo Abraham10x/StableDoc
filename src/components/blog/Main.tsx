@@ -4,7 +4,6 @@ import { FC, useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import { BsFillArrowRightCircleFill, BsStopwatch } from "react-icons/bs";
 import { BiUser } from "react-icons/bi";
-import { FaRegCommentDots } from "react-icons/fa";
 import { Button, LinkButton } from "../general/Button";
 
 const Main: FC = () => {
@@ -37,11 +36,11 @@ const Main: FC = () => {
     {
       id: 6,
       title: "Lifestyle",
-      number: "00",
+      number: "01",
     },
   ];
 
-  const Blogdata = [
+  const healthData = [
     {
       id: 1,
       name: "Dr Msonter Anzaa",
@@ -69,10 +68,24 @@ const Main: FC = () => {
       link: "blog/diabetes",
     },
   ];
+  const lifestyleData = [
+    {
+      id: 1,
+      name: "Dr Isaac Agada",
+      date: "April 11, 2023",
+      image: "/img/blog-images/drinking-water.jpg",
+      header: `Benefits Of Drinking Water: How Much Do You Need In A Day?`,
+      body: `Water is essential for our survival, and staying hydrated is 
+      crucial for maintaining good health. Our bodies are made up of about 
+      60% water, and we need to constantly replenish our fluid levels to 
+      function properly. `,
+      link: "blog/hydration",
+    },
+  ];
 
   const [categories, setCategories] = useState({
     title: "Health",
-    number: "05",
+    number: "02",
   });
   return (
     <div className="container pt-12 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-0 sm:mt-5 lg:mt-10">
@@ -262,48 +275,103 @@ const Main: FC = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-9 mt-28 mb-36">
-        {Blogdata.map((data) => (
-          <div key={data.id} className="border-stroke-500 border rounded-3xl">
-            <Image
-              className="rounded-t-3xl object-cover w-full h-44 sm:h-72 lg:h-96"
-              src={data.image}
-              alt="checking BP"
-              width={1200}
-              height={1200}
-            />
-            <div className="px-5 py-8">
-              <h3 className="text-base sm:text-2xl lg:text-4xl text-text-600">
-                {data.header}
-              </h3>
-              <div className="flex flex-row gap-4 sm:gap-20 mt-5">
-                <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
-                  <BsStopwatch className="text-text-500 text-base sm:text-xl lg:text-2xl" />
-                  <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
-                    {data.date}
-                  </p>
+
+      <div className="mt-24 mb-36">
+        <h1 className="text-lg sm:text-2xl lg:text-5xl font-bold mb-8 bg-gradient-600 bg-clip-text text-transparent-active">
+          Health
+        </h1>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-9">
+          {healthData.map((data) => (
+            <div key={data.id} className="border-stroke-500 border rounded-3xl">
+              <Image
+                className="rounded-t-3xl object-cover w-full h-44 sm:h-72 lg:h-96"
+                src={data.image}
+                alt="checking BP"
+                width={1200}
+                height={1200}
+              />
+              <div className="px-5 py-8">
+                <h3 className="text-base sm:text-2xl lg:text-4xl text-text-600">
+                  {data.header}
+                </h3>
+                <div className="flex flex-row gap-4 sm:gap-20 mt-5">
+                  <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
+                    <BsStopwatch className="text-text-500 text-base sm:text-xl lg:text-2xl" />
+                    <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
+                      {data.date}
+                    </p>
+                  </div>
+                  <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
+                    <BiUser className="text-text-500 text-base sm:text-xl lg:text-2xl" />
+                    <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
+                      {data.name}
+                    </p>
+                  </div>
                 </div>
-                <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
-                  <BiUser className="text-text-500 text-base sm:text-xl lg:text-2xl" />
-                  <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
-                    {data.name}
-                  </p>
-                </div>
+                <p className="my-7 text-sm sm:text-lg lg:text-2xl text-text-500">
+                  {data.body}
+                </p>
+                <LinkButton
+                  link={data.link}
+                  target="_blank"
+                  className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white px-7 sm:px-11 py-1.5 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
+                >
+                  Read More
+                  <BsFillArrowRightCircleFill className="inline ml-4" />
+                </LinkButton>
               </div>
-              <p className="my-7 text-sm sm:text-lg lg:text-2xl text-text-500">
-                {data.body}
-              </p>
-              <LinkButton
-                link={data.link}
-                target="_blank"
-                className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white px-7 sm:px-11 py-1.5 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
-              >
-                Read More
-                <BsFillArrowRightCircleFill className="inline ml-4" />
-              </LinkButton>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-24 mb-36">
+        <h1 className="text-lg sm:text-2xl lg:text-5xl font-bold mb-8 bg-gradient-600 bg-clip-text text-transparent-active">
+          Lifestyle
+        </h1>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-9">
+          {lifestyleData.map((data) => (
+            <div key={data.id} className="border-stroke-500 border rounded-3xl">
+              <Image
+                className="rounded-t-3xl object-cover w-full h-44 sm:h-72 lg:h-96"
+                src={data.image}
+                alt="checking BP"
+                width={1200}
+                height={1200}
+              />
+              <div className="px-5 py-8">
+                <h3 className="text-base sm:text-2xl lg:text-4xl capitalize text-text-600">
+                  {data.header}
+                </h3>
+                <div className="flex flex-row gap-4 sm:gap-20 mt-5">
+                  <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
+                    <BsStopwatch className="text-text-500 text-base sm:text-xl lg:text-2xl" />
+                    <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
+                      {data.date}
+                    </p>
+                  </div>
+                  <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
+                    <BiUser className="text-text-500 text-base sm:text-xl lg:text-2xl" />
+                    <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
+                      {data.name}
+                    </p>
+                  </div>
+                </div>
+                <p className="my-7 text-sm sm:text-lg lg:text-2xl text-text-500">
+                  {data.body}
+                </p>
+                <LinkButton
+                  link={data.link}
+                  target="_blank"
+                  className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white px-7 sm:px-11 py-1.5 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
+                >
+                  Read More
+                  <BsFillArrowRightCircleFill className="inline ml-4" />
+                </LinkButton>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -74,7 +74,7 @@ const Blog: FC = () => {
                 Hypertension
               </h3>
               <LinkButton
-                link="/blog/diabetes"
+                link="/blog/hypertension"
                 target="_blank"
                 className="border-2 border-gray-500 text-white hover:bg-secondary-400/20 transition-all text-xs sm:text-base font-bold rounded-full sm:rounded-none mb-5 px-5 py-2"
               >

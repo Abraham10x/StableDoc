@@ -157,7 +157,7 @@ const Hypertension: NextPage = () => {
   ];
   return (
     <Layout>
-      <Seo templateTitle="Full Read" />
+      <Seo templateTitle="Key Things You Need to Know about the Silent Killer – Hypertension" />
       <Hero
         title="Key Things You Need to Know about the Silent Killer – Hypertension"
         datePosted="March 29, 2023"

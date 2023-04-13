@@ -108,7 +108,7 @@ const Hydration: NextPage = () => {
   ];
   return (
     <Layout>
-      <Seo templateTitle="Full Read" />
+      <Seo templateTitle="Benefits Of Drinking Water: How Much Do You Need In A Day?" />
       <Hero
         title="Benefits Of Drinking Water: How Much Do You Need In A Day?"
         datePosted="April 11, 2023"

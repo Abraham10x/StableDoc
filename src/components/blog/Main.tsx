@@ -21,12 +21,12 @@ const Main: FC = () => {
     {
       id: 3,
       title: "Mental Health",
-      number: "00",
+      number: "01",
     },
     {
       id: 4,
-      title: "StableDoc news",
-      number: "00",
+      title: "StableDoc News",
+      number: "01",
     },
     {
       id: 5,
@@ -80,6 +80,39 @@ const Main: FC = () => {
       60% water, and we need to constantly replenish our fluid levels to 
       function properly. `,
       link: "blog/hydration",
+    },
+  ];
+
+  const mentalHealthData = [
+    {
+      id: 1,
+      name: "Dr Isaac Agada",
+      date: "April 11, 2023",
+      image: "/img/blog-images/stress.jpg",
+      header: "Dealing With Stress And Anxiety",
+      body: `Stress is a common problem that many people face on a daily basis. Whether 
+        it's due to work, family responsibilities, or personal issues, stress can have a 
+        negative impact on our physical and mental health. If left unchecked, stress 
+        can lead to anxiety and other health problems.`,
+      link: "blog/stress",
+    },
+  ];
+
+  const newsData = [
+    {
+      id: 1,
+      name: "Dr Benjamin Idoko",
+      date: "April 13, 2023",
+      image: "/img/blog-images/starlink.jpg",
+      header: `Connecting Nigeria: How Starlink Could Revolutionize Telehealth 
+      for Startups like StableDoc`,
+      body: `Nigeria, with over 200 million people, is the most populous 
+        country in Africa. Unfortunately, millions still lack access to 
+        reliable internet connectivity, and this has significant consequences 
+        for individuals and businesses alike. The lack of connectivity is 
+        particularly challenging for businesses in the healthcare sector, 
+        such as telehealth startups like StableDoc.`,
+      link: "blog/starlink",
     },
   ];
 
@@ -225,28 +258,28 @@ const Main: FC = () => {
         <div className="basis-9/12">
           <div className="border-stroke-500 border rounded-3xl">
             <Image
-              className="rounded-t-3xl"
-              src="/img/blog/blog-post.png"
+              className="rounded-t-3xl w-full h-48 sm:h-80 xl:h-96 object-cover"
+              src="/img/blog-images/starlink.jpg"
               alt="checking BP"
               width={1200}
               height={1200}
             />
             <div className="px-5 py-8">
               <h3 className="text-base sm:text-2xl lg:text-4xl text-text-600">
-                Key Things You Need to Know about the Silent Killer –
-                Hypertension
+                Connecting Nigeria: How Starlink Could Revolutionize Telehealth
+                for Startups like StableDoc
               </h3>
               <div className="flex flex-row gap-4 sm:gap-20 mt-5">
                 <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
                   <BsStopwatch className="text-text-500 text-base sm:text-xl lg:text-2xl" />
                   <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
-                    March 29, 2023
+                    April 13, 2023
                   </p>
                 </div>
                 <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
                   <BiUser className="text-text-500 text-base sm:text-xl lg:text-2xl" />
                   <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
-                    Dr Msonter Anzaa
+                    Dr Benjamin Idoko
                   </p>
                 </div>
               </div>
@@ -257,14 +290,15 @@ const Main: FC = () => {
                 </p>
               </div> */}
               <p className="my-7 text-sm sm:text-lg lg:text-2xl text-text-500">
-                A person is said to have hypertension when their blood pressure
-                is higher than the normal range. The heart pumps blood round all
-                parts of the body to supply them oxygen and nutrients, and to
-                remove waste from where it is generated to where it is excreted
-                from the body.
+                Nigeria, with over 200 million people, is the most populous
+                country in Africa. Unfortunately, millions still lack access to
+                reliable internet connectivity, and this has significant
+                consequences for individuals and businesses alike. The lack of
+                connectivity is particularly challenging for businesses in the
+                healthcare sector, such as telehealth startups like StableDoc.
               </p>
               <LinkButton
-                link="/blog/hypertension"
+                link="/blog/starlink"
                 target="_blank"
                 className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white px-7 sm:px-11 py-1.5 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
               >
@@ -371,6 +405,110 @@ const Main: FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-24 mb-36">
+          <h1 className="text-lg sm:text-2xl lg:text-5xl font-bold mb-8 bg-gradient-600 bg-clip-text text-transparent-active">
+            Mental Health
+          </h1>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-9">
+            {mentalHealthData.map((data) => (
+              <div
+                key={data.id}
+                className="border-stroke-500 border rounded-3xl"
+              >
+                <Image
+                  className="rounded-t-3xl object-cover w-full h-44 sm:h-72 lg:h-96"
+                  src={data.image}
+                  alt="checking BP"
+                  width={1200}
+                  height={1200}
+                />
+                <div className="px-5 py-8">
+                  <h3 className="text-base sm:text-2xl lg:text-4xl capitalize text-text-600">
+                    {data.header}
+                  </h3>
+                  <div className="flex flex-row gap-4 sm:gap-20 mt-5">
+                    <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
+                      <BsStopwatch className="text-text-500 text-base sm:text-xl lg:text-2xl" />
+                      <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
+                        {data.date}
+                      </p>
+                    </div>
+                    <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
+                      <BiUser className="text-text-500 text-base sm:text-xl lg:text-2xl" />
+                      <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
+                        {data.name}
+                      </p>
+                    </div>
+                  </div>
+                  <p className="my-7 text-sm sm:text-lg lg:text-2xl text-text-500">
+                    {data.body}
+                  </p>
+                  <LinkButton
+                    link={data.link}
+                    target="_blank"
+                    className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white px-7 sm:px-11 py-1.5 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
+                  >
+                    Read More
+                    <BsFillArrowRightCircleFill className="inline ml-4" />
+                  </LinkButton>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-24 mb-36">
+          <h1 className="text-lg sm:text-2xl lg:text-5xl font-bold mb-8 bg-gradient-600 bg-clip-text text-transparent-active">
+            StableDoc News
+          </h1>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-9">
+            {newsData.map((data) => (
+              <div
+                key={data.id}
+                className="border-stroke-500 border rounded-3xl"
+              >
+                <Image
+                  className="rounded-t-3xl object-cover w-full h-44 sm:h-72 lg:h-96"
+                  src={data.image}
+                  alt="checking BP"
+                  width={1200}
+                  height={1200}
+                />
+                <div className="px-5 py-8">
+                  <h3 className="text-base sm:text-2xl lg:text-4xl capitalize text-text-600">
+                    {data.header}
+                  </h3>
+                  <div className="flex flex-row gap-4 sm:gap-20 mt-5">
+                    <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
+                      <BsStopwatch className="text-text-500 text-base sm:text-xl lg:text-2xl" />
+                      <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
+                        {data.date}
+                      </p>
+                    </div>
+                    <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
+                      <BiUser className="text-text-500 text-base sm:text-xl lg:text-2xl" />
+                      <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
+                        {data.name}
+                      </p>
+                    </div>
+                  </div>
+                  <p className="my-7 text-sm sm:text-lg lg:text-2xl text-text-500">
+                    {data.body}
+                  </p>
+                  <LinkButton
+                    link={data.link}
+                    target="_blank"
+                    className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white px-7 sm:px-11 py-1.5 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
+                  >
+                    Read More
+                    <BsFillArrowRightCircleFill className="inline ml-4" />
+                  </LinkButton>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

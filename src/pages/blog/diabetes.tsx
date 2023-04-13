@@ -178,7 +178,7 @@ const Diabetes: NextPage = () => {
   ];
   return (
     <Layout>
-      <Seo templateTitle="Full Read" />
+      <Seo templateTitle="Simple Facts You Must Know about Diabetes" />
       <Hero
         title="Simple Facts You Must Know about Diabetes"
         datePosted="March 27, 2023"

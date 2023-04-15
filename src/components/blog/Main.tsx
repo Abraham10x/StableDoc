@@ -67,10 +67,8 @@ const Main: FC = () => {
       sugar and keep it within the normal range. `,
       link: "blog/diabetes",
     },
-  ];
-  const lifestyleData = [
     {
-      id: 1,
+      id: 3,
       name: "Dr Isaac Agada",
       date: "April 11, 2023",
       image: "/img/blog-images/drinking-water.jpg",
@@ -81,12 +79,9 @@ const Main: FC = () => {
       function properly. `,
       link: "blog/hydration",
     },
-  ];
-
-  const mentalHealthData = [
     {
-      id: 1,
-      name: "Dr Isaac Agada",
+      id: 4,
+      name: "Dr Benjamin Idoko",
       date: "April 11, 2023",
       image: "/img/blog-images/stress.jpg",
       header: "Dealing With Stress And Anxiety",
@@ -96,12 +91,9 @@ const Main: FC = () => {
         can lead to anxiety and other health problems.`,
       link: "blog/stress",
     },
-  ];
-
-  const newsData = [
     {
-      id: 1,
-      name: "Dr Benjamin Idoko",
+      id: 5,
+      name: "Dr Isaac Agada",
       date: "April 13, 2023",
       image: "/img/blog-images/starlink.jpg",
       header: `Connecting Nigeria: How Starlink Could Revolutionize Telehealth 
@@ -114,7 +106,53 @@ const Main: FC = () => {
         such as telehealth startups like StableDoc.`,
       link: "blog/starlink",
     },
+    {
+      id: 6,
+      name: "Dr Msonter Anzaa",
+      date: "April 15, 2023",
+      image: "/img/blog-images/infertility.jpg",
+      header: `Five Facts You Never Knew About Infertility`,
+      body: `Infertility is not a sweet word by any standard. Neither is its
+      sister word, sterility. In fact, the only time I ever heard
+      sterility used with something positive was where it was used in
+      relation to mosquitoes.`,
+      link: "blog/infertility",
+    },
   ];
+
+  const latestPost = [
+    {
+      id: 1,
+      name: "Dr Isaac Agada",
+      date: "April 13, 2023",
+      image: "/img/blog-images/starlink.jpg",
+      header: `Connecting Nigeria: How Starlink Could Revolutionize Telehealth 
+      for Startups like StableDoc`,
+      body: `Nigeria, with over 200 million people, is the most populous 
+        country in Africa. Unfortunately, millions still lack access to 
+        reliable internet connectivity, and this has significant consequences 
+        for individuals and businesses alike. The lack of connectivity is 
+        particularly challenging for businesses in the healthcare sector, 
+        such as telehealth startups like StableDoc.`,
+      link: "blog/starlink",
+    },
+    {
+      id: 2,
+      name: "Dr Msonter Anzaa",
+      date: "April 15, 2023",
+      image: "/img/blog-images/infertility.jpg",
+      header: `Five Facts You Never Knew About Infertility`,
+      body: `Infertility is not a sweet word by any standard. Neither is its
+      sister word, sterility. In fact, the only time I ever heard
+      sterility used with something positive was where it was used in
+      relation to mosquitoes.`,
+      link: "blog/infertility",
+    },
+  ];
+
+  const blogPost = healthData.reverse();
+
+  const latest = latestPost.reverse();
 
   const [categories, setCategories] = useState({
     title: "Health",
@@ -141,39 +179,24 @@ const Main: FC = () => {
             <h3 className="bg-gradient-600 bg-clip-text text-transparent-active font-medium text-xl sm:text-2xl lg:text-3xl">
               Latest posts
             </h3>
-            <Link href="blog/hypertension" legacyBehavior>
-              <a target="_blank" rel="noopener noreferrer">
-                <div className="flex flex-row gap-6 mt-4 sm:mt-7 lg:mt-8 hover:bg-secondary-700 transition-colors p-2 cursor-pointer">
-                  <Image
-                    src="/img/blog/latest-posts.png"
-                    className="object-cover rounded-[100%]"
-                    alt="post image"
-                    width={50}
-                    height={50}
-                  />
-                  <p className="text-base sm:text-lg lg:text-xl my-auto text-[#547196]">
-                    Key Things You Need to Know about the Silent Killer –
-                    Hypertension
-                  </p>
-                </div>
-              </a>
-            </Link>
-            <Link href="blog/diabetes" legacyBehavior>
-              <a target="_blank" rel="noopener noreferrer">
-                <div className="flex flex-row gap-6 mt-2 sm:mt-6 lg:mt-8 hover:bg-secondary-700 transition-colors p-2 cursor-pointer">
-                  <Image
-                    src="/img/blog/latest-posts.png"
-                    className="object-cover rounded-[100%]"
-                    alt="post image"
-                    width={50}
-                    height={50}
-                  />
-                  <p className="text-base sm:text-lg lg:text-xl my-auto text-[#547196]">
-                    Simple Facts You Must Know about Diabetes
-                  </p>
-                </div>
-              </a>
-            </Link>
+            {latest.map((post) => (
+              <Link key={post.id} href={post.link} legacyBehavior>
+                <a target="_blank" rel="noopener noreferrer">
+                  <div className="flex flex-row gap-6 mt-4 sm:mt-7 lg:mt-8 hover:bg-secondary-700 transition-colors p-2 cursor-pointer">
+                    <Image
+                      src={post.image}
+                      className="object-cover rounded-[100%] w-16 h-16 my-auto"
+                      alt="post image"
+                      width={50}
+                      height={50}
+                    />
+                    <p className="text-base sm:text-lg lg:text-xl my-auto text-[#547196]">
+                      {post.header}
+                    </p>
+                  </div>
+                </a>
+              </Link>
+            ))}
           </div>
 
           <div className="lg:hidden mt-8">
@@ -279,7 +302,7 @@ const Main: FC = () => {
                 <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
                   <BiUser className="text-text-500 text-base sm:text-xl lg:text-2xl" />
                   <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
-                    Dr Benjamin Idoko
+                    Dr Isaac Agada
                   </p>
                 </div>
               </div>
@@ -311,11 +334,11 @@ const Main: FC = () => {
       </div>
 
       <div className="mt-24 mb-36">
-        <h1 className="text-lg sm:text-2xl lg:text-5xl font-bold mb-8 bg-gradient-600 bg-clip-text text-transparent-active">
+        {/* <h1 className="text-lg sm:text-2xl lg:text-5xl font-bold mb-8 bg-gradient-600 bg-clip-text text-transparent-active">
           Health
-        </h1>
+        </h1> */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-9">
-          {healthData.map((data) => (
+          {blogPost.map((data) => (
             <div key={data.id} className="border-stroke-500 border rounded-3xl">
               <Image
                 className="rounded-t-3xl object-cover w-full h-44 sm:h-72 lg:h-96"
@@ -356,159 +379,6 @@ const Main: FC = () => {
               </div>
             </div>
           ))}
-        </div>
-      </div>
-
-      <div className="mt-24 mb-36">
-        <h1 className="text-lg sm:text-2xl lg:text-5xl font-bold mb-8 bg-gradient-600 bg-clip-text text-transparent-active">
-          Lifestyle
-        </h1>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-9">
-          {lifestyleData.map((data) => (
-            <div key={data.id} className="border-stroke-500 border rounded-3xl">
-              <Image
-                className="rounded-t-3xl object-cover w-full h-44 sm:h-72 lg:h-96"
-                src={data.image}
-                alt="checking BP"
-                width={1200}
-                height={1200}
-              />
-              <div className="px-5 py-8">
-                <h3 className="text-base sm:text-2xl lg:text-4xl capitalize text-text-600">
-                  {data.header}
-                </h3>
-                <div className="flex flex-row gap-4 sm:gap-20 mt-5">
-                  <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
-                    <BsStopwatch className="text-text-500 text-base sm:text-xl lg:text-2xl" />
-                    <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
-                      {data.date}
-                    </p>
-                  </div>
-                  <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
-                    <BiUser className="text-text-500 text-base sm:text-xl lg:text-2xl" />
-                    <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
-                      {data.name}
-                    </p>
-                  </div>
-                </div>
-                <p className="my-7 text-sm sm:text-lg lg:text-2xl text-text-500">
-                  {data.body}
-                </p>
-                <LinkButton
-                  link={data.link}
-                  target="_blank"
-                  className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white px-7 sm:px-11 py-1.5 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
-                >
-                  Read More
-                  <BsFillArrowRightCircleFill className="inline ml-4" />
-                </LinkButton>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-24 mb-36">
-          <h1 className="text-lg sm:text-2xl lg:text-5xl font-bold mb-8 bg-gradient-600 bg-clip-text text-transparent-active">
-            Mental Health
-          </h1>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-9">
-            {mentalHealthData.map((data) => (
-              <div
-                key={data.id}
-                className="border-stroke-500 border rounded-3xl"
-              >
-                <Image
-                  className="rounded-t-3xl object-cover w-full h-44 sm:h-72 lg:h-96"
-                  src={data.image}
-                  alt="checking BP"
-                  width={1200}
-                  height={1200}
-                />
-                <div className="px-5 py-8">
-                  <h3 className="text-base sm:text-2xl lg:text-4xl capitalize text-text-600">
-                    {data.header}
-                  </h3>
-                  <div className="flex flex-row gap-4 sm:gap-20 mt-5">
-                    <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
-                      <BsStopwatch className="text-text-500 text-base sm:text-xl lg:text-2xl" />
-                      <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
-                        {data.date}
-                      </p>
-                    </div>
-                    <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
-                      <BiUser className="text-text-500 text-base sm:text-xl lg:text-2xl" />
-                      <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
-                        {data.name}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="my-7 text-sm sm:text-lg lg:text-2xl text-text-500">
-                    {data.body}
-                  </p>
-                  <LinkButton
-                    link={data.link}
-                    target="_blank"
-                    className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white px-7 sm:px-11 py-1.5 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
-                  >
-                    Read More
-                    <BsFillArrowRightCircleFill className="inline ml-4" />
-                  </LinkButton>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-24 mb-36">
-          <h1 className="text-lg sm:text-2xl lg:text-5xl font-bold mb-8 bg-gradient-600 bg-clip-text text-transparent-active">
-            StableDoc News
-          </h1>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-9">
-            {newsData.map((data) => (
-              <div
-                key={data.id}
-                className="border-stroke-500 border rounded-3xl"
-              >
-                <Image
-                  className="rounded-t-3xl object-cover w-full h-44 sm:h-72 lg:h-96"
-                  src={data.image}
-                  alt="checking BP"
-                  width={1200}
-                  height={1200}
-                />
-                <div className="px-5 py-8">
-                  <h3 className="text-base sm:text-2xl lg:text-4xl capitalize text-text-600">
-                    {data.header}
-                  </h3>
-                  <div className="flex flex-row gap-4 sm:gap-20 mt-5">
-                    <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
-                      <BsStopwatch className="text-text-500 text-base sm:text-xl lg:text-2xl" />
-                      <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
-                        {data.date}
-                      </p>
-                    </div>
-                    <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
-                      <BiUser className="text-text-500 text-base sm:text-xl lg:text-2xl" />
-                      <p className="text-sm sm:text-lg lg:text-2xl text-text-500">
-                        {data.name}
-                      </p>
-                    </div>
-                  </div>
-                  <p className="my-7 text-sm sm:text-lg lg:text-2xl text-text-500">
-                    {data.body}
-                  </p>
-                  <LinkButton
-                    link={data.link}
-                    target="_blank"
-                    className="bg-primary hover:bg-secondary-900 transition-colors font-semibold text-white px-7 sm:px-11 py-1.5 sm:py-3 leading-7 text-xs sm:text-base rounded-full"
-                  >
-                    Read More
-                    <BsFillArrowRightCircleFill className="inline ml-4" />
-                  </LinkButton>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </div>

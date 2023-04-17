@@ -15,8 +15,8 @@ const Main: FC = () => {
     },
     {
       id: 2,
-      title: "Wellness",
-      number: "00",
+      title: "Reproductive Health",
+      number: "01",
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ const Main: FC = () => {
     {
       id: 4,
       title: "StableDoc News",
-      number: "01",
+      number: "02",
     },
     {
       id: 5,
@@ -118,6 +118,20 @@ const Main: FC = () => {
       relation to mosquitoes.`,
       link: "blog/infertility",
     },
+    {
+      id: 7,
+      name: "Dr Isaac Agada",
+      date: "April 17, 2023",
+      image: "/img/blog-images/telehealth.jpg",
+      header: `How Remote Care Is Changing Healthcare For Doctors And 
+      Patients - The Stabledoc Difference`,
+      body: `Telehealth is revolutionizing the healthcare industry, 
+      providing patients with remote access to medical care and offering 
+      a range of benefits to healthcare providers, especially doctors. 
+      At StableDoc, we recognize the transformative power of telehealth and 
+      the positive impact it has on both patients and doctors.`,
+      link: "blog/telehealth",
+    },
   ];
 
   const latestPost = [
@@ -138,15 +152,17 @@ const Main: FC = () => {
     },
     {
       id: 2,
-      name: "Dr Msonter Anzaa",
-      date: "April 15, 2023",
-      image: "/img/blog-images/infertility.jpg",
-      header: `Five Facts You Never Knew About Infertility`,
-      body: `Infertility is not a sweet word by any standard. Neither is its
-      sister word, sterility. In fact, the only time I ever heard
-      sterility used with something positive was where it was used in
-      relation to mosquitoes.`,
-      link: "blog/infertility",
+      name: "Dr Isaac Agada",
+      date: "April 17, 2023",
+      image: "/img/blog-images/telehealth.jpg",
+      header: `How Remote Care Is Changing Healthcare For Doctors And 
+      Patients - The Stabledoc Difference`,
+      body: `Telehealth is revolutionizing the healthcare industry, 
+      providing patients with remote access to medical care and offering 
+      a range of benefits to healthcare providers, especially doctors. 
+      At StableDoc, we recognize the transformative power of telehealth and 
+      the positive impact it has on both patients and doctors.`,
+      link: "blog/telehealth",
     },
   ];
 
@@ -278,7 +294,7 @@ const Main: FC = () => {
             ))}
           </div>
         </div>
-        <div className="basis-9/12">
+        <div className="basis-9/12 hidden sm:block">
           <div className="border-stroke-500 border rounded-3xl">
             <Image
               className="rounded-t-3xl w-full h-48 sm:h-80 xl:h-96 object-cover"

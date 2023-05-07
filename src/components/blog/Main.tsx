@@ -16,7 +16,7 @@ const Main: FC = () => {
     {
       id: 2,
       title: "Reproductive Health",
-      number: "01",
+      number: "02",
     },
     {
       id: 3,
@@ -132,26 +132,24 @@ const Main: FC = () => {
       the positive impact it has on both patients and doctors.`,
       link: "blog/telehealth",
     },
+    {
+      id: 8,
+      name: "Dr Msonter Anzaa",
+      date: "May 08, 2023",
+      image: "/img/blog-images/prostate.jpg",
+      header: `2 Things That Can Happen to Your Prostate and How They Affect Your Life as a Man`,
+      body: `If you are like most men, you probably haven't even heard 
+      the word prostate, let alone knowing that you have one. And please, 
+      note that the word is p-r-o-s-t-a-t-e and not p-r-o-s-t-R-a-t-e! 
+      Sadly, with your prostate, the saying that what you don't know can't 
+      hurt you does not apply.`,
+      link: "blog/prostate",
+    },
   ];
 
   const latestPost = [
     {
       id: 1,
-      name: "Dr Isaac Agada",
-      date: "April 13, 2023",
-      image: "/img/blog-images/starlink.jpg",
-      header: `Connecting Nigeria: How Starlink Could Revolutionize Telehealth 
-      for Startups like StableDoc`,
-      body: `Nigeria, with over 200 million people, is the most populous 
-        country in Africa. Unfortunately, millions still lack access to 
-        reliable internet connectivity, and this has significant consequences 
-        for individuals and businesses alike. The lack of connectivity is 
-        particularly challenging for businesses in the healthcare sector, 
-        such as telehealth startups like StableDoc.`,
-      link: "blog/starlink",
-    },
-    {
-      id: 2,
       name: "Dr Isaac Agada",
       date: "April 17, 2023",
       image: "/img/blog-images/telehealth.jpg",
@@ -163,6 +161,19 @@ const Main: FC = () => {
       At StableDoc, we recognize the transformative power of telehealth and 
       the positive impact it has on both patients and doctors.`,
       link: "blog/telehealth",
+    },
+    {
+      id: 2,
+      name: "Dr Msonter Anzaa",
+      date: "May 08, 2023",
+      image: "/img/blog-images/prostate.jpg",
+      header: `2 Things That Can Happen to Your Prostate and How They Affect Your Life as a Man`,
+      body: `If you are like most men, you probably haven't even heard 
+      the word prostate, let alone knowing that you have one. And please, 
+      note that the word is p-r-o-s-t-a-t-e and not p-r-o-s-t-R-a-t-e! 
+      Sadly, with your prostate, the saying that what you don't know can't 
+      hurt you does not apply.`,
+      link: "blog/prostate",
     },
   ];
 

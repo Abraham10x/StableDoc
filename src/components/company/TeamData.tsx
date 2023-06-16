@@ -14,21 +14,21 @@ export default [
     Twitter: "https://www.linkedin.com/in/isaac-agada-965b23113/",
     LinkedIn: "https://www.linkedin.com/in/isaac-agada-965b23113/",
   },
-  {
-    id: 2,
-    imge: "/img/company/core-team/Das-Douglas.png",
-    name: "Das Douglas",
-    role: "Chief Marketing Officer",
-    description: `Runs successful businesses and several start-ups, including
-    a medical-focused technology firm, an international training
-    consultancy and a housing development company in
-    Houston, Texas; Das brings decades of business acumen
-    and organization efficiency. Single-minded focus to build and
-    scale performance advanced telehealth marketing strategies.`,
-    on: true,
-    Twitter: "https://www.linkedin.com/in/das-douglas-csm-40b691a",
-    LinkedIn: "https://www.linkedin.com/in/das-douglas-csm-40b691a",
-  },
+  // {
+  //   id: 2,
+  //   imge: "/img/company/core-team/Das-Douglas.png",
+  //   name: "Das Douglas",
+  //   role: "Chief Marketing Officer",
+  //   description: `Runs successful businesses and several start-ups, including
+  //   a medical-focused technology firm, an international training
+  //   consultancy and a housing development company in
+  //   Houston, Texas; Das brings decades of business acumen
+  //   and organization efficiency. Single-minded focus to build and
+  //   scale performance advanced telehealth marketing strategies.`,
+  //   on: true,
+  //   Twitter: "https://www.linkedin.com/in/das-douglas-csm-40b691a",
+  //   LinkedIn: "https://www.linkedin.com/in/das-douglas-csm-40b691a",
+  // },
   {
     id: 3,
     imge: "/img/company/core-team/Raj-Baskar.png",

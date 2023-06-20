@@ -26,6 +26,7 @@ module.exports = {
       black: "#000000",
       white: "#FFFFFF",
       red: colors.red,
+      gray: colors.gray,
     },
     fontFamily: {
       sans: ["Cabinet Grotesk", "sans-serif"],

@@ -1,38 +1,25 @@
-import Image from "next/image";
 import { FC } from "react";
+import AuthLoginForm from "../application/auth/AuthLoginForm";
 
 const Login: FC = () => {
   return (
-    <div className="container pt-12 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto">
-      <div className="flex flex-col lg:flex-row justify-between bg-secondary-600 bg-opacity-10 gap-y-24 gap-x-14 px-5 sm:px-16 py-12 rounded-3xl">
-        <div className="flex flex-col justify-between h-full basis-[54%] my-auto">
-          <div className="flex flex-row justify-start">
-            <h1 className="font-bold text-2xl sm:text-3xl lg:text-5xl bg-gradient-600 bg-clip-text text-transparent-active">
-              Get in touch
-            </h1>
-            <Image
-              className="lg:hidden w-6"
-              src="/img/contact/contact-hero.png"
-              alt="Blog image"
-              width={35}
-              height={35}
-            />
+    <main>
+      <div className="flex flex-col sm:flex-row overflow-y-hidden">
+        <div className="bg-auth relative bg-no-repeat h-auto bg-cover basis-5/12 pb-20 sm:pb-0 p-10 2xl:px-20"></div>
+        <div className="basis-7/12 h-screen overflow-y-scroll">
+          <div className=" relative bg-white w-9/12 lg:w-8/12 2xl:w-7/12  sm:p-8 my-7 mx-auto h-auto">
+            <div className="relative z-20">
+              <div className=" mx-auto py-[90px] lg:py-[150px] xl:py-[90px] 2xl:py-[165px]">
+                <h2 className="text-[2rem] text-gray-900 font-extrabold font-sans mb-8 text-center">
+                  LOGIN
+                </h2>
+                <AuthLoginForm />
+              </div>
+            </div>
           </div>
-          <p className="text-base sm:text-lg lg:text-2xl text-text-300 mt-8">
-            How can we help you today? Feel free to reach out as our customer
-            service agents are ready to help 24/7 in all you need to access
-            StableDoc platform seamlessly.
-          </p>
         </div>
-        <Image
-          className="basis-full w-full lg:basis-[20%] hidden lg:block"
-          src="/img/contact/contact-hero.png"
-          alt="Blog image"
-          width={400}
-          height={400}
-        />
       </div>
-    </div>
+    </main>
   );
 };
 

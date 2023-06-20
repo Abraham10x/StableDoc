@@ -5,7 +5,7 @@ import Login from "../../components/dashboard/Login";
 const index: NextPage = () => {
   return (
     <>
-      <Seo templateTitle="login" />
+      <Seo templateTitle="Login" />
       <Login />
     </>
   );

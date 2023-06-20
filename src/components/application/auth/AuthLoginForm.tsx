@@ -62,9 +62,9 @@ const AuthLoginForm: FC = () => {
               />
               <BaseFormInput
                 type="password"
-                placeholder="Password"
+                placeholder="Enter Your Password"
                 name="passkey"
-                label="Enter Your Password"
+                label="Password"
                 value={values.passkey}
                 onChange={handleChange}
                 error={errorParser(errors, touched, "passkey")}

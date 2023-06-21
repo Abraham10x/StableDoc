@@ -1,6 +1,9 @@
-import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
 import { FC, useState } from "react";
 import Image from "next/image";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
+import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
+
 interface IProps {
   type?: string;
   label?: string;
@@ -151,6 +154,85 @@ const BaseFormInput: FC<IProps> = ({
           name={name}
           value={value}
           placeholder={placeholder}
+        />
+      </div>
+    );
+  }
+
+  if (type === "file") {
+    return (
+      <div
+        className={`${className} rounded-lg border-[2px] py-5 px-4 text-base text-gray-500 bg-gray-100 border-[#E5E7EB] border-dashed mt-3`}
+      >
+        <label htmlFor={name} className="flex flex-col cursor-pointer">
+          <Image
+            className="mx-auto mt-2"
+            src="/img/icons/file-upload.svg"
+            alt="file-icon"
+            width={80}
+            height={80}
+          />
+          <p className="text-gray-900 font-bold text-center text-sm">
+            Upload Your {label} Here
+          </p>
+          <p className="text-gray-600 text-center text-xs w-full sm:w-[60%] mx-auto">
+            Note: Your File should not be more than 3mb to 8mb
+          </p>
+        </label>
+        <input
+          id={name}
+          className="hidden w-full"
+          type="file"
+          onChange={onChange}
+          name={name}
+          value={value}
+          // eslint-disable-next-line react/no-unknown-property
+          placeholder={placeholder}
+          // eslint-disable-next-line react/no-unknown-property
+          // validate={validate}
+        />
+      </div>
+    );
+  }
+
+  const modules = {
+    toolbar: [
+      [{ header: [1, 2, false] }],
+      ["bold", "italic", "underline", "strike", "blockquote"],
+      [
+        { list: "ordered" },
+        { list: "bullet" },
+        { indent: "-1" },
+        { indent: "+1" },
+      ],
+      ["link", "image"],
+      ["clean"],
+    ],
+  };
+
+  const formats = [
+    "header",
+    "bold",
+    "italic",
+    "underline",
+    "strike",
+    "blockquote",
+    "list",
+    "bullet",
+    "indent",
+    "link",
+    "image",
+  ];
+
+  if (name === "content") {
+    return (
+      <div className={`w-full mt-3 ${className}`}>
+        <ReactQuill
+          value={value}
+          theme={"snow"}
+          onChange={onChange}
+          modules={modules}
+          formats={formats}
         />
       </div>
     );

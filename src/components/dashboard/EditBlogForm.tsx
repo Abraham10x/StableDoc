@@ -9,7 +9,7 @@ import { IoPlaySkipBackCircleSharp } from "react-icons/io5";
 import { errorParser } from "../../lib/helper";
 import BaseFormInput from "../application/base/BaseFormInput";
 
-const CreateBlogForm = () => {
+const EditBlogForm = () => {
   const router = useRouter();
   const [coverPhoto, setCoverPhoto] = useState<any>();
   const defaultPayload = {
@@ -41,7 +41,7 @@ const CreateBlogForm = () => {
         <div className="flex flex-col sm:flex-row justify-between gap-y-4 align-middle">
           <div className="flex flex-col">
             <h1 className="text-3xl text-text-300 font-extrabold">
-              Create Blog Post
+              Edit Blog Post
             </h1>
             <p className="text-base text-text-600">
               Welcome to StableDoc Admin Panel
@@ -142,4 +142,4 @@ const CreateBlogForm = () => {
   );
 };
 
-export default CreateBlogForm;
+export default EditBlogForm;

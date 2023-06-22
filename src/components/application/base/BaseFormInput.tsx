@@ -1,8 +1,11 @@
 import { FC, useState } from "react";
 import Image from "next/image";
-import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
+
+import dynamic from "next/dynamic";
+
+const ReactQuill = dynamic(import("react-quill"), { ssr: false });
 
 interface IProps {
   type?: string;
@@ -172,12 +175,14 @@ const BaseFormInput: FC<IProps> = ({
             width={80}
             height={80}
           />
-          <p className="text-gray-900 font-bold text-center text-sm">
-            Upload Your {label} Here
-          </p>
-          <p className="text-gray-600 text-center text-xs w-full sm:w-[60%] mx-auto">
-            Note: Your File should not be more than 3mb to 8mb
-          </p>
+          <div className="relative bottom-7">
+            <p className="text-gray-900 font-bold text-center text-sm">
+              Upload Your {label} Here
+            </p>
+            <p className="text-gray-600 text-center text-xs w-full sm:w-[60%] mx-auto">
+              Note: Your File should not be more than 3mb to 8mb
+            </p>
+          </div>
         </label>
         <input
           id={name}
@@ -233,6 +238,7 @@ const BaseFormInput: FC<IProps> = ({
           onChange={onChange}
           modules={modules}
           formats={formats}
+          placeholder="Write Your Content..."
         />
       </div>
     );

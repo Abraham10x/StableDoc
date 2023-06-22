@@ -1,11 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { IoMdAdd } from "react-icons/io";
-import {
-  CalendarDaysIcon,
-  PencilSquareIcon,
-  UserIcon,
-} from "@heroicons/react/24/outline";
+import { CalendarDaysIcon, UserIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { LinkButton } from "../general/Button";
 import Card from "../general/Card";
@@ -18,18 +14,20 @@ const ViewBlog = () => {
     storeToken("title", title);
     storeToken("contractId", id);
     router.push({
-      pathname: `/dashboard/editBlog/${id}`,
+      pathname: `/dashboard/viewBlog/${id}`,
       // query: {
       //   id,
       // },
     });
   };
   return (
-    <>
-      <div className="px-5 sm:px-10 py-6 sticky top-0 shadow-sm z-10">
+    <main>
+      <div className=" bg-dash-white px-5 sm:px-10 py-6">
         <div className="flex flex-col sm:flex-row justify-between gap-y-4 align-middle">
           <div className="flex flex-col">
-            <h1 className="text-3xl text-text-300 font-extrabold">View Blog</h1>
+            <h1 className="text-3xl text-text-300 font-extrabold">
+              View All Blog
+            </h1>
             <p className="text-base text-text-600">
               Welcome to StableDoc Admin Panel
             </p>
@@ -63,18 +61,17 @@ const ViewBlog = () => {
                   <div className="flex flex-row gap-x-3 gap-y-4">
                     <div className="flex gap-2 justify-center">
                       <CalendarDaysIcon className="my-auto w-6 h-6" />
-                      <p className="text-xs sm:text-sm font-bold my-auto">
+                      <p className="text-xs sm:text-sm font-medium my-auto">
                         Mar 27, 2023
                       </p>
                     </div>
-                    <div className="flex gap-2 justify-center">
+                    <div className="flex gap-1 justify-center">
                       <UserIcon className="my-auto w-6 h-6" />
-                      <p className="text-xs sm:text-sm font-bold my-auto">
+                      <p className="text-xs sm:text-sm font-medium my-auto">
                         Queen Dare
                       </p>
                     </div>
                   </div>
-                  <PencilSquareIcon className="my-auto w-6 h-6 text-[#00674C]" />
                 </div>
               </div>
             </div>
@@ -82,7 +79,7 @@ const ViewBlog = () => {
           </Card>
         </div>
       </div>
-    </>
+    </main>
   );
 };
 

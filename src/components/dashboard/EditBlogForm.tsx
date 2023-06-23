@@ -11,12 +11,11 @@ import BaseFormInput from "../application/base/BaseFormInput";
 
 const EditBlogForm = () => {
   const router = useRouter();
-  const [coverPhoto, setCoverPhoto] = useState<any>();
   const defaultPayload = {
     title: "",
     summary: "",
     content: "",
-    coverPhoto: coverPhoto ?? "",
+    coverPhoto: "",
   };
 
   const schema = Yup.object({

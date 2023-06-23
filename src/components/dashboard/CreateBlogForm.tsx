@@ -6,17 +6,39 @@ import { Button, SubmitButton } from "../general/Button";
 import Card from "../general/Card";
 import { useRouter } from "next/router";
 import { IoPlaySkipBackCircleSharp } from "react-icons/io5";
-import { errorParser } from "../../lib/helper";
+import { errorParser, retrieveToken } from "../../lib/helper";
 import BaseFormInput from "../application/base/BaseFormInput";
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
 const CreateBlogForm = () => {
+  const AUTH_TOKEN = retrieveToken("AUTH_TOKEN");
   const router = useRouter();
-  const [coverPhoto, setCoverPhoto] = useState<any>();
   const defaultPayload = {
     title: "",
     summary: "",
     content: "",
-    coverPhoto: coverPhoto ?? "",
+    coverPhoto: "",
+  };
+
+  const handlePost = async (values: any) => {
+    const response = await axios.post(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/blog-posts`,
+      values,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${AUTH_TOKEN}`,
+        },
+      }
+    );
+
+    if (response.status === 201) {
+      toast.success("Blog Created successfully!!! 🎉");
+    } else {
+      toast.error("Unable to create post, try again!");
+    }
+    return response;
   };
 
   const schema = Yup.object({
@@ -33,10 +55,12 @@ const CreateBlogForm = () => {
     coverPhoto: any;
   }) => {
     // handle form submission here
+    await handlePost(values);
   };
 
   return (
     <>
+      <Toaster position="top-right" reverseOrder={false} />
       <div className="px-5 sm:px-10 py-6 sticky top-0 shadow-sm z-10">
         <div className="flex flex-col sm:flex-row justify-between gap-y-4 align-middle">
           <div className="flex flex-col">

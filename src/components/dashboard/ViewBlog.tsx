@@ -7,8 +7,19 @@ import { LinkButton } from "../general/Button";
 import Card from "../general/Card";
 import { useRouter } from "next/router";
 import { storeToken } from "../../lib/helper";
+import axios from "axios";
 
 const ViewBlog = () => {
+  axios
+    .get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/blog-posts`)
+    .then(function (response) {
+      // handle success
+      console.log(response);
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    });
   const router = useRouter();
   const handleRoute = (id: any, title: any) => {
     storeToken("title", title);

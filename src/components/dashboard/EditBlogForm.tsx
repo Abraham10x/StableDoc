@@ -33,7 +33,7 @@ const CreateBlogForm = () => {
       setFormvalues({
         title: data?.title,
         summary: data?.summary,
-        coverPhoto: data?.coverPhoto,
+        coverPhoto: data?.coverPhotoUrl,
       });
 
       setContent(data?.content);
@@ -64,7 +64,7 @@ const CreateBlogForm = () => {
     const values = {
       title: formvalues.title,
       summary: formvalues.summary,
-      coverPhoto: formvalues.coverPhoto[0],
+      coverPhoto: formvalues.coverPhoto,
       content: content,
     };
     console.log(values);

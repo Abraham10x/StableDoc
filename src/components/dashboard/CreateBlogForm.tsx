@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from "react";
-import * as Yup from "yup";
-import { Formik } from "formik";
+import React, { useEffect, useState } from "react";
 import { Button, SubmitButton } from "../general/Button";
 import Card from "../general/Card";
 import { useRouter } from "next/router";
@@ -17,11 +15,38 @@ const CreateBlogForm = () => {
   const defaultPayload = {
     title: "",
     summary: "",
-    content: "",
     coverPhoto: "",
   };
+  const [formvalues, setFormvalues] = useState(defaultPayload);
+  const [content, setContent] = useState("");
+  const [formErrors, setFormErrors] = useState({});
+  const [onSubmit, setonSubmit] = useState(false);
 
-  const handlePost = async (values: any) => {
+  const validate = (values: any) => {
+    const errors = defaultPayload;
+    if (!values.title) {
+      errors.title = "Name is required !";
+    }
+    if (!values.summary) {
+      errors.summary = "Email is required !";
+    }
+    if (!values.coverPhoto) {
+      errors.coverPhoto = "Message is required !";
+    }
+    return errors;
+  };
+
+  const handlePost = async (event: any) => {
+    event.preventDefault();
+    setFormErrors(validate(formvalues));
+    setonSubmit(true);
+    const values = {
+      title: formvalues.title,
+      summary: formvalues.summary,
+      coverPhoto: formvalues.coverPhoto[0],
+      content: content,
+    };
+    console.log(values);
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/blog-posts`,
       values,
@@ -35,28 +60,26 @@ const CreateBlogForm = () => {
 
     if (response.status === 201) {
       toast.success("Blog Created successfully!!! 🎉");
+      router.push({
+        pathname: `/dashboard/blog/`,
+      });
     } else {
       toast.error("Unable to create post, try again!");
+      event.target.reset();
     }
     return response;
   };
 
-  const schema = Yup.object({
-    title: Yup.string().required("Required"),
-    summary: Yup.string().required("Required"),
-    content: Yup.string().required("Required"),
-    coverPhoto: Yup.string().required("Required"),
-  });
+  useEffect(() => {
+    if (Object.keys(formErrors).length === 0 && onSubmit) {
+      console.log(formvalues);
+    }
+  }, [formErrors]);
 
-  const onSubmit = async (values: {
-    title: string;
-    summary: string;
-    content: string;
-    coverPhoto: any;
-  }) => {
-    // handle form submission here
-    await handlePost(values);
-  };
+  // const onSubmit = async () => {
+  //   // handle form submission here
+  //   await handlePost();
+  // };
 
   return (
     <>
@@ -86,80 +109,66 @@ const CreateBlogForm = () => {
             <h2 className="text-xl font-semibold">Blog Content</h2>
             <p>Tell us more about your job</p>
           </div>
-          <Formik
-            enableReinitialize
-            initialValues={defaultPayload}
-            validationSchema={schema}
-            onSubmit={async (values, { resetForm }) => {
-              await onSubmit(values);
-              resetForm();
-            }}
-          >
-            {(formik) => {
-              const {
-                handleSubmit,
-                values,
-                errors,
-                touched,
-                handleBlur,
-                handleChange,
-              } = formik;
-              return (
-                <div>
-                  <form onSubmit={handleSubmit}>
-                    <div className="flex flex-col gap-3">
-                      <BaseFormInput
-                        type="text"
-                        label="Title"
-                        name="title"
-                        value={values.title}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        error={errorParser(errors, touched, "title")}
-                      />
-                      <BaseFormInput
-                        type="textarea"
-                        label="Summary"
-                        name="summary"
-                        value={values.summary}
-                        onChange={handleChange}
-                        onBlur={handleBlur}
-                        error={errorParser(errors, touched, "summary")}
-                      />
-                      <BaseFormInput
-                        type="file"
-                        label="Cover Image"
-                        id="coverPhoto"
-                        name="coverPhoto"
-                        value={values.coverPhoto}
-                      />
-                      <BaseFormInput
-                        name="content"
-                        value={values.content}
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className="flex justify-start items-center gap-x-5 py-5 border-t">
-                      <SubmitButton
-                        type="submit"
-                        className="bg-primary text-white py-2 px-5 rounded-md"
-                      >
-                        Submit
-                      </SubmitButton>
-                      <Button
-                        className="border-[1px] border-outline-gray py-2 px-5 rounded-md"
-                        onClick={() => {
-                          router.back;
-                        }}
-                      >
-                        Cancel
-                      </Button>
-                    </div>
-                  </form>
-                </div>
-              );
-            }}
-          </Formik>
+          <div>
+            <form onSubmit={handlePost}>
+              <div className="flex flex-col gap-3">
+                <BaseFormInput
+                  type="text"
+                  label="Title"
+                  name="title"
+                  value={formvalues.title}
+                  onChange={(event: any) =>
+                    setFormvalues({ ...formvalues, title: event.target.value })
+                  }
+                />
+                <BaseFormInput
+                  type="textarea"
+                  label="Summary"
+                  name="summary"
+                  value={formvalues.summary}
+                  onChange={(event: any) =>
+                    setFormvalues({
+                      ...formvalues,
+                      summary: event.target.value,
+                    })
+                  }
+                />
+                <BaseFormInput
+                  type="file"
+                  label="Cover Image"
+                  id="coverPhoto"
+                  name="coverPhoto"
+                  onChange={(event: any) =>
+                    setFormvalues({
+                      ...formvalues,
+                      coverPhoto: event.target.files,
+                    })
+                  }
+                />
+                <BaseFormInput
+                  name="content"
+                  value={content}
+                  onChange={setContent}
+                />
+              </div>
+              <div className="flex justify-start items-center gap-x-5 py-5 border-t">
+                <SubmitButton
+                  type="submit"
+                  className="bg-primary text-white py-2 px-5 rounded-md"
+                >
+                  Submit
+                </SubmitButton>
+                <Button
+                  className="border-[1px] border-outline-gray py-2 px-5 rounded-md"
+                  onClick={() => {
+                    router.back;
+                  }}
+                >
+                  Cancel
+                </Button>
+              </div>
+            </form>
+          </div>
         </Card>
       </div>
     </>

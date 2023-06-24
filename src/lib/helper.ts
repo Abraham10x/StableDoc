@@ -12,7 +12,7 @@ export const errorParser = (errors: any, touched: any, type: string) => {
  * @returns Parsed object value associated with the given key or null.
  */
 export const retrieveToken = (key: string) => {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     return JSON.parse(localStorage.getItem(key) ?? "{}");
   }
 };
@@ -29,7 +29,7 @@ export const storeToken = (key: string, object: any) => {
 export const readableDate = (date: any) => {
   const d = new Date(date);
   return d.toDateString();
-}
+};
 
 // export const ggg = (arr1 = [], arr2 = [], dataArray: any) => {
 //   dataArray.forEach((item: any) => {
@@ -41,4 +41,4 @@ export const readableDate = (date: any) => {
 
 export const numberWithCommas = (amount: any) => {
   return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+};

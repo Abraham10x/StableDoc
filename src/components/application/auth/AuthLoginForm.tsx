@@ -3,35 +3,52 @@ import * as Yup from "yup";
 import { Formik } from "formik";
 import BaseFormInput from "../base/BaseFormInput";
 import { SubmitButton } from "../../general/Button";
-import { errorParser } from "../../../lib/helper";
-// import authQueries from "@lib/queries/auth";
-import { Toaster } from "react-hot-toast";
+import { errorParser, storeToken } from "../../../lib/helper";
+import toast, { Toaster } from "react-hot-toast";
+import axios from "axios";
+import { useRouter } from "next/router";
 
 const defaultPayload = {
   email: "",
-  passkey: "",
+  password: "",
 };
 
 const AuthLoginForm: FC = () => {
   const [payload] = useState(defaultPayload);
-  // const [remember, setRemember] = useState(false);
-  // const { mutate } = authQueries.login();
+  const router = useRouter();
+  const handleLogin = async (values: any) => {
+    const response = await axios.post(
+      `${process.env.NEXT_PUBLIC_API_BASE_URL}/admin-auth/login`,
+      values,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    if (response.status === 200) {
+      storeToken("AUTH_TOKEN", response?.data.idToken);
+      router.push({
+        pathname: `/dashboard/blog`,
+      });
+      toast.success("login successfully!!! 🎉");
+    } else {
+      toast.error("Unable to comment, try again!");
+    }
+    return response;
+  };
 
   const schema = Yup.object({
     email: Yup.string().email("Invalid Email Address").required("Required"),
-    passkey: Yup.string()
+    password: Yup.string()
       .min(8, "Password must be more than 8 characters")
       .max(32, "Password must be less than 32 characters")
       .required("Required"),
   });
 
-  // const handleRemember = () => {
-  //   setRemember(!remember);
-  // };
-
-  const onSubmit = async (values: { email: string; passkey: string }) => {
+  const onSubmit = async (values: { email: string; password: string }) => {
     // handle form submission here
-    // mutate(values);
+    handleLogin(values);
   };
 
   return (
@@ -63,11 +80,11 @@ const AuthLoginForm: FC = () => {
               <BaseFormInput
                 type="password"
                 placeholder="Enter Your Password"
-                name="passkey"
+                name="password"
                 label="Password"
-                value={values.passkey}
+                value={values.password}
                 onChange={handleChange}
-                error={errorParser(errors, touched, "passkey")}
+                error={errorParser(errors, touched, "password")}
               />
               <SubmitButton
                 type="submit"

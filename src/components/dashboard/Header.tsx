@@ -25,6 +25,7 @@ const Header = () => {
               alt="Logo"
               width={150}
               height={150}
+              priority
             />
           </div>
           <div className="hidden lg:flex space-x-3 items-center">

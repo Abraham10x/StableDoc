@@ -190,7 +190,6 @@ const BaseFormInput: FC<IProps> = ({
           type="file"
           onChange={onChange}
           name={name}
-          value={value}
           // eslint-disable-next-line react/no-unknown-property
           placeholder={placeholder}
           // eslint-disable-next-line react/no-unknown-property

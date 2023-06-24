@@ -20,7 +20,7 @@ const Hero: FC<IProps> = ({ title, datePosted, author }: IProps) => {
               {title}
             </h1>
           </div>
-          <div className="flex flex-row gap-4 sm:gap-20 mt-9">
+          <div className="flex flex-row gap-4 sm:gap-12 mt-9">
             <div className="flex flex-row gap-2 sm:gap-3 lg:gap-5">
               <BsStopwatch className="text-text-500 text-base sm:text-xl lg:text-2xl" />
               <p className="text-sm sm:text-lg lg:text-2xl text-text-500">

@@ -23,7 +23,6 @@ const CreateBlogForm = () => {
   const [content, setContent] = useState("");
   const [formErrors, setFormErrors] = useState({});
   const [onSubmit, setonSubmit] = useState(false);
-  console.log(formvalues.title);
 
   useEffect(() => {
     const getSingleBlog = async () => {
@@ -47,13 +46,13 @@ const CreateBlogForm = () => {
   const validate = (values: any) => {
     const errors = defaultPayload;
     if (!values.title) {
-      errors.title = "Name is required !";
+      errors.title = "title is required !";
     }
     if (!values.summary) {
-      errors.summary = "Email is required !";
+      errors.summary = "title is required !";
     }
     if (!values.coverPhoto) {
-      errors.coverPhoto = "Message is required !";
+      errors.coverPhoto = "image is required !";
     }
     return errors;
   };

@@ -14,7 +14,6 @@ const CTA: FC = () => {
   const [payload] = useState(defaultPayload);
 
   const onSubmit = async (values: { email: string }) => {
-    console.log({ values });
     emailjs
       .sendForm(
         "service_6qi0hku",

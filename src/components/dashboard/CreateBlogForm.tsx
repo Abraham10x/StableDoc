@@ -46,7 +46,6 @@ const CreateBlogForm = () => {
       coverPhoto: formvalues.coverPhoto[0],
       content: content,
     };
-    console.log(values);
     const response = await axios.post(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/blog-posts`,
       values,
@@ -72,7 +71,6 @@ const CreateBlogForm = () => {
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && onSubmit) {
-      console.log(formvalues);
     }
   }, [formErrors]);
 

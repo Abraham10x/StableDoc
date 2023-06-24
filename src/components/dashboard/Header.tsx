@@ -2,17 +2,22 @@
 // import authQueries from "@lib/queries/auth";
 import React from "react";
 import BaseFormInput from "../application/base/BaseFormInput";
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { IoLogOut } from "react-icons/io5";
 import Image from "next/image";
 import { Button } from "../general/Button";
+import { useRouter } from "next/router";
 
 const Header = () => {
-  // const sessionID = retrieveToken("sessionID");
-  // const { mutate } = authQueries.logout();
-  // const handleLogout = () => {
-  //   mutate({ session_id: sessionID });
-  // };
+  const router = useRouter();
+
+  const logout = () => {
+    localStorage.clear();
+    router.push({
+      pathname: `/dashboard/`,
+    });
+    toast.success("loged out successfully!!! 🎉");
+  };
 
   return (
     <>
@@ -36,7 +41,10 @@ const Header = () => {
             />
           </div>
           <div className="flex flex-row-reverse sm:flex-row sm:gap-6">
-            <Button className="flex flex-row gap-3 text-red-600">
+            <Button
+              onClick={logout}
+              className="flex flex-row gap-3 text-red-600"
+            >
               <IoLogOut className="w-10 h-10" />
               <p className="font-medium text-lg my-auto">Logout</p>
             </Button>

@@ -47,7 +47,6 @@ const ViewBlog = () => {
       });
     }
   };
-  console.log(post);
   const router = useRouter();
   const handleRoute = (id: any) => {
     router.push({
@@ -215,12 +214,7 @@ const ViewBlog = () => {
       </div>
       <Main
         blogImage="/img/blog-images/drinking-water.jpg"
-        summary={`How Much Water Should You Be Drinking Every Day and What Are the Benefits?. 
-        Water is essential for our survival, and staying hydrated is crucial for maintaining 
-        good health. Our bodies are made up of about 60% water, and we need to constantly 
-        replenish our fluid levels to function properly. In this blog post, we'll explore the 
-        importance of hydration, how much water you should be drinking every day, and the 
-        benefits of staying hydrated.`}
+        summary={post?.summary}
         blogData={blogData}
       />
     </>

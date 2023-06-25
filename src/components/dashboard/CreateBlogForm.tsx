@@ -152,14 +152,20 @@ const CreateBlogForm = () => {
               <div className="flex justify-start items-center gap-x-5 py-5 border-t">
                 <SubmitButton
                   type="submit"
-                  className="bg-primary text-white py-2 px-5 rounded-md"
+                  className="bg-primary hover:bg-secondary-900 duration-100 text-white py-2 px-5 rounded-md"
                 >
                   Submit
                 </SubmitButton>
+                <SubmitButton
+                  type="submit"
+                  className="bg-secondary-900 hover:bg-gray-500 duration-100 text-white py-2 px-5 rounded-md"
+                >
+                  Preview
+                </SubmitButton>
                 <Button
-                  className="border-[1px] border-outline-gray py-2 px-5 rounded-md"
+                  className="border-[1px] hover:bg-gray-300 duration-100 border-outline-gray py-2 px-5 rounded-md"
                   onClick={() => {
-                    router.back;
+                    router.back();
                   }}
                 >
                   Cancel

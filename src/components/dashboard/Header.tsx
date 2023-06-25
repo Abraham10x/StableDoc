@@ -7,6 +7,7 @@ import { IoLogOut } from "react-icons/io5";
 import Image from "next/image";
 import { Button } from "../general/Button";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Header = () => {
   const router = useRouter();
@@ -25,13 +26,15 @@ const Header = () => {
       <div className="bg-white px-5 sm:px-10 py-6 sticky top-0 shadow-sm z-10">
         <div className="flex justify-between items-center">
           <div className="my-auto">
-            <Image
-              src="/img/brand-Identity.svg"
-              alt="Logo"
-              width={150}
-              height={150}
-              priority
-            />
+            <Link href="/dashboard/blog" className="cursor-pointer">
+              <Image
+                src="/img/brand-Identity.svg"
+                alt="Logo"
+                width={150}
+                height={150}
+                priority
+              />
+            </Link>
           </div>
           <div className="hidden lg:flex space-x-3 items-center">
             <BaseFormInput

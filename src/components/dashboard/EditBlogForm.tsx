@@ -15,6 +15,7 @@ const CreateBlogForm = () => {
 
   const router = useRouter();
   const defaultPayload = {
+    author: "",
     title: "",
     summary: "",
     coverPhoto: "",
@@ -31,6 +32,7 @@ const CreateBlogForm = () => {
       );
       const data = response?.data;
       setFormvalues({
+        author: data?.author,
         title: data?.title,
         summary: data?.summary,
         coverPhoto: data?.coverPhotoUrl,
@@ -135,6 +137,15 @@ const CreateBlogForm = () => {
               <div className="flex flex-col gap-3">
                 <BaseFormInput
                   type="text"
+                  label="Author"
+                  name="authotr"
+                  value={formvalues.author}
+                  onChange={(event: any) =>
+                    setFormvalues({ ...formvalues, author: event.target.value })
+                  }
+                />
+                <BaseFormInput
+                  type="text"
                   label="Title"
                   name="title"
                   value={formvalues.title}
@@ -154,6 +165,19 @@ const CreateBlogForm = () => {
                     })
                   }
                 />
+                {formvalues.coverPhoto === "" ? (
+                  <p>No cover image uploaded</p>
+                ) : (
+                  <p style={{ textDecoration: "underline", color: "blue" }}>
+                    <a
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      href={formvalues?.coverPhoto}
+                    >
+                      Click to view cover image
+                    </a>
+                  </p>
+                )}
                 <BaseFormInput
                   type="file"
                   label="Cover Image"
@@ -175,14 +199,14 @@ const CreateBlogForm = () => {
               <div className="flex justify-start items-center gap-x-5 py-5 border-t">
                 <SubmitButton
                   type="submit"
-                  className="bg-primary text-white py-2 px-5 rounded-md"
+                  className="bg-primary hover:bg-secondary-900 duration-100 text-white py-2 px-5 rounded-md"
                 >
                   Submit
                 </SubmitButton>
                 <Button
-                  className="border-[1px] border-outline-gray py-2 px-5 rounded-md"
+                  className="border-[1px] hover:bg-gray-300 duration-100 border-outline-gray py-2 px-5 rounded-md"
                   onClick={() => {
-                    router.back;
+                    router.back();
                   }}
                 >
                   Cancel

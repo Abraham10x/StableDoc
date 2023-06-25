@@ -19,6 +19,7 @@
     "eslint-config-next": "13.0.6",
     "flag-icon-css": "^4.1.7",
     "formik": "^2.2.9",
+    "framer-motion": "^10.12.17",
     "next": "13.0.6",
     "preline": "^1.6.0",
     "react": "18.2.0",

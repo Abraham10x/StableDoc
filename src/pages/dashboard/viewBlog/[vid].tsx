@@ -14,11 +14,17 @@ import { readableDate, retrieveToken } from "../../../lib/helper";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import MainBody from "../../../components/dashboard/MainBody";
+import Modal from "../../../components/general/Modal";
 
 const ViewBlog = () => {
   const uId = retrieveToken("uId");
   const AUTH_TOKEN = retrieveToken("AUTH_TOKEN");
   const [post, setPost] = useState<any>();
+  const [showModal, setShowModal] = useState(false);
+
+  const handleModal = () => {
+    setShowModal((prev) => !prev);
+  };
 
   useEffect(() => {
     const getSingleBlog = async () => {
@@ -99,10 +105,8 @@ const ViewBlog = () => {
                   </p>
                 </Button>
                 <Button
-                  onClick={() => {
-                    deletePost();
-                  }}
-                  className="bg-red-500 px-4 py-2 flex flex-row gap-2 sm:gap-3 lg:gap-5 rounded-lg hover:bg-secondary-900 duration-100 w-fit"
+                  className="bg-red-500 hover:bg-red-400  px-4 py-2 flex flex-row gap-2 sm:gap-3 lg:gap-5 rounded-lg duration-100 w-fit"
+                  onClick={handleModal}
                 >
                   <TrashIcon className="text-white my-auto w-6 h-6" />
                   <p className="text-sm sm:text-lg lg:text-xl text-white">
@@ -114,6 +118,37 @@ const ViewBlog = () => {
           </div>
         </div>
       </div>
+      <Modal
+        label="Delete Post"
+        showModal={showModal}
+        onClose={() => setShowModal(false)}
+        className="w-[90%] md:w-[450px] xl:w-[500px]"
+      >
+        <div className="flex flex-col bg-white">
+          <div className="p-4 overflow-y-auto">
+            <p className="text-gray-800 px-2">
+              Are You Sure You Want To Detele this blog post?
+            </p>
+          </div>
+          <div className="flex justify-end items-center gap-x-2 py-3 px-4 border-t">
+            <Button
+              className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-primary text-white hover:bg-secondary-900 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all text-base"
+              onClick={() => setShowModal(false)}
+            >
+              No
+            </Button>
+            <Button
+              className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary transition-all text-base"
+              onClick={() => {
+                deletePost();
+                handleModal();
+              }}
+            >
+              Yes
+            </Button>
+          </div>
+        </div>
+      </Modal>
       <MainBody
         blogImage={post?.coverPhotoUrl}
         title={post?.title}

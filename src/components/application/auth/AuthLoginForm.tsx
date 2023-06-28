@@ -2,8 +2,8 @@ import { FC, useState } from "react";
 import * as Yup from "yup";
 import { Formik } from "formik";
 import BaseFormInput from "../base/BaseFormInput";
-import { SubmitButton } from "../../general/Button";
-import { errorParser, storeToken } from "../../../lib/helper";
+import { Button, SubmitButton } from "../../general/Button";
+import { errorParser, retrieveToken, storeToken } from "../../../lib/helper";
 import toast, { Toaster } from "react-hot-toast";
 import axios from "axios";
 import { useRouter } from "next/router";
@@ -15,6 +15,7 @@ const defaultPayload = {
 
 const AuthLoginForm: FC = () => {
   const [payload] = useState(defaultPayload);
+
   const router = useRouter();
   const handleLogin = async (values: any) => {
     const response = await axios.post(
@@ -88,7 +89,7 @@ const AuthLoginForm: FC = () => {
               />
               <SubmitButton
                 type="submit"
-                className="relative w-full bg-primary mt-4 py-3 px-4 rounded-lg btn-shadow text-white text-lg font-semibold hover:bg-green/80 transition-all"
+                className="relative w-full bg-primary mt-4 py-3 px-4 rounded-lg btn-shadow text-white text-lg font-semibold hover:bg-secondary-900 duration-100 transition-all"
               >
                 Login
               </SubmitButton>

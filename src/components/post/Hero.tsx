@@ -6,7 +6,7 @@ import { BiUser } from "react-icons/bi";
 
 interface IProps {
   title: string;
-  datePosted: string;
+  datePosted?: string;
   author: string;
 }
 

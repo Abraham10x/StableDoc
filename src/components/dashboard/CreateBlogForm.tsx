@@ -4,7 +4,7 @@ import { Button, SubmitButton } from "../general/Button";
 import Card from "../general/Card";
 import { useRouter } from "next/router";
 import { IoPlaySkipBackCircleSharp } from "react-icons/io5";
-import { errorParser, retrieveToken } from "../../lib/helper";
+import { errorParser, retrieveToken, storeToken } from "../../lib/helper";
 import BaseFormInput from "../application/base/BaseFormInput";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
@@ -13,6 +13,7 @@ const CreateBlogForm = () => {
   const AUTH_TOKEN = retrieveToken("AUTH_TOKEN");
   const router = useRouter();
   const defaultPayload = {
+    authorName: "",
     title: "",
     summary: "",
     coverPhoto: "",
@@ -24,23 +25,42 @@ const CreateBlogForm = () => {
 
   const validate = (values: any) => {
     const errors = defaultPayload;
+    if (!values.author) {
+      errors.authorName = "Author is required !";
+    }
     if (!values.title) {
-      errors.title = "Name is required !";
+      errors.title = "Title is required !";
     }
     if (!values.summary) {
-      errors.summary = "Email is required !";
+      errors.summary = "Summary is required !";
     }
     if (!values.coverPhoto) {
-      errors.coverPhoto = "Message is required !";
+      errors.coverPhoto = "Photo is required !";
     }
     return errors;
   };
+
+  console.log(formvalues.coverPhoto);
+
+  const handlePreview = () => {
+    storeToken("createPost", {
+      author: formvalues.authorName,
+      title: formvalues.title,
+      summary: formvalues.summary,
+      coverPhoto: formvalues.coverPhoto[0],
+      content: content,
+    });
+    router.push("/dashboard/preview");
+  };
+
+  console.log(formvalues.coverPhoto[0]);
 
   const handlePost = async (event: any) => {
     event.preventDefault();
     setFormErrors(validate(formvalues));
     setonSubmit(true);
     const values = {
+      authorName: formvalues.authorName,
       title: formvalues.title,
       summary: formvalues.summary,
       coverPhoto: formvalues.coverPhoto[0],
@@ -112,6 +132,18 @@ const CreateBlogForm = () => {
               <div className="flex flex-col gap-3">
                 <BaseFormInput
                   type="text"
+                  label="Author"
+                  name="authotr"
+                  value={formvalues.authorName}
+                  onChange={(event: any) =>
+                    setFormvalues({
+                      ...formvalues,
+                      authorName: event.target.value,
+                    })
+                  }
+                />
+                <BaseFormInput
+                  type="text"
                   label="Title"
                   name="title"
                   value={formvalues.title}
@@ -150,18 +182,17 @@ const CreateBlogForm = () => {
                 />
               </div>
               <div className="flex justify-start items-center gap-x-5 py-5 border-t">
-                <SubmitButton
-                  type="submit"
-                  className="bg-primary hover:bg-secondary-900 duration-100 text-white py-2 px-5 rounded-md"
-                >
+                <SubmitButton className="bg-primary hover:bg-secondary-900 duration-100 text-white py-2 px-5 rounded-md">
                   Submit
                 </SubmitButton>
-                <SubmitButton
-                  type="submit"
+                <Button
+                  onClick={() => {
+                    handlePreview();
+                  }}
                   className="bg-secondary-900 hover:bg-gray-500 duration-100 text-white py-2 px-5 rounded-md"
                 >
                   Preview
-                </SubmitButton>
+                </Button>
                 <Button
                   className="border-[1px] hover:bg-gray-300 duration-100 border-outline-gray py-2 px-5 rounded-md"
                   onClick={() => {

@@ -15,7 +15,7 @@ const CreateBlogForm = () => {
 
   const router = useRouter();
   const defaultPayload = {
-    author: "",
+    authorName: "",
     title: "",
     summary: "",
     coverPhoto: "",
@@ -32,7 +32,7 @@ const CreateBlogForm = () => {
       );
       const data = response?.data;
       setFormvalues({
-        author: data?.author,
+        authorName: data?.author,
         title: data?.title,
         summary: data?.summary,
         coverPhoto: data?.coverPhotoUrl,
@@ -47,14 +47,17 @@ const CreateBlogForm = () => {
 
   const validate = (values: any) => {
     const errors = defaultPayload;
+    if (!values.author) {
+      errors.authorName = "Author is required !";
+    }
     if (!values.title) {
-      errors.title = "title is required !";
+      errors.title = "Title is required !";
     }
     if (!values.summary) {
-      errors.summary = "title is required !";
+      errors.summary = "Summary is required !";
     }
     if (!values.coverPhoto) {
-      errors.coverPhoto = "image is required !";
+      errors.coverPhoto = "Message is required !";
     }
     return errors;
   };
@@ -139,9 +142,12 @@ const CreateBlogForm = () => {
                   type="text"
                   label="Author"
                   name="authotr"
-                  value={formvalues.author}
+                  value={formvalues.authorName}
                   onChange={(event: any) =>
-                    setFormvalues({ ...formvalues, author: event.target.value })
+                    setFormvalues({
+                      ...formvalues,
+                      authorName: event.target.value,
+                    })
                   }
                 />
                 <BaseFormInput

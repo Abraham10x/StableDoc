@@ -1,15 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from "react";
 import { PencilSquareIcon, TrashIcon } from "@heroicons/react/24/outline";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { BsStopwatch } from "react-icons/bs";
 import { BiUser } from "react-icons/bi";
 import { Button } from "../../../components/general/Button";
 import Header from "../../../components/dashboard/Header";
 import Seo from "../../../components/general/Seo";
-import Main from "../../../components/post/Main";
-import Link from "next/link";
 import { readableDate, retrieveToken } from "../../../lib/helper";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";

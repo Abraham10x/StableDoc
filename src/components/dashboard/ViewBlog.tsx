@@ -48,7 +48,7 @@ const ViewBlog = () => {
           </div>
           <LinkButton
             link="/dashboard/createBlog"
-            className="bg-primary text-white flex items-center gap-x-4 px-4 py-3 h-fit rounded-lg"
+            className="bg-primary hover:bg-secondary-900 duration-100 text-white flex items-center gap-x-4 px-4 py-3 h-fit rounded-lg"
           >
             <IoMdAdd className="h-5 w-5" />
             <p>Create Blog</p>

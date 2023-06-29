@@ -2,24 +2,38 @@
 import React, { useEffect, useState } from "react";
 import { Button, SubmitButton } from "../general/Button";
 import Card from "../general/Card";
-import { useRouter } from "next/router";
+import { Router, useRouter } from "next/router";
 import { IoPlaySkipBackCircleSharp } from "react-icons/io5";
 import { errorParser, retrieveToken, storeToken } from "../../lib/helper";
 import BaseFormInput from "../application/base/BaseFormInput";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import PreviewModal from "./PreviewModal";
 
 const CreateBlogForm = () => {
   const AUTH_TOKEN = retrieveToken("AUTH_TOKEN");
+  const postDetails = retrieveToken("createPost");
+  const [showModal, setShowModal] = useState(false);
+  let imageFile: File;
+  const dataUrl = postDetails?.coverPhoto;
+  useEffect(() => {
+    fetch(dataUrl)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const file = new File([blob], "cover-photo.png", { type: blob.type });
+        imageFile = file;
+      });
+  }, []);
+
   const router = useRouter();
   const defaultPayload = {
-    authorName: "",
-    title: "",
-    summary: "",
-    coverPhoto: "",
+    authorName: postDetails?.author ?? "",
+    title: postDetails?.title ?? "",
+    summary: postDetails?.summary ?? "",
+    coverPhoto: [],
   };
   const [formvalues, setFormvalues] = useState(defaultPayload);
-  const [content, setContent] = useState("");
+  const [content, setContent] = useState(postDetails?.content ?? "");
   const [formErrors, setFormErrors] = useState({});
   const [onSubmit, setonSubmit] = useState(false);
 
@@ -34,26 +48,34 @@ const CreateBlogForm = () => {
     if (!values.summary) {
       errors.summary = "Summary is required !";
     }
-    if (!values.coverPhoto) {
-      errors.coverPhoto = "Photo is required !";
-    }
     return errors;
   };
 
   console.log(formvalues.coverPhoto);
 
+  const convert = (file: any) => {
+    let localImage;
+    const reader = new FileReader();
+    reader.onload = () => {
+      localImage = reader.result;
+    };
+    reader.readAsDataURL(file);
+    return localImage;
+  };
   const handlePreview = () => {
+    let localImage;
+    if (postDetails?.coverPhoto) {
+      localImage = convert(formvalues?.coverPhoto[0]);
+    }
+    setShowModal((prev) => !prev);
     storeToken("createPost", {
       author: formvalues.authorName,
       title: formvalues.title,
       summary: formvalues.summary,
-      coverPhoto: formvalues.coverPhoto[0],
+      coverPhoto: localImage,
       content: content,
     });
-    router.push("/dashboard/preview");
   };
-
-  console.log(formvalues.coverPhoto[0]);
 
   const handlePost = async (event: any) => {
     event.preventDefault();
@@ -63,7 +85,7 @@ const CreateBlogForm = () => {
       authorName: formvalues.authorName,
       title: formvalues.title,
       summary: formvalues.summary,
-      coverPhoto: formvalues.coverPhoto[0],
+      coverPhoto: imageFile ?? formvalues.coverPhoto[0],
       content: content,
     };
     const response = await axios.post(
@@ -82,6 +104,7 @@ const CreateBlogForm = () => {
       router.push({
         pathname: `/dashboard/blog/`,
       });
+      localStorage.removeItem("createPost");
     } else {
       toast.error("Unable to create post, try again!");
       event.target.reset();
@@ -102,7 +125,7 @@ const CreateBlogForm = () => {
   return (
     <>
       <Toaster position="top-right" reverseOrder={false} />
-      <div className="px-5 sm:px-10 py-6 sticky top-0 shadow-sm z-10">
+      <div className="px-5 sm:px-10 py-6 top-0 shadow-sm">
         <div className="flex flex-col sm:flex-row justify-between gap-y-4 align-middle">
           <div className="flex flex-col">
             <h1 className="text-3xl text-text-300 font-extrabold">
@@ -116,7 +139,7 @@ const CreateBlogForm = () => {
             onClick={() => {
               router.back();
             }}
-            className="bg-primary text-white flex items-center gap-x-4 px-4 py-3 h-fit rounded-lg"
+            className="bg-primary hover:bg-secondary-900 duration-100 text-white flex items-center gap-x-4 px-4 py-3 h-fit rounded-lg"
           >
             <IoPlaySkipBackCircleSharp className="h-5 w-5" />
             <p>Back</p>
@@ -206,6 +229,7 @@ const CreateBlogForm = () => {
           </div>
         </Card>
       </div>
+      <PreviewModal showModal={showModal} setShowModal={setShowModal} />
     </>
   );
 };

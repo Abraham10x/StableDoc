@@ -8,11 +8,16 @@ interface IProps {
   title: string;
   datePosted?: string;
   author: string;
+  container?: string;
 }
 
-const Hero: FC<IProps> = ({ title, datePosted, author }: IProps) => {
+const Hero: FC<IProps> = ({ title, datePosted, author, container }: IProps) => {
   return (
-    <div className="container pt-12 px-5 sm:px-10 sm:pb-8 2xl:px-0 mx-auto">
+    <div
+      className={`${
+        container ? "" : "container 2xl:px-0"
+      } pt-12 px-5 sm:px-10 sm:pb-8 mx-auto`}
+    >
       <div className="flex flex-col lg:flex-row justify-between bg-secondary-600 bg-opacity-10 gap-y-24 gap-x-14 px-5 sm:px-16 py-12 rounded-3xl">
         <div className="flex flex-col justify-between h-full basis-full my-auto">
           <div className="flex flex-row justify-start gap-5">

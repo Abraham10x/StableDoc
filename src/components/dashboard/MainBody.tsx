@@ -9,7 +9,7 @@ interface IProps {
 
 const MainBody: FC<IProps> = ({ body, summary, blogImage, title }: IProps) => {
   return (
-    <div className="container pt-12 px-5 sm:px-10 pb-8 2xl:px-0 mx-auto mt-0 sm:mt-5 lg:mt-10">
+    <div className="pt-12 px-5 sm:px-10 pb-8 mx-auto mt-0 sm:mt-5 lg:mt-10">
       <img
         src={blogImage}
         className="w-full h-96 lg:h-[34rem] object-cover"
@@ -22,15 +22,7 @@ const MainBody: FC<IProps> = ({ body, summary, blogImage, title }: IProps) => {
           {summary}
         </p>
       </div>
-      <div className="mt-14">
-        {/* <h3 className="font-bold text-xl sm:text-2xl lg:text-4xl bg-gradient-600 bg-clip-text text-transparent-active">
-            {data.header}
-          </h3>
-          <p className="text-[#7889B2] text-base sm:text-lg lg:text-2xl mt-4">
-            {data.body}
-          </p> */}
-        {body}
-      </div>
+      <div className="mt-14" dangerouslySetInnerHTML={{ __html: body }} />
     </div>
   );
 };

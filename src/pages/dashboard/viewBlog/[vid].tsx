@@ -66,7 +66,7 @@ const ViewBlog = () => {
       <Toaster position="top-right" reverseOrder={false} />
       <Seo templateTitle="Benefits Of Drinking Water: How Much Do You Need In A Day?" />
       <Header />
-      <div className="container pt-12 px-5 sm:px-10 sm:pb-8 2xl:px-0 mx-auto">
+      <div className="pt-12 px-5 sm:px-10 sm:pb-8 mx-auto">
         <div className="flex flex-col lg:flex-row justify-between bg-secondary-600 bg-opacity-10 gap-y-24 gap-x-14 px-5 sm:px-16 py-12 rounded-3xl">
           <div className="flex flex-col justify-between h-full basis-full my-auto">
             <div className="flex flex-row justify-start gap-5">

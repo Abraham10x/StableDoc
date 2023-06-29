@@ -14,7 +14,7 @@ const preview: NextPage = () => {
     <>
       <Seo templateTitle="preview Posts" />
       <Header />
-      <div className="flex flex-col sm:flex-row justify-between gap-y-4 align-middle px-5 sm:px-28 py-6">
+      <div className="flex flex-col sm:flex-row justify-between gap-y-4 align-middle px-5 sm:px-10 py-6">
         <div className="flex flex-col">
           <h1 className="text-3xl text-text-300 font-extrabold">
             Preview Blog Post
@@ -37,6 +37,7 @@ const preview: NextPage = () => {
         author={postDetails?.author}
         datePosted="Awaiting"
         title={postDetails?.title}
+        container="no-container"
       />
       <MainBody
         blogImage={postDetails?.coverPhoto}

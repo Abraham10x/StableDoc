@@ -89,12 +89,12 @@ const Header = () => {
                 </svg>
               </button>
               <div
-                className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-48 sm:w-56 hidden z-10 mt-2 bg-white shadow-md rounded-lg py-1 px-0.5 sm:py-2 sm:px-2"
+                className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-48 sm:w-56 hidden z-50 mt-2 bg-white shadow-md rounded-lg py-1 px-0.5 sm:py-2 sm:px-2"
                 aria-labelledby="hs-dropdown-default"
               >
                 <Button
                   onClick={handleResetPassword}
-                  className="flex flex-row gap-5 text-text-500"
+                  className="flex flex-row gap-5 text-text-500 w-full"
                 >
                   <ArrowPathIcon className="w-8 h-8" />
                   <p className="font-medium text-base my-auto">
@@ -103,7 +103,7 @@ const Header = () => {
                 </Button>
                 <Button
                   onClick={logout}
-                  className="flex flex-row gap-5 text-text-500 mt-1"
+                  className="flex flex-row gap-5 text-text-500 mt-1 w-full"
                 >
                   <IoLogOut className="w-8 h-8" />
                   <p className="font-medium text-base my-auto">Logout</p>

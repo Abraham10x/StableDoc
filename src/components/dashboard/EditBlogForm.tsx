@@ -4,10 +4,11 @@ import { Button, SubmitButton } from "../general/Button";
 import Card from "../general/Card";
 import { useRouter } from "next/router";
 import { IoPlaySkipBackCircleSharp } from "react-icons/io5";
-import { retrieveToken } from "../../lib/helper";
+import { retrieveToken, storeToken } from "../../lib/helper";
 import BaseFormInput from "../application/base/BaseFormInput";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import PreviewModal from "./PreviewModal";
 
 const CreateBlogForm = () => {
   const AUTH_TOKEN = retrieveToken("AUTH_TOKEN");
@@ -24,6 +25,7 @@ const CreateBlogForm = () => {
   const [content, setContent] = useState("");
   const [formErrors, setFormErrors] = useState({});
   const [onSubmit, setonSubmit] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const getSingleBlog = async () => {
@@ -32,7 +34,7 @@ const CreateBlogForm = () => {
       );
       const data = response?.data;
       setFormvalues({
-        authorName: data?.author,
+        authorName: data?.author?.name,
         title: data?.title,
         summary: data?.summary,
         coverPhoto: data?.coverPhotoUrl,
@@ -60,6 +62,17 @@ const CreateBlogForm = () => {
       errors.coverPhoto = "Message is required !";
     }
     return errors;
+  };
+
+  const handlePreview = () => {
+    storeToken("createPost", {
+      author: formvalues.authorName,
+      title: formvalues.title,
+      summary: formvalues.summary,
+      coverPhoto: formvalues.coverPhoto,
+      content: content,
+    });
+    setShowModal((prev) => !prev);
   };
 
   const handlePost = async (event: any) => {
@@ -110,7 +123,7 @@ const CreateBlogForm = () => {
   return (
     <>
       <Toaster position="top-right" reverseOrder={false} />
-      <div className="px-5 sm:px-10 py-6 sticky top-0 shadow-sm z-10">
+      <div className="px-5 sm:px-10 py-6 top-0 shadow-sm">
         <div className="flex flex-col sm:flex-row justify-between gap-y-4 align-middle">
           <div className="flex flex-col">
             <h1 className="text-3xl text-text-300 font-extrabold">
@@ -124,7 +137,7 @@ const CreateBlogForm = () => {
             onClick={() => {
               router.back();
             }}
-            className="bg-primary text-white flex items-center gap-x-4 px-4 py-3 h-fit rounded-lg"
+            className="bg-primary hover:bg-secondary-900 duration-100 text-white flex items-center gap-x-4 px-4 py-3 h-fit rounded-lg"
           >
             <IoPlaySkipBackCircleSharp className="h-5 w-5" />
             <p>Back</p>
@@ -210,6 +223,14 @@ const CreateBlogForm = () => {
                   Submit
                 </SubmitButton>
                 <Button
+                  onClick={() => {
+                    handlePreview();
+                  }}
+                  className="bg-secondary-900 hover:bg-gray-500 duration-100 text-white py-2 px-5 rounded-md"
+                >
+                  Preview
+                </Button>
+                <Button
                   className="border-[1px] hover:bg-gray-300 duration-100 border-outline-gray py-2 px-5 rounded-md"
                   onClick={() => {
                     router.back();
@@ -222,6 +243,7 @@ const CreateBlogForm = () => {
           </div>
         </Card>
       </div>
+      <PreviewModal showModal={showModal} setShowModal={setShowModal} />;
     </>
   );
 };

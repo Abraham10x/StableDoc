@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import Image from "next/image";
 import "react-quill/dist/quill.snow.css";
 import { EyeIcon, EyeSlashIcon } from "@heroicons/react/24/outline";
+import { CheckBadgeIcon } from "@heroicons/react/24/solid";
 
 import dynamic from "next/dynamic";
 
@@ -19,7 +20,6 @@ interface IProps {
   error?: any;
   disabled?: any;
   isUploaded?: any;
-  progressValue?: any;
   id?: any;
 }
 
@@ -33,6 +33,7 @@ const BaseFormInput: FC<IProps> = ({
   onChange,
   onBlur,
   error,
+  isUploaded,
   disabled,
 }: IProps) => {
   const [eyeOff, setEyeOff] = useState(true);
@@ -182,6 +183,12 @@ const BaseFormInput: FC<IProps> = ({
             <p className="text-gray-600 text-center text-xs w-full sm:w-[60%] mx-auto">
               Note: Your File should not be more than 3mb to 8mb
             </p>
+            {isUploaded && (
+              <p className="text-gray-600 text-center text-sm w-full sm:w-[60%] mx-auto">
+                <CheckBadgeIcon className="w-5 h-5 text-primary inline-flex mr-3" />
+                {isUploaded?.name}
+              </p>
+            )}
           </div>
         </label>
         <input

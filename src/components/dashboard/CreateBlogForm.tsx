@@ -17,12 +17,14 @@ const CreateBlogForm = () => {
   let imageFile: File;
   const dataUrl = postDetails?.coverPhoto;
   useEffect(() => {
-    fetch(dataUrl)
-      .then((response) => response.blob())
-      .then((blob) => {
-        const file = new File([blob], "cover-photo.png", { type: blob.type });
-        imageFile = file;
-      });
+    if (dataUrl) {
+      fetch(dataUrl)
+        .then((response) => response.blob())
+        .then((blob) => {
+          const file = new File([blob], "cover-photo.png", { type: blob.type });
+          imageFile = file;
+        });
+    }
   }, []);
 
   const router = useRouter();
@@ -191,6 +193,7 @@ const CreateBlogForm = () => {
                   label="Cover Image"
                   id="coverPhoto"
                   name="coverPhoto"
+                  isUploaded={formvalues.coverPhoto[0]}
                   onChange={(event: any) =>
                     setFormvalues({
                       ...formvalues,

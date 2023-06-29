@@ -99,3 +99,49 @@ a {
   width: 3rem;
   padding-right: 1.5rem;
 }
+
+.main-blog h1,
+h2,
+h3 {
+  font-size: 1.23rem;
+  line-height: 1.75rem;
+  background-image: linear-gradient(97.43deg, #4485fd -3.02%, #1a4187 108.35%);
+  background: linear-gradient(97.43deg, #4485fd -3.02%, #1a4187 108.35%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+div.main-blog p {
+  color: #7889b2;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 640px) {
+  div.main-blog h1,
+  h2,
+  h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  div.main-blog p {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  div.main-blog h1,
+  h2,
+  h3 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  div.main-blog p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}

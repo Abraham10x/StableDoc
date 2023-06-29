@@ -202,6 +202,7 @@ const CreateBlogForm = () => {
                   label="Cover Image"
                   id="coverPhoto"
                   name="coverPhoto"
+                  isUploaded={formvalues.coverPhoto[0]}
                   onChange={(event: any) =>
                     setFormvalues({
                       ...formvalues,

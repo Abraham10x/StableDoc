@@ -22,7 +22,10 @@ const MainBody: FC<IProps> = ({ body, summary, blogImage, title }: IProps) => {
           {summary}
         </p>
       </div>
-      <div className="mt-14" dangerouslySetInnerHTML={{ __html: body }} />
+      <div
+        className="mt-14 main-blog"
+        dangerouslySetInnerHTML={{ __html: body }}
+      />
     </div>
   );
 };

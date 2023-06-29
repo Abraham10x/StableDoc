@@ -30,9 +30,9 @@ const Login: FC = () => {
               height={5000}
             />
             <div className="text-center flex flex-col gap-2 text-white">
-              <h2 className="text-lg sm:text-xl xl:text-3xl font-bold gap-4">
+              <h4 className="text-lg sm:text-xl xl:text-3xl font-bold gap-4 text-white">
                 Login To The StableDoc Admin Panel
-              </h2>
+              </h4>
               <p className="text-base sm:text-lg xl:text-xl">
                 Change content once and it will update everywhere. Where it id
                 needed.

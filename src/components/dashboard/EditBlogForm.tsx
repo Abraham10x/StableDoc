@@ -91,8 +91,8 @@ const CreateBlogForm = () => {
     };
     let response;
     try {
-      response = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/blog-posts`,
+      response = await axios.patch(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/blog-posts/${uId}`,
         values,
         {
           headers: {
@@ -102,17 +102,15 @@ const CreateBlogForm = () => {
         }
       );
 
-      if (response.status === 201) {
-        toast.success("Blog Created successfully!!! 🎉");
+      if (response.status === 204) {
+        toast.success("Blog Edited Successfully!!! 🎉");
         router.push({
-          pathname: `/dashboard/blog/${uId}`,
+          pathname: `/dashboard/viewBlog/${uId}`,
         });
         localStorage.removeItem("editPost");
       }
     } catch (err: any) {
-      toast.error(
-        err.response.data.message ? err.response.data.message : err.message
-      );
+      toast.error(err.message);
       event.target.reset();
     }
     return response;

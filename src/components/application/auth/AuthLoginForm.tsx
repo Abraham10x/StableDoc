@@ -18,23 +18,28 @@ const AuthLoginForm: FC = () => {
 
   const router = useRouter();
   const handleLogin = async (values: any) => {
-    const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/admin-auth/login`,
-      values,
-      {
-        headers: {
-          "Content-Type": "application/json",
-        },
+    let response;
+    try {
+      response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/admin-auth/login`,
+        values,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      if (response.status === 200) {
+        storeToken("AUTH_TOKEN", response?.data.idToken);
+        router.push({
+          pathname: `/dashboard/blog`,
+        });
+        toast.success("login successfully!!! 🎉");
       }
-    );
-    if (response.status === 200) {
-      storeToken("AUTH_TOKEN", response?.data.idToken);
-      router.push({
-        pathname: `/dashboard/blog`,
-      });
-      toast.success("login successfully!!! 🎉");
-    } else {
-      toast.error("Unable to comment, try again!");
+    } catch (err: any) {
+      toast.error(
+        err.response.data.message ? err.response.data.message : err.message
+      );
     }
     return response;
   };

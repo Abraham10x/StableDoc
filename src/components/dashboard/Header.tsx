@@ -17,7 +17,7 @@ const Header = () => {
   const router = useRouter();
 
   const logout = () => {
-    localStorage.clear();
+    localStorage.removeItem("AUTH_TOKEN");
     router.push({
       pathname: `/dashboard/`,
     });

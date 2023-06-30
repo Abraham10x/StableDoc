@@ -2,18 +2,19 @@
 import React, { useEffect, useState } from "react";
 import { Button, SubmitButton } from "../general/Button";
 import Card from "../general/Card";
-import { Router, useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { IoPlaySkipBackCircleSharp } from "react-icons/io5";
-import { errorParser, retrieveToken, storeToken } from "../../lib/helper";
+import { retrieveToken, storeToken } from "../../lib/helper";
 import BaseFormInput from "../application/base/BaseFormInput";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import PreviewModal from "./PreviewModal";
+import PreviewCreateModal from "./PreviewCreateModal";
 
 const CreateBlogForm = () => {
   const AUTH_TOKEN = retrieveToken("AUTH_TOKEN");
   const postDetails = retrieveToken("createPost");
   const [showModal, setShowModal] = useState(false);
+  const [image, setImage] = useState<any>(postDetails?.coverPhoto);
   let imageFile: File;
   const dataUrl = postDetails?.coverPhoto;
   useEffect(() => {
@@ -53,30 +54,23 @@ const CreateBlogForm = () => {
     return errors;
   };
 
-  console.log(formvalues.coverPhoto);
-
-  const convert = (file: any) => {
-    let localImage;
-    const reader = new FileReader();
-    reader.onload = () => {
-      localImage = reader.result;
-    };
-    reader.readAsDataURL(file);
-    return localImage;
-  };
   const handlePreview = () => {
-    let localImage;
-    if (postDetails?.coverPhoto) {
-      localImage = convert(formvalues?.coverPhoto[0]);
+    if (formvalues.coverPhoto[0]) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setImage(reader.result);
+      };
+      reader.readAsDataURL(formvalues.coverPhoto[0]);
     }
-    setShowModal((prev) => !prev);
+
     storeToken("createPost", {
       author: formvalues.authorName,
       title: formvalues.title,
       summary: formvalues.summary,
-      coverPhoto: localImage,
+      coverPhoto: image,
       content: content,
     });
+    setShowModal((prev) => !prev);
   };
 
   const handlePost = async (event: any) => {
@@ -87,28 +81,33 @@ const CreateBlogForm = () => {
       authorName: formvalues.authorName,
       title: formvalues.title,
       summary: formvalues.summary,
-      coverPhoto: imageFile ?? formvalues.coverPhoto[0],
+      coverPhoto: formvalues.coverPhoto[0] ?? imageFile,
       content: content,
     };
-    const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/blog-posts`,
-      values,
-      {
-        headers: {
-          "Content-Type": "multipart/form-data",
-          Authorization: `Bearer ${AUTH_TOKEN}`,
-        },
-      }
-    );
+    let response;
+    try {
+      response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/blog-posts`,
+        values,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+            Authorization: `Bearer ${AUTH_TOKEN}`,
+          },
+        }
+      );
 
-    if (response.status === 201) {
-      toast.success("Blog Created successfully!!! 🎉");
-      router.push({
-        pathname: `/dashboard/blog/`,
-      });
-      localStorage.removeItem("createPost");
-    } else {
-      toast.error("Unable to create post, try again!");
+      if (response.status === 201) {
+        toast.success("Blog Created successfully!!! 🎉");
+        router.push({
+          pathname: `/dashboard/blog/`,
+        });
+        localStorage.removeItem("createPost");
+      }
+    } catch (err: any) {
+      toast.error(
+        err.response.data.message ? err.response.data.message : err.message
+      );
       event.target.reset();
     }
     return response;
@@ -118,11 +117,6 @@ const CreateBlogForm = () => {
     if (Object.keys(formErrors).length === 0 && onSubmit) {
     }
   }, [formErrors]);
-
-  // const onSubmit = async () => {
-  //   // handle form submission here
-  //   await handlePost();
-  // };
 
   return (
     <>
@@ -147,7 +141,7 @@ const CreateBlogForm = () => {
             <p>Back</p>
           </Button>
         </div>
-        <Card className="mt-10 mb-8 sm:mb-14 sm:mt-20 p-10">
+        <Card className="mt-10 mb-8 sm:mb-14 sm:mt-20 p-5 sm:p-10">
           <div className="flex flex-col">
             <h2 className="text-xl font-semibold">Blog Content</h2>
             <p>Tell us more about your job</p>
@@ -180,7 +174,7 @@ const CreateBlogForm = () => {
                   type="textarea"
                   label="Summary"
                   name="summary"
-                  value={formvalues.summary}
+                  value={formvalues?.summary}
                   onChange={(event: any) =>
                     setFormvalues({
                       ...formvalues,
@@ -207,7 +201,7 @@ const CreateBlogForm = () => {
                   onChange={setContent}
                 />
               </div>
-              <div className="flex justify-start items-center gap-x-5 py-5 border-t">
+              <div className="flex justify-start flex-wrap gap-3 gap-x-5 py-5 border-t">
                 <SubmitButton className="bg-primary hover:bg-secondary-900 duration-100 text-white py-2 px-5 rounded-md">
                   Submit
                 </SubmitButton>
@@ -217,7 +211,7 @@ const CreateBlogForm = () => {
                   }}
                   className="bg-secondary-900 hover:bg-gray-500 duration-100 text-white py-2 px-5 rounded-md"
                 >
-                  Preview
+                  Save & Preview
                 </Button>
                 <Button
                   className="border-[1px] hover:bg-gray-300 duration-100 border-outline-gray py-2 px-5 rounded-md"
@@ -232,7 +226,7 @@ const CreateBlogForm = () => {
           </div>
         </Card>
       </div>
-      <PreviewModal showModal={showModal} setShowModal={setShowModal} />
+      <PreviewCreateModal showModal={showModal} setShowModal={setShowModal} />
     </>
   );
 };

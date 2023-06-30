@@ -55,10 +55,8 @@ const ViewBlog = () => {
   const handleRoute = (id: any) => {
     router.push({
       pathname: `/dashboard/editBlog/${id}`,
-      // query: {
-      //   id,
-      // },
     });
+    localStorage.removeItem("editPost");
   };
 
   return (
@@ -97,7 +95,7 @@ const ViewBlog = () => {
                   className="bg-primary px-4 py-2 flex flex-row gap-2 sm:gap-3 lg:gap-5 rounded-lg hover:bg-secondary-900 duration-100 w-fit"
                 >
                   <PencilSquareIcon className="text-white my-auto w-6 h-6" />
-                  <p className="text-sm sm:text-lg lg:text-xl text-white">
+                  <p className="text-sm sm:text-lg lg:text-xl text-white my-auto">
                     Edit Post
                   </p>
                 </Button>
@@ -106,7 +104,7 @@ const ViewBlog = () => {
                   onClick={handleModal}
                 >
                   <TrashIcon className="text-white my-auto w-6 h-6" />
-                  <p className="text-sm sm:text-lg lg:text-xl text-white">
+                  <p className="text-sm sm:text-lg lg:text-xl text-white my-auto">
                     Delete Post
                   </p>
                 </Button>

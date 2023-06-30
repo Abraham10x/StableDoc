@@ -13,7 +13,10 @@ interface IProps {
   setShowModal: any;
 }
 
-const PreviewModal: FC<IProps> = ({ showModal, setShowModal }: IProps) => {
+const PreviewCreateModal: FC<IProps> = ({
+  showModal,
+  setShowModal,
+}: IProps) => {
   const blog = retrieveToken("createPost");
   return (
     <>
@@ -61,4 +64,4 @@ const PreviewModal: FC<IProps> = ({ showModal, setShowModal }: IProps) => {
   );
 };
 
-export default PreviewModal;
+export default PreviewCreateModal;

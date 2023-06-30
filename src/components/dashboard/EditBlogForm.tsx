@@ -8,24 +8,26 @@ import { retrieveToken, storeToken } from "../../lib/helper";
 import BaseFormInput from "../application/base/BaseFormInput";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
-import PreviewModal from "./PreviewModal";
+import PreviewEditModal from "./PreviewEditModal";
 
 const CreateBlogForm = () => {
   const AUTH_TOKEN = retrieveToken("AUTH_TOKEN");
   const uId = retrieveToken("uId");
+  const postDetails = retrieveToken("editPost");
 
   const router = useRouter();
   const defaultPayload = {
     authorName: "",
     title: "",
     summary: "",
-    coverPhoto: "",
+    coverPhoto: postDetails?.coverPhoto ?? "",
   };
   const [formvalues, setFormvalues] = useState(defaultPayload);
   const [content, setContent] = useState("");
   const [formErrors, setFormErrors] = useState({});
   const [onSubmit, setonSubmit] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [image, setImage] = useState();
 
   useEffect(() => {
     const getSingleBlog = async () => {
@@ -34,13 +36,13 @@ const CreateBlogForm = () => {
       );
       const data = response?.data;
       setFormvalues({
-        authorName: data?.author?.name,
-        title: data?.title,
-        summary: data?.summary,
-        coverPhoto: data?.coverPhotoUrl,
+        authorName: postDetails?.author ?? data?.author?.name,
+        title: postDetails?.title ?? data?.title,
+        summary: postDetails?.summary ?? data?.summary,
+        coverPhoto: "",
       });
-
-      setContent(data?.content);
+      setImage(data?.coverPhotoUrl);
+      setContent(postDetails?.content ?? data?.content);
     };
 
     // eslint-disable-next-line @typescript-eslint/no-floating-promises
@@ -65,11 +67,12 @@ const CreateBlogForm = () => {
   };
 
   const handlePreview = () => {
-    storeToken("createPost", {
+    storeToken("editPost", {
       author: formvalues.authorName,
       title: formvalues.title,
       summary: formvalues.summary,
-      coverPhoto: formvalues.coverPhoto,
+      coverPhoto:
+        formvalues.coverPhoto.lenght > 1 ? formvalues?.coverPhoto : image,
       content: content,
     });
     setShowModal((prev) => !prev);
@@ -80,30 +83,36 @@ const CreateBlogForm = () => {
     setFormErrors(validate(formvalues));
     setonSubmit(true);
     const values = {
+      authorName: formvalues.authorName,
       title: formvalues.title,
       summary: formvalues.summary,
-      coverPhoto: formvalues.coverPhoto,
+      coverPhoto: formvalues.coverPhoto[0],
       content: content,
     };
-    console.log(values);
-    const response = await axios.post(
-      `${process.env.NEXT_PUBLIC_API_BASE_URL}/blog-posts`,
-      values,
-      {
-        headers: {
-          "Content-Type": "multipart/form-data",
-          Authorization: `Bearer ${AUTH_TOKEN}`,
-        },
-      }
-    );
+    let response;
+    try {
+      response = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/blog-posts`,
+        values,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+            Authorization: `Bearer ${AUTH_TOKEN}`,
+          },
+        }
+      );
 
-    if (response.status === 201) {
-      toast.success("Blog Created successfully!!! 🎉");
-      router.push({
-        pathname: `/dashboard/blog/`,
-      });
-    } else {
-      toast.error("Unable to create post, try again!");
+      if (response.status === 201) {
+        toast.success("Blog Created successfully!!! 🎉");
+        router.push({
+          pathname: `/dashboard/blog/${uId}`,
+        });
+        localStorage.removeItem("editPost");
+      }
+    } catch (err: any) {
+      toast.error(
+        err.response.data.message ? err.response.data.message : err.message
+      );
       event.target.reset();
     }
     return response;
@@ -114,11 +123,6 @@ const CreateBlogForm = () => {
       console.log(formvalues);
     }
   }, [formErrors]);
-
-  // const onSubmit = async () => {
-  //   // handle form submission here
-  //   await handlePost();
-  // };
 
   return (
     <>
@@ -143,7 +147,7 @@ const CreateBlogForm = () => {
             <p>Back</p>
           </Button>
         </div>
-        <Card className="mt-10 mb-8 sm:mb-14 sm:mt-20 p-10">
+        <Card className="mt-10 mb-8 sm:mb-14 sm:mt-20 p-5 sm:p-10">
           <div className="flex flex-col">
             <h2 className="text-xl font-semibold">Blog Content</h2>
             <p>Tell us more about your job</p>
@@ -184,15 +188,11 @@ const CreateBlogForm = () => {
                     })
                   }
                 />
-                {formvalues.coverPhoto === "" ? (
+                {image === "" ? (
                   <p>No cover image uploaded</p>
                 ) : (
                   <p style={{ textDecoration: "underline", color: "blue" }}>
-                    <a
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      href={formvalues?.coverPhoto}
-                    >
+                    <a target="_blank" rel="noreferrer noopener" href={image}>
                       Click to view cover image
                     </a>
                   </p>
@@ -216,7 +216,7 @@ const CreateBlogForm = () => {
                   onChange={setContent}
                 />
               </div>
-              <div className="flex justify-start items-center gap-x-5 py-5 border-t">
+              <div className="flex justify-start flex-wrap gap-3 gap-x-5 py-5 border-t">
                 <SubmitButton
                   type="submit"
                   className="bg-primary hover:bg-secondary-900 duration-100 text-white py-2 px-5 rounded-md"
@@ -229,7 +229,7 @@ const CreateBlogForm = () => {
                   }}
                   className="bg-secondary-900 hover:bg-gray-500 duration-100 text-white py-2 px-5 rounded-md"
                 >
-                  Preview
+                  Save & Preview
                 </Button>
                 <Button
                   className="border-[1px] hover:bg-gray-300 duration-100 border-outline-gray py-2 px-5 rounded-md"
@@ -244,7 +244,7 @@ const CreateBlogForm = () => {
           </div>
         </Card>
       </div>
-      <PreviewModal showModal={showModal} setShowModal={setShowModal} />;
+      <PreviewEditModal showModal={showModal} setShowModal={setShowModal} />;
     </>
   );
 };

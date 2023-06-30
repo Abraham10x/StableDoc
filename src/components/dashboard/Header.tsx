@@ -89,7 +89,7 @@ const Header = () => {
                 </svg>
               </button>
               <div
-                className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-48 sm:w-56 hidden z-50 mt-2 bg-white shadow-md rounded-lg py-1 px-0.5 sm:py-2 sm:px-2"
+                className="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] hs-dropdown-open:opacity-100 opacity-0 w-48 sm:w-56 hidden z-50 mt-2 bg-white shadow-md rounded-lg py-1 px-1.5 sm:py-2 sm:px-2"
                 aria-labelledby="hs-dropdown-default"
               >
                 <Button

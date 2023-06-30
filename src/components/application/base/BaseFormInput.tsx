@@ -89,7 +89,6 @@ const BaseFormInput: FC<IProps> = ({
           {label}
         </label>
         <textarea
-          id={name}
           className="block w-full rounded-md border-[1px] py-4 px-4 text-base text-gray-500 bg-gray-100"
           rows={3}
           name={name}
@@ -185,7 +184,7 @@ const BaseFormInput: FC<IProps> = ({
             </p>
             {isUploaded && (
               <p className="text-gray-600 text-center text-sm w-full sm:w-[60%] mx-auto">
-                <CheckBadgeIcon className="w-5 h-5 text-primary inline-flex mr-3" />
+                <CheckBadgeIcon className="w-5 h-5 text-primary inline-flex mr-1 sm:mr-3" />
                 {isUploaded?.name}
               </p>
             )}

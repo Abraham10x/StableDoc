@@ -23,9 +23,11 @@ module.exports = {
       "gradient-500": "linear-gradient(96.45deg, #4485FD 0%, #1A4187 99%)",
       "stroke-500": "#A9C5DE",
       "gray-500": "#F8FBFF",
+      "dash-white": "#F9F9F9",
       black: "#000000",
       white: "#FFFFFF",
       red: colors.red,
+      gray: colors.gray,
     },
     fontFamily: {
       sans: ["Cabinet Grotesk", "sans-serif"],

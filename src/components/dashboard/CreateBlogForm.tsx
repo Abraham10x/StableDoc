@@ -115,6 +115,7 @@ const CreateBlogForm = () => {
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && onSubmit) {
+      console.log(formErrors);
     }
   }, [formErrors]);
 
